@@ -40,7 +40,12 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 	</dependency>
-	
+	<!-- SpringCloud整合eureka -->
+	<dependency>
+	     <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+	    <version>2.0.2.RELEASE</version>
+	</dependency>
   </dependencies>
   
   <repositories>
