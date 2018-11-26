@@ -23,9 +23,9 @@
 		<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Finchley.M7</version>
+				<version>Finchley.M9</version>
 				<type>pom</type>
-				<scope>import</scope>
+				<scope>improt</scope>
 			</dependency>
 		</dependencies> 
 	</dependencyManagement>
