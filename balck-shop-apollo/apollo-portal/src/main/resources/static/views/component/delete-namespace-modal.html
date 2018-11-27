@@ -1,0 +1,28 @@
+<div id="deleteNamespaceModal" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header panel-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">
+                    删除Namespace
+                </h4>
+            </div>
+            <div class="modal-body form-horizontal" ng-show="toDeleteNamespace.isPublic">
+                删除Namespace将导致实例获取不到此Namespace的配置，确定要删除吗?
+            </div>
+            <div class="modal-body form-horizontal" ng-show="!toDeleteNamespace.isPublic">
+                删除私有Namespace将导致实例获取不到此Namespace的配置，而且无法在当前集群重新创建该Namespace（除非使用管理员工具把所有环境的AppNamespace删除后重建），确定要删除吗?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    取消
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"
+                ng-click="doDeleteNamespace()">
+                    确认
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

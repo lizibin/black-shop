@@ -1,0 +1,18 @@
+<div id="showTextModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content no-radius">
+            <div class="modal-header panel-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+
+                <h4 class="modal-title">查看</h4>
+            </div>
+            <pre class="modal-body no-radius" style="margin-bottom: 0"
+                 ng-show="!jsonObject" ng-bind="text">
+            </pre>
+            <pre class="modal-body no-radius" style="margin-bottom: 0"
+                 ng-show="jsonObject" ng-bind="jsonObject | json:4">
+            </pre>
+        </div>
+    </div>
+</div>

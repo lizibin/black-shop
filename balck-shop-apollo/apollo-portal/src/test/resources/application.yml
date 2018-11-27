@@ -1,0 +1,20 @@
+server:
+  port: 8070
+  
+spring:
+  application:
+    name: apollo-portal
+
+logging:
+  level:
+    org.springframework.cloud: 'DEBUG'
+  file: /opt/logs/100003173/apollo-portal.log
+  
+apollo:
+  portal:
+    envs: local
+
+management:
+  health:
+    status:
+      order: DOWN, OUT_OF_SERVICE, UNKNOWN, UP 

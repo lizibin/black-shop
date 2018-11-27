@@ -1,0 +1,98 @@
+<form id="rollbackModal" class="modal fade form-horizontal"
+      ng-submit="showRollbackAlertDialog()">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header panel-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <div class="modal-title text-center">
+                    <span style="font-size: 18px;" ng-bind="toRollbackNamespace.firstRelease.name"></span>
+                    <span style="font-size: 18px;"> &nbsp;回滚到&nbsp;</span>
+                    <span style="font-size: 18px;" ng-bind="toRollbackNamespace.secondRelease.name"></span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-warning" role="alert">
+                    此操作将会回滚到上一个发布版本，且当前版本作废，但不影响正在修改的配置。可在发布历史页面查看当前生效的版本
+                    <a target="_blank"
+                       href="/config/history.html?#/appid={{appId}}&env={{env}}&clusterName={{toRollbackNamespace.baseInfo.clusterName}}&namespaceName={{toRollbackNamespace.baseInfo.namespaceName}}">点击查看</a>
+                </div>
+
+                <div class="form-group" style="margin-top: 15px;">
+                    <!--properties format-->
+                    <div class="col-sm-12"
+                         ng-if="toRollbackNamespace.releaseCompareResult.length > 0 && toRollbackNamespace.isPropertiesFormat">
+                        <table class="table table-bordered table-striped text-center table-hover"
+                               ng-if="toRollbackNamespace.isPropertiesFormat">
+                            <thead>
+                            <tr>
+                                <th>
+                                    Type
+                                </th>
+                                <th>
+                                    Key
+                                </th>
+                                <th>
+                                    回滚前
+                                </th>
+                                <th>
+                                    回滚后
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <tr ng-repeat="change in toRollbackNamespace.releaseCompareResult">
+                                <td width="10%">
+                                    <span ng-show="change.type == 'ADDED'">新增</span>
+                                    <span ng-show="change.type == 'MODIFIED'">更新</span>
+                                    <span ng-show="change.type == 'DELETED'">删除</span>
+                                </td>
+                                <td width="20%" ng-bind="change.entity.firstEntity.key">
+
+                                </td>
+                                <td width="35%" ng-bind="change.entity.firstEntity.value">
+                                </td>
+                                <td width="35%" ng-bind="change.entity.secondEntity.value">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!--file format -->
+                    <div class="col-sm-12"
+                         ng-if="toRollbackNamespace.releaseCompareResult.length > 0 && !toRollbackNamespace.isPropertiesFormat">
+                        <div ng-repeat="change in toRollbackNamespace.releaseCompareResult"
+                             ng-if="!toRollbackNamespace.isPropertiesFormat">
+                            <h5>回滚前</h5>
+                                        <textarea class="form-control no-radius" rows="20"
+                                                  ng-disabled="true" ng-bind="change.entity.firstEntity.value">
+                                            </textarea>
+                            <hr>
+                            <h5>回滚后</h5>
+                                        <textarea class="form-control no-radius" rows="20"
+                                                  ng-disabled="true" ng-bind="change.entity.secondEntity.value">
+                                            </textarea>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12 text-center" ng-if="toRollbackNamespace.releaseCompareResult.length == 0">
+                        <h4>
+                            配置没有变化
+                        </h4>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-danger"
+                        ng-disabled="toRollbackNamespace.rollbackBtnDisabled">回滚
+                </button>
+            </div>
+        </div>
+    </div>
+
+</form>

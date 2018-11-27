@@ -1,0 +1,81 @@
+<form id="itemModal" class="modal fade" valdr-type="Item" name="itemForm"
+      ng-submit="doItem()">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header panel-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">
+                    <span ng-show="item.tableViewOperType == 'create' && !toOperationNamespace.isBranch">
+                        添加配置项 <small class="text-info">(温馨提示: 可以通过文本模式批量添加配置)</small>
+                    </span>
+                    <span ng-show="item.tableViewOperType == 'create' && toOperationNamespace.isBranch"> 添加灰度配置项</span>
+                    <span ng-show="item.tableViewOperType == 'update'"> 修改配置项</span>
+                </h4>
+            </div>
+            <div class="modal-body form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        <apollorequiredfield
+                                ng-show="item.tableViewOperType == 'create'"></apollorequiredfield>
+                        Key
+                    </label>
+                    <div class="col-sm-10" valdr-form-group>
+                        <input type="text" name="key" class="form-control" ng-model="item.key" tabindex="1"
+                               ng-required="true" ng-disabled="item.tableViewOperType != 'create'"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        <apollorequiredfield></apollorequiredfield>
+                        Value
+                    </label>
+                    <div class="col-sm-10" valdr-form-group>
+                        <textarea name="value" class="form-control" rows="6" tabindex="2"
+                                  ng-required="true"
+                                  ng-model="item.value">
+                            </textarea>
+                        注意: 隐藏字符(空格、换行符、制表符Tab)容易导致配置出错，如果需要检测Value中隐藏字符请点击 <a ng-click="showHiddenChars()">检测隐藏字符</a>
+                        <br>
+                        <div class="bg-info" ng-show="showHiddenCharsContext && hiddenCharCounter == 0">无隐藏字符</div>
+                        <div class="bg-info" ng-bind-html="valueWithHiddenChars" ng-show="showHiddenCharsContext && hiddenCharCounter > 0"></div>
+                    </div>
+
+
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Comment</label>
+                    <div class="col-sm-10" valdr-form-group>
+                        <textarea class="form-control" name="comment" ng-model="item.comment" tabindex="3"
+                                  rows="2">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group"
+                     ng-show="item.tableViewOperType == 'create' && !toOperationNamespace.isBranch">
+                    <label class="col-sm-2 control-label">
+                        <apollorequiredfield></apollorequiredfield>
+                        选择集群</label>
+                    <div class="col-sm-10">
+                        <apolloclusterselector apollo-app-id="appId"
+                                               apollo-default-all-checked="false"
+                                               apollo-default-checked-env="env"
+                                               apollo-default-checked-cluster="cluster"
+                                               apollo-select="collectSelectedClusters">
+
+                        </apolloclusterselector>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    取消
+                </button>
+                <button type="submit" class="btn btn-primary"
+                        ng-disabled="itemForm.$invalid || (item.addItemBtnDisabled && item.tableViewOperType == 'create')">
+                    提交
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
