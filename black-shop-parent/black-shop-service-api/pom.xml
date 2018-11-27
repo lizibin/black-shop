@@ -6,4 +6,8 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>black-shop-service-api</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>black-shop-service-api-user</module>
+  </modules>
 </project>
