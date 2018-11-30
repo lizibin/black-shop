@@ -17,20 +17,20 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**  
 
-* <p>Title: AppEureka</p>  
+* <p>Title: AppUser</p>  
 
 * <p>Description: </p>  
 
 * @author zibin  
 
-* @date 2018年11月28日  
+* @date 2018年11月30日  
 
 */
 @SpringBootApplication
 @EnableEurekaClient
-public class AppEureka {
+public class AppUser {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AppEureka.class, args);
+		SpringApplication.run(AppUser.class, args);
 	}
 }
