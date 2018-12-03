@@ -11,11 +11,15 @@
 */  
 package cn.blackshop.contoller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import cn.blackshop.service.UserService;
 
 /**  
 
-* <p>Title: UserContoller</p>  
+* <p>Title: 用户控制层</p>  
 
 * <p>Description: </p>  
 
@@ -27,4 +31,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserContoller {
 
+	@Autowired
+	private UserService userService;
+	
+	@GetMapping("/getUser")
+	public String getUser() {
+		userService.getUser();
+		return "success";
+	}
 }
