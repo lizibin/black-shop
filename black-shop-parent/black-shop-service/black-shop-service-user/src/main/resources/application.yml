@@ -1,0 +1,6 @@
+#配置服务端口号
+server:
+  port: 8081
+spring:
+  application:
+    name: bs-user
