@@ -10,4 +10,17 @@
   <modules>
   	<module>black-shop-service-user</module>
   </modules>
+  	  <dependencies>
+  		<!--mybatis 组件 -->
+  		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+		<!--mysql连接 组件 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+	 </dependencies>
 </project>
