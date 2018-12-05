@@ -10,6 +10,9 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+### Intellij Patch ###
+*.iml
+
 # Package Files #
 *.jar
 *.war
