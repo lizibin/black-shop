@@ -6,4 +6,13 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>black-shop-basic-springcloud-eureka</artifactId>
+  
+  <dependencies>
+  	<!--SpringCloud eureka-server -->
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		 <version>2.0.2.RELEASE</version>
+	</dependency>
+  </dependencies>
 </project>

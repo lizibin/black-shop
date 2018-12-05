@@ -14,7 +14,7 @@
   <parent>
   	<groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.1.0.RELEASE</version>
+    <version>2.0.7.RELEASE</version>
   </parent>
   
   <!-- 管理依赖springcloud -->
@@ -23,7 +23,7 @@
 		<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Finchley.M9</version>
+				<version>Finchley.SR2</version>
 				<type>pom</type>
 				<scope>improt</scope>
 			</dependency>
@@ -43,18 +43,16 @@
 	</dependency>
 	<!-- SpringBoot整合lombok组件 -->
 	<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
 	</dependency>
 	<!-- SpringCloud整合eureka -->
 	<dependency>
 	     <groupId>org.springframework.cloud</groupId>
-	    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-	    <version>2.0.2.RELEASE</version>
+	     <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+	      <version>2.0.2.RELEASE</version>
 	</dependency>
-	
   </dependencies>
-  
   <repositories>
 		<repository>
 			<id>spring-milestones</id>
