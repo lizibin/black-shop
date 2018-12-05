@@ -11,7 +11,10 @@
 */  
 package cn.blackshop.impl;
 
-/**  
+import cn.blackshop.service.UserService;
+import org.springframework.stereotype.Service;
+
+/**
 
 * <p>Title: UserServiceImpl</p>  
 
@@ -22,6 +25,11 @@ package cn.blackshop.impl;
 * @date 2018年12月3日  
 
 */
-public class UserServiceImpl {
+@Service(value = "userService")
+public class UserServiceImpl implements UserService {
 
+    @Override
+    public String getUser() {
+        return "success";
+    }
 }
