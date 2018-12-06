@@ -40,6 +40,6 @@ public class UserContoller {
 	public String getUser() {
 		log.info("getUser");
 		userService.getUser();
-		return "success1";
+		return "success";
 	}
 }
