@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cn.blackshop.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 
 /**  
 
@@ -29,6 +30,7 @@ import cn.blackshop.service.UserService;
 
 */
 @RestController
+@Slf4j
 public class UserContoller {
 
 	@Autowired
@@ -36,6 +38,7 @@ public class UserContoller {
 	
 	@GetMapping("/getUser")
 	public String getUser() {
+		log.info("getUser");
 		userService.getUser();
 		return "success";
 	}
