@@ -6,13 +6,10 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>black-shop-service-user</artifactId>
-  
-  	<dependencies>
-		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-service-api-user</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
-  
+  <packaging>pom</packaging>
+  <modules>
+  	<module>black-shop-service-user-sso</module>
+  	<module>black-shop-service-user-basic</module>
+  	<module>black-shop-service-user-oauth</module>
+  </modules>
 </project>
