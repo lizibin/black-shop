@@ -14,6 +14,8 @@ package cn.blackshop.model;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Date;
+
 /**  
 
 * <p>Title: User</p>  
@@ -29,10 +31,26 @@ import lombok.ToString;
 @ToString
 public class User {
 	
-	private String userId;
+	private Integer userId;
 	
 	private String nickName;
-	
-	private String userMobile;
+
+	private String mobile;
+
+	private String password;
+
+    private Boolean enabled;
+
+    private Date modifyTime;
+
+    private Date userLastTime;
+
+    private String userRegIp;
+
+    private String userLastIp;
+
+    private String portraitPic;
+
+    private String openId;
 
 }
