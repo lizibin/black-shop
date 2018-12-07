@@ -2,13 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>cn.black-shop</groupId>
-    <artifactId>black-shop-parent</artifactId>
+    <artifactId>black-shop-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>black-shop-common</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>black-shop-common-util</module>
-  	<module>black-shop-common-basic</module>
-  </modules>
+  <artifactId>black-shop-common-basic</artifactId>
 </project>
