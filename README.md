@@ -1,11 +1,13 @@
-# black-shop
+# 黑店（black-shop）
 
 #### 项目介绍
-黑店
+black-shop是基于Spring Cloud微服务化电商平台，每个模块单独封装，各个模块之间通过Fegin调用，多业务系统并行开发，可以用来学习了解Spring Cloud各个组件的功能，了解电商的业务。 代码简洁，架构清晰，适合学习和直接项目中使用；核心技术采用Eureka、Fegin、Ribbon、getway、Hystrix、Security、Mybatis、Druid等主要框架和中间件， 前端采用Vue全家桶组件，欢迎Star。
 
 #### 软件架构
-软件架构说明
-
+|-black-shop
+|- |-black-shop-parent
+|- |-black-shop-admin
+|- |-black-shop-apollo
 
 #### 安装教程
 
