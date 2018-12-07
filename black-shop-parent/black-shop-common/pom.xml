@@ -6,4 +6,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>black-shop-common</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>black-shop-common-util</module>
+  	<module>black-shop-common-basic</module>
+  </modules>
 </project>

@@ -22,12 +22,6 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		<!--新增common公共组件 -->
-		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 		<!--service 整合feign客户端调用 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
