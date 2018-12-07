@@ -5,9 +5,22 @@ black-shop是基于Spring Cloud微服务化电商平台，每个模块单独封�
 
 #### 软件架构
 |-black-shop</br>
-|- |-black-shop-parent</br>
-|- |-black-shop-admin</br>
-|- |-black-shop-apollo</br>
+|-  |-black-shop-parent</br>
+|-  |-  |-black-shop-basic</br>
+|-  |-  |-  |-black-shop-basic-springcloud-apollo</br>
+|-  |-  |-  |-black-shop-basic-springcloud-eureka</br>
+|-  |-  |-black-shop-common</br>
+|-  |-  |-  |-black-shop-common-basic</br>
+|-  |-  |-  |-black-shop-common-util</br>
+|-  |-  |-black-shop-service</br>
+|-  |-  |-  |-black-shop-service-user</br>
+|-  |-  |-  |-  |-black-shop-service-user-basic</br>
+|-  |-  |-  |-  |-black-shop-service-user-oauth</br>
+|-  |-  |-  |-  |-black-shop-service-user-sso</br>
+|-  |-  |-black-shop-service-api</br>
+|-  |-  |-  |-black-shop-service-api-user</br>
+|-  |-black-shop-admin</br>
+|-  |-black-shop-apollo</br>
 
 #### 安装教程
 
