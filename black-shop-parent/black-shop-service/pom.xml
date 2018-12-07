@@ -22,5 +22,11 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+		<!--新增common公共组件 -->
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	 </dependencies>
 </project>
