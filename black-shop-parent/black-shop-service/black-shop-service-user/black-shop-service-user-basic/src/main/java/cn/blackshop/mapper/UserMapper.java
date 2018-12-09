@@ -11,7 +11,13 @@
 */  
 package cn.blackshop.mapper;
 
-/**  
+import cn.blackshop.model.User;
+import org.apache.ibatis.annotations.Mapper;
+import tk.mybatis.mapper.common.BaseMapper;
+
+import java.util.List;
+
+/**
 
 * <p>Title: 用户类</p>  
 
@@ -22,6 +28,9 @@ package cn.blackshop.mapper;
 * @date 2018年12月6日  
 
 */
-public interface UserMapper{
-	
+@Mapper
+public interface UserMapper extends BaseMapper<User> {
+
+    User getUser(Integer id);
+
 }

@@ -14,6 +14,8 @@ package cn.blackshop.model;
 import lombok.Data;
 import lombok.ToString;
 
+import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 
 /**  
@@ -29,7 +31,8 @@ import java.util.Date;
 */
 @Data
 @ToString
-public class User {
+@Table(name = "user")
+public class User implements Serializable {
 	
 	private Integer userId;
 	

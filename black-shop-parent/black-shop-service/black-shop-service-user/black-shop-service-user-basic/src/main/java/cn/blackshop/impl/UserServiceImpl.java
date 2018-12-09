@@ -11,8 +11,16 @@
 */  
 package cn.blackshop.impl;
 
+import cn.blackshop.mapper.UserMapper;
+import cn.blackshop.model.User;
 import cn.blackshop.service.UserService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
 
@@ -26,10 +34,30 @@ import org.springframework.stereotype.Service;
 
 */
 @Service(value = "userService")
+@Slf4j
 public class UserServiceImpl implements UserService {
+
+    @Autowired
+    private UserMapper userMapper;
 
     @Override
     public String getUser() {
-        return "success";
+
+        User user =  userMapper.getUser(1);
+
+        if(null == user){
+            return "success!";
+        }
+
+      return user.toString();
+    }
+
+    @Override
+    public String queryUser() {
+
+        PageInfo<Object> pageInfo = PageHelper.startPage(1, 2).setOrderBy("user_id desc").doSelectPageInfo(() -> this.userMapper.selectAll());
+        log.info("[lambda写法] - [分页信息] - [{}]", pageInfo.toString());
+
+        return "sucess";
     }
 }
