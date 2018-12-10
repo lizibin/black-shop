@@ -13,6 +13,7 @@ package cn.blackshop.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**  
 
@@ -25,9 +26,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 * @date 2018年11月26日  
 
 */
+@RestController
 public class ApolloIndexController {
 
-	@Value("${apollo}")
+	@Value("${username}")
 	private String apollo;
 	
 	
