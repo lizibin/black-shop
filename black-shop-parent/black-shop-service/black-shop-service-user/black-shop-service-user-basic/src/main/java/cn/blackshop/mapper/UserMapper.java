@@ -11,11 +11,10 @@
 */  
 package cn.blackshop.mapper;
 
-import cn.blackshop.model.User;
 import org.apache.ibatis.annotations.Mapper;
-import tk.mybatis.mapper.common.BaseMapper;
 
-import java.util.List;
+import cn.blackshop.model.User;
+import tk.mybatis.mapper.common.BaseMapper;
 
 /**
 

@@ -34,6 +34,9 @@ import java.util.Date;
 @Table(name = "user")
 public class User implements Serializable {
 	
+	/** serialVersionUID*/  
+	private static final long serialVersionUID = 1668182610874748008L;
+
 	private Integer userId;
 	
 	private String nickName;

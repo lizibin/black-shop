@@ -11,16 +11,16 @@
 */  
 package cn.blackshop.impl;
 
-import cn.blackshop.mapper.UserMapper;
-import cn.blackshop.model.User;
-import cn.blackshop.service.UserService;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+
+import cn.blackshop.mapper.UserMapper;
+import cn.blackshop.model.User;
+import cn.blackshop.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 
 /**
 
