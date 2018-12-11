@@ -9,5 +9,6 @@
   <packaging>pom</packaging>
   <modules>
   	<module>black-shop-service-api-user</module>
+  	<module>black-shop-service-api-search</module>
   </modules>
 </project>

@@ -9,6 +9,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>black-shop-service-user</module>
+		<module>black-shop-service-search</module>
 	</modules>
 	<dependencies>
 		<!--mybatis 组件 -->
