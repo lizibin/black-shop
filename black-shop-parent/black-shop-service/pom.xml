@@ -44,8 +44,14 @@
 		<!--数据库连接池-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
+			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>1.1.10</version>
 		</dependency>
+		<!--整合通用工具-->
+		<dependency>
+	 	    <groupId>cn.black-shop</groupId>
+	        <artifactId>black-shop-common-util</artifactId>
+	        <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 	</dependencies>
 </project>

@@ -6,4 +6,18 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>black-shop-service-user-security</artifactId>
+  
+  <!-->spring-boot 整合security -->
+  <dependencies>
+    <dependency>
+	  <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-starter-security</artifactId>
+	</dependency>
+	
+	<dependency>
+	  <groupId>cn.black-shop</groupId>
+	  <artifactId>black-shop-service-api-user-security</artifactId>
+	  <version>0.0.1-SNAPSHOT</version>
+	</dependency>
+  </dependencies>
 </project>

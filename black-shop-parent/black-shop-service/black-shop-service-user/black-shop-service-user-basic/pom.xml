@@ -8,10 +8,10 @@
   <artifactId>black-shop-service-user-basic</artifactId>
   
   <dependencies>
-		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-service-api-user-basic</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
+    <dependency>
+	  <groupId>cn.black-shop</groupId>
+	  <artifactId>black-shop-service-api-user-basic</artifactId>
+	  <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>
