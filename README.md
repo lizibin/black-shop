@@ -19,6 +19,9 @@ black-shop是基于Spring Cloud微服务化电商平台，每个模块单独封�
 |-  |-  |-  |-  |-black-shop-service-user-basic
 |-  |-  |-  |-  |-black-shop-service-user-oauth
 |-  |-  |-  |-  |-black-shop-service-user-sso
+|-  |-  |-  |-  |-black-shop-service-user-security
+|-  |-  |-  |-black-shop-service-serach
+|-  |-  |-  |-  |-black-shop-service-serach-prod
 |-  |-  |-black-shop-service-api
 |-  |-  |-  |-black-shop-service-api-user
 |-  |-black-shop-admin
