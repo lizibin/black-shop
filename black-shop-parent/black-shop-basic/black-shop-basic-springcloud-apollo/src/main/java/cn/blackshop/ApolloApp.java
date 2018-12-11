@@ -15,6 +15,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
+import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
+
 /**  
 
 * <p>Title: ApolloApp</p>  
@@ -27,6 +29,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 */
 @SpringBootApplication
+@EnableApolloConfig
 @EnableEurekaClient
 public class ApolloApp {
 	public static void main(String[] args) {

@@ -13,7 +13,7 @@ eureka:
     register-with-eureka: false
     ###因为自己是为注册中心，不需要检索服务
     fetch-registry: false
-  server:
+ # server:
   # 测试时关闭自我保护机制，保证不可用服务及时踢出
-    enable-self-preservation: false
-    eviction-interval-timer-in-ms: 2000
+    #enable-self-preservation: false
+   # eviction-interval-timer-in-ms: 2000

@@ -23,4 +23,6 @@ package cn.blackshop.service;
 public interface UserService {
 
 	abstract String getUser();
+
+	String queryUser();
 }

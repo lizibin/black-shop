@@ -2,15 +2,12 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>cn.black-shop</groupId>
-    <artifactId>black-shop-service</artifactId>
+    <artifactId>black-shop-service-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>black-shop-service-user</artifactId>
+  <artifactId>black-shop-service-api-search</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>black-shop-service-user-sso</module>
-  	<module>black-shop-service-user-basic</module>
-  	<module>black-shop-service-user-oauth</module>
-  	<module>black-shop-service-user-security</module>
+  	<module>black-shop-service-api-search-prod</module>
   </modules>
 </project>

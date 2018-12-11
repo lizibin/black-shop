@@ -2,13 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>cn.black-shop</groupId>
-    <artifactId>black-shop-parent</artifactId>
+    <artifactId>black-shop-service-api-search</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>black-shop-service-api</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>black-shop-service-api-user</module>
-  	<module>black-shop-service-api-search</module>
-  </modules>
+  <artifactId>black-shop-service-api-search-prod</artifactId>
 </project>
