@@ -54,5 +54,17 @@
 	        <artifactId>black-shop-common-util</artifactId>
 	        <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <!--整合通用基础类-->
+		<dependency>
+	 	    <groupId>cn.black-shop</groupId>
+	        <artifactId>black-shop-common-basic</artifactId>
+	        <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--整合swagger-->
+         <dependency>
+		    <groupId>com.spring4all</groupId>
+		    <artifactId>swagger-spring-boot-starter</artifactId>
+		    <version>1.8.0.RELEASE</version>
+   		 </dependency>
 	</dependencies>
 </project>
