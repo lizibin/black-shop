@@ -17,9 +17,15 @@ import org.springframework.stereotype.Service;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
+import cn.blackshop.basic.BaseApiService;
 import cn.blackshop.mapper.UserMapper;
 import cn.blackshop.model.User;
 import cn.blackshop.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -35,7 +41,8 @@ import lombok.extern.slf4j.Slf4j;
 */
 @Service(value = "userService")
 @Slf4j
-public class UserServiceImpl implements UserService {
+@Api(description = "会员服务接口")
+public class UserServiceImpl extends BaseApiService implements UserService {
 
     @Autowired
     private UserMapper userMapper;
@@ -52,7 +59,9 @@ public class UserServiceImpl implements UserService {
       return user.toString();
     }
 
-    @Override
+    @ApiOperation("查询所有用户信息分页")
+	@ApiResponse(code = 200, message = "查询结果成功")
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "获取数据成功"), @ApiResponse(code = 400, message = "参数错误"), })
     public String queryUser() {
 
         PageInfo<Object> pageInfo = PageHelper.startPage(1, 2).setOrderBy("user_id desc").doSelectPageInfo(() -> this.userMapper.selectAll());

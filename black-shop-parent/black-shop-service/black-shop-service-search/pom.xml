@@ -10,4 +10,18 @@
   <modules>
   	<module>black-shop-service-search-prod</module>
   </modules>
+  
+  <!-- springBoot整合elasticsearch -->
+  <dependencies>
+  	<dependency>
+	  <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+	</dependency>
+	
+	<dependency>
+	  <groupId>com.google.collections</groupId>
+	  <artifactId>google-collections</artifactId>
+	  <version>1.0</version>
+	</dependency>
+  </dependencies>
 </project>

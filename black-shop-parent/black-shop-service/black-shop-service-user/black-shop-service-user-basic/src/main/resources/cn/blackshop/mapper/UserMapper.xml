@@ -3,7 +3,7 @@
 <mapper namespace="cn.blackshop.mapper.UserMapper">
 
     <select id="getUser" parameterType="int" resultType="cn.blackshop.model.User">
-      SELECT * FROM `user` WHERE user_id = #{id}
+      SELECT * FROM bs_user WHERE user_id = #{id}
     </select>
 
 </mapper>

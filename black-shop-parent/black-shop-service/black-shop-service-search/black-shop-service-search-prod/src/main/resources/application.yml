@@ -1,0 +1,9 @@
+server:
+  port: 8083
+spring:
+  data:
+    elasticsearch:
+    ####集群名称
+     cluster-name: es-cluster
+    ####地址 
+     cluster-nodes: 192.168.0.180:9300
