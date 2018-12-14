@@ -31,7 +31,7 @@ import java.util.Date;
 */
 @Data
 @ToString
-@Table(name = "user")
+@Table(name = "bs_user")
 public class User implements Serializable {
 	
 	/** serialVersionUID*/  
