@@ -2,6 +2,9 @@
 server:
   port: 8081
 ###服务名称(服务注册到eureka名称)
+spring:
+    application:
+        name: bs-user
 ###服务注册到eureka地址
 eureka:
   client:
