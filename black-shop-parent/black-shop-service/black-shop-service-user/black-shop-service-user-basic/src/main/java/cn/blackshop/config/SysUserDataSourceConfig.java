@@ -4,15 +4,12 @@ import com.alibaba.druid.pool.DruidDataSource;
 import com.github.pagehelper.PageHelper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 import tk.mybatis.mapper.autoconfigure.ConfigurationCustomizer;
 
 import java.sql.SQLException;
 import java.util.Properties;
 
 @Configuration
-@EnableTransactionManagement
 public class SysUserDataSourceConfig extends DataSourceConfig {
 
     @Bean
@@ -54,11 +51,6 @@ public class SysUserDataSourceConfig extends DataSourceConfig {
         dataSource.setUseGlobalDataSourceStat(useGlobalDataSourceStat);
 
         return dataSource;
-    }
-
-    @Bean
-    public DataSourceTransactionManager dataSourceTransactionManager() throws SQLException {//开启事务
-        return new DataSourceTransactionManager(dataSource());
     }
 
     @Bean
