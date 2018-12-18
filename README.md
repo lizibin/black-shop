@@ -5,7 +5,7 @@ black-shop是基于Spring Cloud微服务化电商平台，每个模块单独封�
 
 项目采用springBoot-2.0.7和springcloud-Finchley.SR2进行开发。
 
-#### 欢迎参与该项目贡献
+#### 欢迎参与该项目贡献  QQ讨论群：204528889
 
 #### 软件架构
 
@@ -33,17 +33,6 @@ black-shop是基于Spring Cloud微服务化电商平台，每个模块单独封�
 
 
 ```
-#### 安装教程
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 使用说明
-
-1. xxxx
-2. xxxx
-3. xxxx
 
 #### 参与贡献
 
