@@ -1,28 +1,10 @@
 ###服务启动端口号
 server:
-  port: 9001
+  port: 8020
 ###服务名称(服务注册到eureka名称)  
 spring:
     application:
         name: bs-user-security
-    datasource:
-        url : jdbc:mysql://119.23.188.255:3306/sys_user?useSSL=false
-        username : root
-        password : Abc#1234
-        driver-class-name: com.mysql.jdbc.Driver
-        type: com.alibaba.druid.pool.DruidDataSource
-        connectionProperties: druid.stat.mergeSql=true
-
-mybatis:
-  ##开启驼峰映射
-  configuration:
-    map-underscore-to-camel-case: true
-#pagehelper分页配置
-pagehelper:
-    helperDialect: mysql
-    reasonable: true
-    supportMethodsArguments: true
-    params: count=countSql
 ###服务注册到eureka地址
 eureka:
   client:
