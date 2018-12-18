@@ -22,7 +22,6 @@ import cn.blackshop.mapper.UserMapper;
 import cn.blackshop.model.User;
 import cn.blackshop.service.UserService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
