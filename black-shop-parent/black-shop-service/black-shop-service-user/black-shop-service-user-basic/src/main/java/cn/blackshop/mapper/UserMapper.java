@@ -16,7 +16,7 @@ import tk.mybatis.mapper.common.BaseMapper;
 
 /**
 
-* <p>Title: 用户类</p>  
+* <p>Title: 用户mapper类</p>  
 
 * <p>Description: </p>  
 
