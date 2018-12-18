@@ -37,24 +37,34 @@ public class User implements Serializable {
 	/** serialVersionUID*/  
 	private static final long serialVersionUID = 1668182610874748008L;
 
+	/**用户唯一的id*/
 	private Integer userId;
 	
+	/**用户昵称*/
 	private String nickName;
 
+	/**用户手机号*/
 	private String mobile;
 
+	/**用户密码*/
 	private String password;
 
+	/**用户是否被禁用*/
     private Boolean enabled;
 
+    /**用户修改时间*/
     private Date modifyTime;
 
+    /**用户最后登录时间*/
     private Date userLastTime;
 
+    /**用户注册ip*/
     private String userRegIp;
 
+    /**用户最后登录ip*/
     private String userLastIp;
 
+    /**用户头像*/
     private String portraitPic;
 
     private String openId;

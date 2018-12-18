@@ -41,7 +41,7 @@ import lombok.extern.slf4j.Slf4j;
 */
 @Service(value = "userService")
 @Slf4j
-@Api(description = "会员服务接口")
+@Api(tags = "会员服务接口")
 public class UserServiceImpl extends BaseApiService implements UserService {
 
     @Autowired
