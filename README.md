@@ -13,24 +13,31 @@ black-shop是基于Spring Cloud微服务化电商平台，每个模块单独封�
 #### 软件架构
 
 ```
-|-black-shop
-|-  |-black-shop-parent
-|-  |-  |-black-shop-basic
-|-  |-  |-  |-black-shop-basic-springcloud-apollo
-|-  |-  |-  |-black-shop-basic-springcloud-eureka
-|-  |-  |-black-shop-common
-|-  |-  |-  |-black-shop-common-basic
-|-  |-  |-  |-black-shop-common-util
-|-  |-  |-black-shop-service
-|-  |-  |-  |-black-shop-service-user
-|-  |-  |-  |-  |-black-shop-service-user-basic
-|-  |-  |-  |-  |-black-shop-service-user-oauth
-|-  |-  |-  |-  |-black-shop-service-user-sso
-|-  |-  |-  |-  |-black-shop-service-user-security
-|-  |-  |-  |-black-shop-service-serach
-|-  |-  |-  |-  |-black-shop-service-serach-prod
-|-  |-  |-black-shop-service-api
-|-  |-  |-  |-black-shop-service-api-user
+|-black-shop   #黑店
+|-  |-black-shop-parent   #公共依赖  
+|-  |-  |-black-shop-basic   #基础组件
+|-  |-  |-  |-black-shop-basic-springcloud-apollo   #阿波罗
+|-  |-  |-  |-black-shop-basic-springcloud-eureka   #注册中心
+|-  |-  |-black-shop-common   #公共服务
+|-  |-  |-  |-black-shop-common-basic  #公共基础服务
+|-  |-  |-  |-black-shop-common-util   #公共工具服务   
+|-  |-  |-black-shop-service-api   #业务服务保罗接口
+|-  |-  |-  |-black-shop-service-api-user   #用户服务接口
+|-  |-  |-  |-  |-black-shop-service-api-user-security   #用户服务安全框架暴露接口
+|-  |-  |-  |-black-shop-service-api-serach   #搜索服务接口
+|-  |-  |-  |-  |-black-shop-service-api-serach-prod   #商品搜索暴露接口
+|-  |-  |-  |-black-shop-service-api-prod   #商品服务接口
+|-  |-  |-  |-  |-black-shop-service-api-prod-basic   #商品暴露接口
+|-  |-  |-black-shop-service   #服务实现
+|-  |-  |-  |-black-shop-service-user   #用户服务实现
+|-  |-  |-  |-  |-black-shop-service-user-basic   #用户基础服务实现
+|-  |-  |-  |-  |-black-shop-service-user-oauth   #用户认证授权服务实现
+|-  |-  |-  |-  |-black-shop-service-user-sso   #用户单点登录服务实现
+|-  |-  |-  |-  |-black-shop-service-user-security   #用户安全框架实现
+|-  |-  |-  |-black-shop-service-serach   #搜索服务
+|-  |-  |-  |-  |-black-shop-service-serach-prod   #商品搜索服务实现
+|-  |-  |-  |-black-shop-service-prod   #商品服务
+|-  |-  |-  |-  |-black-shop-service-prod-basic   #商品基础服务实现
 |-  |-black-shop-admin
 |-  |-black-shop-apollo
 
@@ -43,3 +50,4 @@ black-shop是基于Spring Cloud微服务化电商平台，每个模块单独封�
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
+
