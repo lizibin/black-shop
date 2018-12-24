@@ -19,5 +19,11 @@
 	  <artifactId>black-shop-service-api-user-security</artifactId>
 	  <version>0.0.1-SNAPSHOT</version>
 	</dependency>
+	
+	<dependency>
+	  <groupId>cn.black-shop</groupId>
+	  <artifactId>black-shop-service-user-basic</artifactId>
+	  <version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies>
 </project>

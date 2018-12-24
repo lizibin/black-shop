@@ -22,7 +22,6 @@ import cn.blackshop.mapper.UserMapper;
 import cn.blackshop.model.User;
 import cn.blackshop.service.UserService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -41,7 +40,7 @@ import lombok.extern.slf4j.Slf4j;
 */
 @Service(value = "userService")
 @Slf4j
-@Api(description = "会员服务接口")
+@Api(tags = "会员服务接口")
 public class UserServiceImpl extends BaseApiService implements UserService {
 
     @Autowired

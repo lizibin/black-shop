@@ -11,12 +11,9 @@
 */  
 package cn.blackshop.mapper;
 
-import cn.blackshop.model.User;
-import tk.mybatis.mapper.common.BaseMapper;
-
 /**
 
-* <p>Title: 用户mapper类</p>  
+* <p>Title: 用户权限mapper类</p>  
 
 * <p>Description: </p>  
 
@@ -25,8 +22,6 @@ import tk.mybatis.mapper.common.BaseMapper;
 * @date 2018年12月6日  
 
 */
-public interface UserMapper extends BaseMapper<User> {
-
-    User getUser(Integer id);
+public interface UserSecurityMapper {
 
 }
