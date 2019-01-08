@@ -49,4 +49,3 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
-

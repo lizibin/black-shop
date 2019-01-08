@@ -2,14 +2,17 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>cn.black-shop</groupId>
-    <artifactId>black-shop-parent</artifactId>
+    <artifactId>black-shop-basic</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>black-shop-basic</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>black-shop-basic-springcloud-apollo</module>
-  	<module>black-shop-basic-springcloud-eureka</module>
-  	<module>black-shop-redis</module>
-  </modules>
+  <artifactId>black-shop-eureka</artifactId>
+  
+  <dependencies>
+  	<!--SpringCloud eureka-server -->
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		 <version>2.0.2.RELEASE</version>
+	</dependency>
+  </dependencies>
 </project>

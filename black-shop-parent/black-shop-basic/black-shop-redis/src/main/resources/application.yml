@@ -1,0 +1,12 @@
+###服务端口号
+server:
+  port: 8002
+spring:
+  application:
+    name: black-shop-redis
+###eureka 基本信息配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8888/eureka/
+   

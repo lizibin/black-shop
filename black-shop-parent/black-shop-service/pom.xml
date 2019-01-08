@@ -66,5 +66,10 @@
 		    <artifactId>swagger-spring-boot-starter</artifactId>
 		    <version>1.8.0.RELEASE</version>
    		 </dependency>
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-basic-springcloud-apollo</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>

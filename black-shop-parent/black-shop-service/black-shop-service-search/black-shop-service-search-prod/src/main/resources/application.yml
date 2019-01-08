@@ -4,9 +4,9 @@ spring:
   data:
     elasticsearch:
       ####集群名称
-      cluster-name: es-cluster
+      cluster-name: elasticsearch
       ####地址 
-      cluster-nodes: 127.0.0.1:9301
+      cluster-nodes: 127.0.0.1:9300
   application:
     name: bs-prod-search
   datasource:
@@ -36,13 +36,12 @@ eureka:
 
 
 #ES配置
-elasticsearch:
-  ip: 127.0.0.1
-  port: 9300
-  pool: 5
-  retry-on-conflict: 5
-  number-of-shards: 3
-  number-of-replicas: 1
-  cluster:
-    name: elasticsearch
-    node: bs-node-1
+elasticsearch.ip: 127.0.0.1:9200
+#  port: 9300
+#  pool: 5
+#  retry-on-conflict: 5
+#  number-of-shards: 3
+#  number-of-replicas: 1
+#  cluster:
+#    name: elasticSearch
+#    node: bs-node-1
