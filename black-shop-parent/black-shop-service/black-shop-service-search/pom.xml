@@ -8,7 +8,7 @@
   <artifactId>black-shop-service-search</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>black-shop-service-search-prod</module>
+  	<module>black-shop-service-search-product</module>
   </modules>
 
   <!-- springBoot整合elasticsearch -->

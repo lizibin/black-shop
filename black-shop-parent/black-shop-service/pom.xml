@@ -10,7 +10,7 @@
 	<modules>
 		<module>black-shop-service-user</module>
 		<module>black-shop-service-search</module>
-		<module>black-shop-service-prod</module>
+		<module>black-shop-service-product</module>
 	</modules>
 	<dependencies>
 		<!--mybatis 组件 -->

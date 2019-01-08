@@ -13,7 +13,7 @@ package cn.blackshop.impl;
 
 import org.springframework.stereotype.Service;
 
-import cn.blackshop.service.ProdService;
+import cn.blackshop.service.product.basic.service.ProdService;
 
 /**  
 
