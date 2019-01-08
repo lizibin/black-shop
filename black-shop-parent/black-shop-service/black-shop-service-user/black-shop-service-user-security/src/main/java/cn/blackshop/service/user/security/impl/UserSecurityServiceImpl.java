@@ -13,7 +13,7 @@ package cn.blackshop.service.user.security.impl;
 
 import org.springframework.stereotype.Service;
 
-import cn.blackshop.service.UserSecurityService;
+import cn.blackshop.service.api.user.security.UserSecurityService;
 import lombok.extern.slf4j.Slf4j;
 
 /**

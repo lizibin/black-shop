@@ -9,11 +9,11 @@
 * black-shop(黑店) 版权所有,并保留所有权利。
 
 */  
-package cn.blackshop.service;
+package cn.blackshop.service.api.prod.basic;
 
 /**  
 
-* <p>Title: UserSecurityService</p>  
+* <p>Title: ProdService</p>  
 
 * <p>Description: </p>  
 
@@ -22,7 +22,6 @@ package cn.blackshop.service;
 * @date 2018年12月11日  
 
 */
-public interface UserSecurityService {
-
-	abstract String UserAuthentication(String userName);
+public interface  ProdService {
+	abstract String getProd();
 }

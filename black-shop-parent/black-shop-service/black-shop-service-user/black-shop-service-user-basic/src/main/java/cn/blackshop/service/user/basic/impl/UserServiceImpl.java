@@ -18,7 +18,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
 import cn.blackshop.common.basic.basic.BaseApiService;
-import cn.blackshop.service.UserService;
+import cn.blackshop.service.api.user.basic.UserService;
 import cn.blackshop.service.user.basic.mapper.UserMapper;
 import cn.blackshop.service.user.basic.model.User;
 import io.swagger.annotations.Api;
