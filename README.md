@@ -6,21 +6,20 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 项目采用springBoot-2.0.4和spring-cloud-alibaba-{latest.version}进行开发。
 
 #### 欢迎参与该项目贡献和讨论  QQ群：204528889
+![qun.png](https://i.loli.net/2019/01/08/5c3485faed740.png)
+
 ## 组件
-
-
 
 **[Nacos(~~Eureka~~)](https://github.com/alibaba/Nacos)**：一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
 
-**[Sentinel(~~hystrix~~)](https://github.com/alibaba/Sentinel)**：把流量作为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务的稳定性。
+**[Sentinel(~~Hystrix~~)](https://github.com/alibaba/Sentinel)**：把流量作为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务的稳定性。
 
 **[RocketMQ](https://rocketmq.apache.org/)**：一款开源的分布式消息系统，基于高可用分布式集群技术，提供低延时的、高可靠的消息发布与订阅服务。
 
-**[Apollo(~~spring Config~~)](https://github.com/ctripcorp/apollo)**：能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。
-
+**[Apollo(~~Spring Config~~)](https://github.com/ctripcorp/apollo)**：能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。
 
 #### 项目架构图
-正在画………………
+正在抓紧时间画………………客观稍安勿躁。
 
 #### 软件架构
 
