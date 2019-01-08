@@ -10,7 +10,7 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 
 
 
-**[Nacos](https://github.com/alibaba/Nacos)**：***~~Eureka~~***一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
+**[Nacos~~Eureka~~](https://github.com/alibaba/Nacos)**：一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
 
 **[Sentinel](https://github.com/alibaba/Sentinel)**：把流量作为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务的稳定性。
 
