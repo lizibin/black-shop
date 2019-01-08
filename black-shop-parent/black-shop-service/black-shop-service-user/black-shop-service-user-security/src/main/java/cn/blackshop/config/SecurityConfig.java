@@ -6,7 +6,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.stereotype.Component;
 
-import cn.blackshop.util.MD5Util;
+import cn.blackshop.common.util.MD5Util;
 
 /**
 

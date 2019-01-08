@@ -1,4 +1,4 @@
-package cn.blackshop.util;
+package cn.blackshop.common.util;
 
 import java.security.MessageDigest;
 
