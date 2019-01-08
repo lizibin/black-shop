@@ -1,4 +1,4 @@
-package cn.blackshop.serializer;
+package cn.blackshop.basic.redis.serializer;
 
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.SerializationException;

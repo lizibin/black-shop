@@ -1,4 +1,4 @@
-package cn.blackshop.serializer;
+package cn.blackshop.basic.redis.serializer;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;

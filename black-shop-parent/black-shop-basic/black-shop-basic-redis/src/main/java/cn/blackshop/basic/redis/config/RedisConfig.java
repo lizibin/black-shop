@@ -1,7 +1,8 @@
-package cn.blackshop.config;
+package cn.blackshop.basic.redis.config;
 
-import cn.blackshop.serializer.KryoSerializer;
-import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
@@ -12,10 +13,11 @@ import org.springframework.data.redis.connection.RedisNode;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
-import redis.clients.jedis.JedisPoolConfig;
 
-import java.util.HashSet;
-import java.util.Set;
+import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
+
+import cn.blackshop.basic.redis.serializer.KryoSerializer;
+import redis.clients.jedis.JedisPoolConfig;
 
 @Configuration
 @EnableCaching
