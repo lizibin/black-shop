@@ -5,7 +5,7 @@
     <artifactId>black-shop-basic</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>black-shop-apollo</artifactId>
+  <artifactId>black-shop-basic-apollo</artifactId>
   
     <dependencies>
     <dependency>

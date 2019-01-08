@@ -5,7 +5,7 @@
         <artifactId>black-shop-basic</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>black-shop-redis</artifactId>
+    <artifactId>black-shop-basic-redis</artifactId>
 
     <dependencies>
         <dependency>
