@@ -1,13 +1,16 @@
-package cn.blackshop.config;
-
-import com.alibaba.druid.pool.DruidDataSource;
-import com.github.pagehelper.PageHelper;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import tk.mybatis.mapper.autoconfigure.ConfigurationCustomizer;
+package cn.blackshop.service.user.basic.config;
 
 import java.sql.SQLException;
 import java.util.Properties;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.alibaba.druid.pool.DruidDataSource;
+import com.github.pagehelper.PageHelper;
+
+import cn.blackshop.basic.apollo.config.DataSourceConfig;
+import tk.mybatis.mapper.autoconfigure.ConfigurationCustomizer;
 
 @Configuration
 public class SysUserDataSourceConfig extends DataSourceConfig {
