@@ -8,7 +8,9 @@
   <artifactId>black-shop-basic</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>black-shop-basic-springcloud-apollo</module>
-  	<module>black-shop-basic-springcloud-eureka</module>
+  	<module>black-shop-basic-apollo</module>
+  	<module>black-shop-basic-eureka</module>
+  	<module>black-shop-basic-redis</module>
+  	<module>black-shop-basic-nacos</module>
   </modules>
 </project>

@@ -8,31 +8,37 @@
   <artifactId>black-shop-service-search</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>black-shop-service-search-prod</module>
+  	<module>black-shop-service-search-product</module>
   </modules>
-  
+
   <!-- springBoot整合elasticsearch -->
   <dependencies>
-  	<dependency>
-	  <groupId>org.springframework.boot</groupId>
-	  <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
-	</dependency>
-	
-	<dependency>
-	  <groupId>com.google.collections</groupId>
-	  <artifactId>google-collections</artifactId>
-	  <version>1.0</version>
-	</dependency>
+
       <dependency>
           <groupId>org.elasticsearch</groupId>
           <artifactId>elasticsearch</artifactId>
-          <version>6.4.0</version>
+          <version>6.5.4</version>
       </dependency>
-
       <dependency>
           <groupId>org.elasticsearch.client</groupId>
-          <artifactId>transport</artifactId>
-          <version>6.4.0</version>
+          <artifactId>elasticsearch-rest-client</artifactId>
+          <version>6.5.4</version>
+      </dependency>
+      <dependency>
+          <groupId>org.elasticsearch.client</groupId>
+          <artifactId>elasticsearch-rest-high-level-client</artifactId>
+          <version>6.5.4</version>
+      </dependency>
+      <!--<dependency>-->
+          <!--<groupId>org.json</groupId>-->
+          <!--<artifactId>json</artifactId>-->
+          <!--<version>20160810</version>-->
+      <!--</dependency>-->
+      <!-- 工具类 -->
+      <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-lang3</artifactId>
+          <version>3.8.1</version>
       </dependency>
   </dependencies>
 </project>
