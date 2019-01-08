@@ -8,8 +8,8 @@
   <artifactId>black-shop-basic</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>black-shop-basic-springcloud-apollo</module>
-  	<module>black-shop-basic-springcloud-eureka</module>
+  	<module>black-shop-apollo</module>
+  	<module>black-shop-eureka</module>
   	<module>black-shop-redis</module>
   </modules>
 </project>
