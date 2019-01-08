@@ -9,11 +9,11 @@
 * black-shop(黑店) 版权所有,并保留所有权利。
 
 */  
-package cn.blackshop.impl;
+package cn.blackshop.service.product.basic.impl;
 
 import org.springframework.stereotype.Service;
 
-import cn.blackshop.service.product.basic.service.ProdService;
+import cn.blackshop.service.api.prod.basic.ProdService;
 
 /**  
 
