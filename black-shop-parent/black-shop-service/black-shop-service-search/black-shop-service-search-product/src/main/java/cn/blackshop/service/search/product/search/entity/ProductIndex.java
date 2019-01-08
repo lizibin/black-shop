@@ -1,4 +1,4 @@
-package cn.blackshop.search.entity;
+package cn.blackshop.service.search.product.search.entity;
 
 import lombok.Data;
 
