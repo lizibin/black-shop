@@ -10,6 +10,6 @@
   <modules>
   	<module>black-shop-service-api-user</module>
   	<module>black-shop-service-api-search</module>
-  	<module>black-shop-service-api-prod</module>
+  	<module>black-shop-service-api-product</module>
   </modules>
 </project>
