@@ -14,8 +14,8 @@
         </dependency>
         <dependency>
             <groupId>cn.black-shop</groupId>
-            <artifactId>black-shop-basic-springcloud-apollo</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <artifactId>black-shop-basic-apollo</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>redis.clients</groupId>

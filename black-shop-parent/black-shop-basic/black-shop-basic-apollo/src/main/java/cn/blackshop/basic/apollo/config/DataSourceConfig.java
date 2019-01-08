@@ -1,4 +1,4 @@
-package cn.blackshop.config;
+package cn.blackshop.basic.apollo.config;
 
 
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;

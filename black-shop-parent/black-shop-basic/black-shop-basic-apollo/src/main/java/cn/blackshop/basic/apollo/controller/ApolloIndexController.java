@@ -9,7 +9,7 @@
 * black-shop(黑店) 版权所有,并保留所有权利。
 
 */  
-package cn.blackshop.controller;
+package cn.blackshop.basic.apollo.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
