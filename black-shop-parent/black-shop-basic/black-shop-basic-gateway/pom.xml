@@ -5,5 +5,5 @@
     <artifactId>black-shop-basic</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>black-shop-gateway</artifactId>
+  <artifactId>black-shop-basic-gateway</artifactId>
 </project>

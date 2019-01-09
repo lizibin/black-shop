@@ -12,8 +12,7 @@
   	<module>black-shop-basic-eureka</module>
   	<module>black-shop-basic-redis</module>
   	<module>black-shop-basic-nacos</module>
-  	<module>black-shop-basic-getway</module>
-  	<module>black-shop-gateway</module>
+  	<module>black-shop-basic-gateway</module>
   	<module>black-shop-basic-elasticsearch</module>
   	<module>black-shop-basic-zipkin</module>
   	<module>black-shop-basic-scheduler</module>
