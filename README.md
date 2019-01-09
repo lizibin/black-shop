@@ -1,4 +1,4 @@
-<img src="https://i.loli.net/2019/01/09/5c35d32d1d16f.png" alt="black-shop-logo" width="60%">
+<img src="https://i.loli.net/2019/01/09/5c35d32d1d16f.png" alt="black-shop-logo" width="25%">
 
 # black-shop（黑店） for spring cloud Alibaba
 
