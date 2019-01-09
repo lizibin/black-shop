@@ -28,7 +28,12 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 |-  |-black-shop-parent   #公共依赖  
 |-  |-  |-black-shop-basic   #基础组件
 |-  |-  |-  |-black-shop-basic-apollo   #阿波罗
+|-  |-  |-  |-black-shop-basic-elasticsearch   #elasticsearch搜索服务，对es服务器封装
 |-  |-  |-  |-black-shop-basic-redis   #redis缓存基础服务
+|-  |-  |-  |-black-shop-basic-scheduler   #任务调度
+|-  |-  |-  |-black-shop-basic-zipkin   #服务链路追踪
+|-  |-  |-  |-black-shop-basic-gateway   #服务网关
+|-  |-  |-  |-black-shop-basic-nacos   #nacos的demo
 |-  |-  |-black-shop-common   #公共服务
 |-  |-  |-  |-black-shop-common-basic  #公共基础服务
 |-  |-  |-  |-black-shop-common-util   #公共工具服务   
@@ -36,9 +41,11 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 |-  |-  |-  |-black-shop-service-api-user   #用户服务接口
 |-  |-  |-  |-  |-black-shop-service-api-user-security   #用户服务安全框架暴露接口
 |-  |-  |-  |-black-shop-service-api-serach   #搜索服务接口
-|-  |-  |-  |-  |-black-shop-service-api-serach-product   #商品搜索暴露接口
+|-  |-  |-  |-  |-black-shop-service-api-serach-product   #商品搜索服务暴露接口
 |-  |-  |-  |-black-shop-service-api-product   #商品服务接口
-|-  |-  |-  |-  |-black-shop-service-api-product-basic   #商品暴露接口
+|-  |-  |-  |-  |-black-shop-service-api-product-basic   #商品服务暴露接口
+|-  |-  |-  |-black-shop-service-api-order   #订单服务接口
+|-  |-  |-  |-  |-black-shop-service-api-product-basic   #订单服务暴露接口
 |-  |-  |-black-shop-service   #服务实现
 |-  |-  |-  |-black-shop-service-user   #用户服务实现
 |-  |-  |-  |-  |-black-shop-service-user-basic   #用户基础服务实现
@@ -49,7 +56,8 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 |-  |-  |-  |-  |-black-shop-service-serach-product   #商品搜索服务实现
 |-  |-  |-  |-black-shop-service-product   #商品服务
 |-  |-  |-  |-  |-black-shop-service-product-basic   #商品基础服务实现
-|-  |-black-shop-admin
+|-  |-  |-  |-black-shop-service-order   #订单服务
+|-  |-  |-  |-  |-black-shop-service-order-basic   #订单基础服务实现
 |-  |-black-shop-apollo
 
 
