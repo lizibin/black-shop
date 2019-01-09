@@ -11,5 +11,6 @@
   	<module>black-shop-service-api-user</module>
   	<module>black-shop-service-api-search</module>
   	<module>black-shop-service-api-product</module>
+  	<module>black-shop-service-api-order</module>
   </modules>
 </project>
