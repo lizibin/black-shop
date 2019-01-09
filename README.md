@@ -5,7 +5,7 @@
     <p align="center">
         black-shop, microservice B2C e-commerce platform.
         <br>
-        <a href="http://www.xuxueli.com/xxl-job/"><strong>-- Home Page --</strong></a>
+        <a href="https://github.com/lizibin/black-shop"><strong>-- Home Page --</strong></a>
         <br>
         <br>
        <a href="https://travis-ci.org/lizibin/black-shop">
