@@ -9,22 +9,23 @@
 	<packaging>pom</packaging>
 	
 	<properties>
-		 <mybatis.springboot.version>1.3.2</mybatis.springboot.version>
-		 <mapper.springboot.version>2.0.4</mapper.springboot.version>
-		 <pagehelper.springboot.version>1.2.10</pagehelper.springboot.version>
-		 <druid.springboot.version>1.1.10</druid.springboot.version>
+		 <springboot.mybatis.version>1.3.2</springboot.mybatis.version>
+		 <springboot.mapper.version>2.0.4</springboot.mapper.version>
+		 <springboot.pagehelper.version>1.2.10</springboot.pagehelper.version>
+		 <springboot.druid.version>1.1.10</springboot.druid.version>
 	</properties>
 	<modules>
 		<module>black-shop-service-user</module>
 		<module>black-shop-service-search</module>
 		<module>black-shop-service-product</module>
+		<module>black-shop-service-order</module>
 	</modules>
 	<dependencies>
 		<!--mybatis 组件 -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>${mybatis.springboot.version}</version>
+			<version>${springboot.mybatis.version}</version>
 		</dependency>
 		<!--mysql连接 组件 -->
 		<dependency>
@@ -35,13 +36,13 @@
 		<dependency>
 			<groupId>tk.mybatis</groupId>
 			<artifactId>mapper-spring-boot-starter</artifactId>
-			<version>${mapper.springboot.version}</version>
+			<version>${springboot.mapper.version}</version>
 		</dependency>
 		<!-- 分页插件 -->
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
-			<version>${pagehelper.springboot.version}</version>
+			<version>${springboot.pagehelper.version}</version>
 		</dependency>
 		<!--service 整合feign客户端调用 -->
 		<dependency>
@@ -53,7 +54,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
-			<version>${druid.springboot.version}</version>
+			<version>${springboot.druid.version}</version>
 		</dependency>
 		<!--整合通用工具-->
 		<dependency>

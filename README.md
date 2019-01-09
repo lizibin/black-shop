@@ -8,15 +8,15 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 #### 欢迎参与该项目贡献和讨论  QQ群：204528889
 ![qun.png](https://i.loli.net/2019/01/08/5c3485faed740.png)
 
-## 组件
+## 基础组件~
 
-**[Nacos(~~Eureka~~)](https://github.com/alibaba/Nacos)**：一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
+**[Nacos(~~Eureka~~)](https://github.com/alibaba/Nacos)**：替换Eureka，nacos是一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
 
-**[Sentinel(~~Hystrix~~)](https://github.com/alibaba/Sentinel)**：把流量作为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务的稳定性。
+**[Sentinel(~~Hystrix~~)](https://github.com/alibaba/Sentinel)**：替换Hystrix，把流量作为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务的稳定性。
 
 **[RocketMQ](https://rocketmq.apache.org/)**：一款开源的分布式消息系统，基于高可用分布式集群技术，提供低延时的、高可靠的消息发布与订阅服务。
 
-**[Apollo(~~Spring Config~~)](https://github.com/ctripcorp/apollo)**：能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。
+**[Apollo(~~SpringCloud Config~~)](https://github.com/ctripcorp/apollo)**：替换SpringCloud Config，apollo能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。
 
 #### 项目架构图
 正在抓紧时间画………………客观稍安勿躁。
@@ -28,7 +28,12 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 |-  |-black-shop-parent   #公共依赖  
 |-  |-  |-black-shop-basic   #基础组件
 |-  |-  |-  |-black-shop-basic-apollo   #阿波罗
+|-  |-  |-  |-black-shop-basic-elasticsearch   #elasticsearch搜索服务，对es服务器封装
 |-  |-  |-  |-black-shop-basic-redis   #redis缓存基础服务
+|-  |-  |-  |-black-shop-basic-scheduler   #任务调度
+|-  |-  |-  |-black-shop-basic-zipkin   #服务链路追踪
+|-  |-  |-  |-black-shop-basic-gateway   #服务网关
+|-  |-  |-  |-black-shop-basic-nacos   #nacos的demo
 |-  |-  |-black-shop-common   #公共服务
 |-  |-  |-  |-black-shop-common-basic  #公共基础服务
 |-  |-  |-  |-black-shop-common-util   #公共工具服务   
@@ -36,9 +41,11 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 |-  |-  |-  |-black-shop-service-api-user   #用户服务接口
 |-  |-  |-  |-  |-black-shop-service-api-user-security   #用户服务安全框架暴露接口
 |-  |-  |-  |-black-shop-service-api-serach   #搜索服务接口
-|-  |-  |-  |-  |-black-shop-service-api-serach-product   #商品搜索暴露接口
+|-  |-  |-  |-  |-black-shop-service-api-serach-product   #商品搜索服务暴露接口
 |-  |-  |-  |-black-shop-service-api-product   #商品服务接口
-|-  |-  |-  |-  |-black-shop-service-api-product-basic   #商品暴露接口
+|-  |-  |-  |-  |-black-shop-service-api-product-basic   #商品服务暴露接口
+|-  |-  |-  |-black-shop-service-api-order   #订单服务接口
+|-  |-  |-  |-  |-black-shop-service-api-product-basic   #订单服务暴露接口
 |-  |-  |-black-shop-service   #服务实现
 |-  |-  |-  |-black-shop-service-user   #用户服务实现
 |-  |-  |-  |-  |-black-shop-service-user-basic   #用户基础服务实现
@@ -49,7 +56,8 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 |-  |-  |-  |-  |-black-shop-service-serach-product   #商品搜索服务实现
 |-  |-  |-  |-black-shop-service-product   #商品服务
 |-  |-  |-  |-  |-black-shop-service-product-basic   #商品基础服务实现
-|-  |-black-shop-admin
+|-  |-  |-  |-black-shop-service-order   #订单服务
+|-  |-  |-  |-  |-black-shop-service-order-basic   #订单基础服务实现
 |-  |-black-shop-apollo
 
 

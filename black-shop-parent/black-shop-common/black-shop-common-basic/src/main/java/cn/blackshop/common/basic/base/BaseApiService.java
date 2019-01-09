@@ -1,4 +1,4 @@
-package cn.blackshop.common.basic.basic;
+package cn.blackshop.common.basic.base;
 
 import org.springframework.stereotype.Component;
 
