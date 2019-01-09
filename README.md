@@ -1,5 +1,21 @@
-<img src="https://i.loli.net/2019/01/09/5c35d32d1d16f.png" alt="black-shop-logo" width="25%">
 
+<p align="center">
+     <img src="https://i.loli.net/2019/01/09/5c35d32d1d16f.png" alt="black-shop-logo" width="25%">
+    <h3 align="center">Black-Shop</h3>
+    <p align="center">
+        black-shop, microservice B2C e-commerce platform.
+        <br>
+        <a href="http://www.xuxueli.com/xxl-job/"><strong>-- Home Page --</strong></a>
+        <br>
+        <br>
+       <a href="https://travis-ci.org/lizibin/black-shop">
+            <img src="https://travis-ci.org/lizibin/black-shop.svg?branch=master" >
+        </a>
+         <a href="https://www.apache.org/licenses/LICENSE-2.0.html">
+             <img src="https://img.shields.io/badge/license-apache2.0-000000.svg" >       
+         </a>
+    </p>    
+</p>
 # black-shop（黑店） for spring cloud Alibaba
 
 #### 项目介绍
