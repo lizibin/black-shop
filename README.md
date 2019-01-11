@@ -1,4 +1,25 @@
-# black-shop（黑店） for spring cloud Alibaba
+
+<p align="center">
+     <img src="https://i.loli.net/2019/01/09/5c35d32d1d16f.png" alt="black-shop-logo" width="25%">
+    <h3 align="center">Black-Shop</h3>
+    <p align="center">
+        black-shop, microservice B2C e-commerce platform.
+        <br>
+        <a href="https://github.com/lizibin/black-shop"><strong>-- Home Page --</strong></a>
+        <br>
+        <br>
+       <a href="https://travis-ci.org/lizibin/black-shop">
+            <img src="https://travis-ci.org/lizibin/black-shop.svg?branch=master" >
+        </a>
+         <a href="https://www.apache.org/licenses/LICENSE-2.0.html">
+             <img src="https://img.shields.io/badge/license-apache2.0-000000.svg" >       
+         </a>
+    </p>    
+</p>
+
+
+
+## black-shop（黑店） for spring cloud Alibaba
 
 #### 项目介绍
 black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块单独封装，各个模块之间通过Fegin调用，多业务系统并行开发，可以用来学习了解Spring Cloud各个组件的功能，了解电商的业务。 代码简洁，架构清晰，适合学习和直接项目中使用；核心技术采用Nacos、Sentinel、RocketMQ、Fegin、Ribbon、getway、Security、Mybatis、Druid、Apollo、Redis、EFK、等主要框架和中间件， 后台管理采用开源框架vue-admin进行开发，前端采用Vue全家桶组件，欢迎Star、Watch、Fork。
