@@ -16,11 +16,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
+import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
+
+import cn.blackshop.basic.apollo.constans.ApolloNamespaceConstant;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**  
 
-* <p>Title: AppUser</p>  
+* <p>Title: UserBasicApp用户基础服务启动类</p>  
 
 * <p>Description: </p>  
 
@@ -30,12 +33,13 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 */
 @EnableFeignClients
-@MapperScan("cn.blackshop.mapper")
-@SpringBootApplication
+@MapperScan("cn.blackshop.service.user.basic.mapper")
 @EnableDiscoveryClient
-public class AppUser {
+@EnableApolloConfig({ApolloNamespaceConstant.PUBLIC_NACOS_CONFIG,ApolloNamespaceConstant.PUBLIC_RIBBON_CONFIG}) 
+@SpringBootApplication
+public class UserBasicApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AppUser.class, args);
+		SpringApplication.run(UserBasicApp.class, args);
 	}
 }

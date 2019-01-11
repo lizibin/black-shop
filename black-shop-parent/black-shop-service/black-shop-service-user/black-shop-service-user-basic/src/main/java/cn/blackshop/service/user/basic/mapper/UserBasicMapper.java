@@ -11,7 +11,9 @@
 */  
 package cn.blackshop.service.user.basic.mapper;
 
-import cn.blackshop.service.user.basic.model.User;
+import java.util.List;
+
+import cn.blackshop.model.user.entity.User;
 import tk.mybatis.mapper.common.BaseMapper;
 
 /**
@@ -25,8 +27,10 @@ import tk.mybatis.mapper.common.BaseMapper;
 * @date 2018年12月6日  
 
 */
-public interface UserMapper extends BaseMapper<User> {
+public interface UserBasicMapper extends BaseMapper<User> {
 
-    User getUser(Integer id);
+    User getUserByNickName(String nickName);
+    
+    List<User> queryUserList();
 
 }

@@ -17,4 +17,12 @@
   	<module>black-shop-basic-zipkin</module>
   	<module>black-shop-basic-scheduler</module>
   </modules>
+  <dependencies>
+  	<!--整合通用基础类-->
+	<dependency>
+ 	    <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-common-basic</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+  </dependencies>
 </project>

@@ -9,6 +9,12 @@
 */  
 package cn.blackshop.service.api.user.basic;
 
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestParam;
+
+import cn.blackshop.model.user.entity.User;
+
 /**  
 
 * <p>Title: 用户服务</p>  
@@ -20,9 +26,9 @@ package cn.blackshop.service.api.user.basic;
 * @date 2018年12月3日  
 
 */
-public interface UserService {
+public interface UserBasicService {
 
-	abstract String getUser();
+	 User getUserByNickName(@RequestParam String nickName);
 
-	String queryUser();
+	 List<User> queryUserList();
 }
