@@ -9,7 +9,7 @@
 * black-shop(黑店) 版权所有,并保留所有权利。
 
 */  
-package cn.blackshop.common.basic.constants;
+package cn.blackshop.basic.apollo.constans;
 
 /**  
 

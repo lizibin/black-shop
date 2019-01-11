@@ -32,8 +32,8 @@ import cn.blackshop.service.user.basic.mapper.UserBasicMapper;
 * @date 2019年1月11日  
 
 */
-@Service(value="userBasicService")
 @RestController
+@Service(value="userBasicService")
 public class UserBasicServiceImpl implements UserBasicService{
 
 	@Autowired

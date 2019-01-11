@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 
-import cn.blackshop.common.basic.constants.ApolloNamespaceConstant;
+import cn.blackshop.basic.apollo.constans.ApolloNamespaceConstant;
 import lombok.Data;
 
 /**  

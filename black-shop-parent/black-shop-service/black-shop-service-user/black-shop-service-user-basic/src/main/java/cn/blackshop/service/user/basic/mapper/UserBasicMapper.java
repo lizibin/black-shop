@@ -31,7 +31,6 @@ public interface UserBasicMapper extends BaseMapper<User> {
 
     User getUserByNickName(String nickName);
     
-    
     List<User> queryUserList();
 
 }

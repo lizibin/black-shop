@@ -28,7 +28,7 @@ import lombok.extern.slf4j.Slf4j;
 
 * <p>Title: DataSourceManager</p>  
 
-* <p>Description: </p>  
+* <p>Description:数据源管理 </p>  
 
 * @author zibin  
 

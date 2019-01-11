@@ -18,7 +18,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 
-import cn.blackshop.common.basic.constants.ApolloNamespaceConstant;
+import cn.blackshop.basic.apollo.constans.ApolloNamespaceConstant;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**  
@@ -33,10 +33,10 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 */
 @EnableFeignClients
-@MapperScan("cn.blackshop.mapper")
-@SpringBootApplication
+@MapperScan("cn.blackshop.service.user.basic.mapper")
 @EnableDiscoveryClient
 @EnableApolloConfig({ApolloNamespaceConstant.PUBLIC_NACOS_CONFIG,ApolloNamespaceConstant.PUBLIC_RIBBON_CONFIG}) 
+@SpringBootApplication
 public class UserBasicApp {
 
 	public static void main(String[] args) {
