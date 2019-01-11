@@ -6,4 +6,13 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>black-shop-service-api-user-basic</artifactId>
+  
+  
+  <dependencies>
+        <dependency>
+            <groupId>cn.black-shop</groupId>
+            <artifactId>black-shop-model-user</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>
