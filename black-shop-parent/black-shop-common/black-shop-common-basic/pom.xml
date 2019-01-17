@@ -6,4 +6,5 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>black-shop-common-basic</artifactId>
+  
 </project>

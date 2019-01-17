@@ -19,6 +19,8 @@
 		<module>black-shop-service-search</module>
 		<module>black-shop-service-product</module>
 		<module>black-shop-service-order</module>
+		<module>black-shop-service-payment</module>
+		<module>black-shop-service-thirdparty</module>
 	</modules>
 	<dependencies>
 		<!--mysql连接 组件 -->
