@@ -58,6 +58,7 @@ public class User implements Serializable {
     /**用户头像*/
     private String portraitPic;
 
+    /**微信的openId*/
     private String openId;
 
 }
