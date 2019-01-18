@@ -47,7 +47,7 @@ public class MyUserDetailsService implements UserDetailsService{
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encodePassword= passwordEncoder.encode("123456");
         userInfo.setPassword(encodePassword);
-        Set authoritiesSet = new HashSet();
+        Set<GrantedAuthority> authoritiesSet = new HashSet<GrantedAuthority>();
         GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_ADMIN"); // 模拟从数据库中获取用户角色
 
         authoritiesSet.add(authority);
