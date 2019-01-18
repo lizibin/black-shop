@@ -10,6 +10,10 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.stereotype.Component;
 
+import com.alibaba.fastjson.JSON;
+
+import cn.blackshop.service.user.security.dto.SecurityResponseBase;
+
 /**
 
 * <p>Title: spring security认证失败handler</p>  
@@ -23,10 +27,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyAuthenticationFailureHandler implements AuthenticationFailureHandler {
 
-	public void onAuthenticationFailure(HttpServletRequest req, HttpServletResponse res, AuthenticationException auth)
-			throws IOException, ServletException {
-		
-		System.out.println("登陆失败!");
-		res.sendRedirect("");
-	}
+	  @Override
+	    public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
+		  	SecurityResponseBase responseBody = new SecurityResponseBase();
+
+	        responseBody.setRtnCode(400);
+	        responseBody.setMsg("Login Failure!");
+
+	        httpServletResponse.getWriter().write(JSON.toJSONString(responseBody));
+	    }
 }

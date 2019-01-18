@@ -2,8 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>cn.black-shop</groupId>
-    <artifactId>black-shop-service-user</artifactId>
+    <artifactId>black-shop-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>black-shop-service-user-sso</artifactId>
+  <artifactId>black-shop-service-payment</artifactId>
+  <packaging>pom</packaging>
 </project>

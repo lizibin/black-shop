@@ -51,6 +51,16 @@
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 			<version>${openfegin.version}</version>
 		</dependency>
+		<!--service 整合sentinel监控 -->
+		<dependency>
+		    <groupId>com.alibaba.csp</groupId>
+		    <artifactId>sentinel-core</artifactId>
+		</dependency>
+		<!--service 整合sentinel 通信 -->
+		<dependency>
+		    <groupId>com.alibaba.csp</groupId>
+		    <artifactId>sentinel-transport-simple-http</artifactId>
+		</dependency>
 		<!--数据库连接池-->
 		<dependency>
 			<groupId>com.alibaba</groupId>

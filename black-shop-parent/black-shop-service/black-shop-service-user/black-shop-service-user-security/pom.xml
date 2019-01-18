@@ -7,23 +7,29 @@
   </parent>
   <artifactId>black-shop-service-user-security</artifactId>
   
-  <!-->spring-boot 整合security -->
   <dependencies>
+  	<!-->spring-boot 整合security -->
     <dependency>
 	  <groupId>org.springframework.boot</groupId>
 	  <artifactId>spring-boot-starter-security</artifactId>
+	</dependency>
+	<!-->spring-boot 整合oauth2 -->
+	<dependency>
+	    <groupId>org.springframework.security.oauth</groupId>
+	    <artifactId>spring-security-oauth2</artifactId>
+	    <version>2.0.16.RELEASE</version>
 	</dependency>
 	
 	<dependency>
 	  <groupId>cn.black-shop</groupId>
 	  <artifactId>black-shop-service-api-user-security</artifactId>
-	  <version>0.0.1-SNAPSHOT</version>
+	  <version>${project.version}</version>
 	</dependency>
 	
 	<dependency>
 	  <groupId>cn.black-shop</groupId>
 	  <artifactId>black-shop-service-user-basic</artifactId>
-	  <version>0.0.1-SNAPSHOT</version>
+	 <version>${project.version}</version>
 	</dependency>
   </dependencies>
 </project>
