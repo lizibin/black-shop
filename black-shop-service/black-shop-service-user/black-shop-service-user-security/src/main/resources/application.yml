@@ -1,0 +1,23 @@
+###服务启动端口号
+server:
+  port: 8020
+###服务名称(服务注册到eureka名称)  
+spring:
+  application:
+        name: bs-user-security
+###服务注册到nacos地址
+  cloud: 
+    nacos: 
+      discovery: 
+        server-addr: 192.168.0.238:8848
+###因为该应用为注册中心，不会注册自己
+    register-with-eureka: true
+###是否需要从eureka上获取注册信息
+    fetch-registry: true
+    # 心跳检测检测与续约时间
+    # 测试时将值设置设置小些，保证服务关闭后注册中心能及时踢出服务
+  #instance:
+    ###Eureka客户端向服务端发送心跳的时间间隔，单位为秒（客户端告诉服务端自己会按照该规则）  
+    #lease-renewal-interval-in-seconds: 1
+    ####Eureka服务端在收到最后一次心跳之后等待的时间上限，单位为秒，超过则剔除（客户端告诉服务端按照此规则等待自己）
+    #lease-expiration-duration-in-seconds: 2    

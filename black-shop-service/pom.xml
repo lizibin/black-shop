@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cn.black-shop</groupId>
+		<artifactId>black-shop</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>black-shop-service</artifactId>
+	<packaging>pom</packaging>
+	
+	<properties>
+		 <springboot.mapper.version>2.0.4</springboot.mapper.version>
+		 <springboot.pagehelper.version>1.2.10</springboot.pagehelper.version>
+		 <springboot.druid.version>1.1.10</springboot.druid.version>
+	</properties>
+	
+	<modules>
+		<module>black-shop-service-user</module>
+		<module>black-shop-service-search</module>
+		<module>black-shop-service-product</module>
+		<module>black-shop-service-order</module>
+		<module>black-shop-service-payment</module>
+		<module>black-shop-service-thirdparty</module>
+		<module>black-shop-service-shoppingcart</module>
+	</modules>
+	<dependencies>
+		<!--mysql连接 组件 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${springboot.mybatis.version}</version>
+		</dependency>
+		<!-- 通用Mapper插件 文档地址：https://gitee.com/free/Mapper/wikis/Home -->
+		<dependency>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper-spring-boot-starter</artifactId>
+			<version>${springboot.mapper.version}</version>
+		</dependency>
+		<!-- 分页插件 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>${springboot.pagehelper.version}</version>
+		</dependency>
+		<!--service 整合feign客户端调用 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>${openfegin.version}</version>
+		</dependency>
+		<!--service 整合sentinel监控 -->
+		<dependency>
+		    <groupId>com.alibaba.csp</groupId>
+		    <artifactId>sentinel-core</artifactId>
+		</dependency>
+		<!--service 整合sentinel 通信 -->
+		<dependency>
+		    <groupId>com.alibaba.csp</groupId>
+		    <artifactId>sentinel-transport-simple-http</artifactId>
+		</dependency>
+		<!--数据库连接池-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>${springboot.druid.version}</version>
+		</dependency>
+		<!--整合通用工具-->
+		<dependency>
+	 	    <groupId>cn.black-shop</groupId>
+	        <artifactId>black-shop-common-util</artifactId>
+	        <version>${project.version}</version>
+        </dependency>
+        <!--整合通用基础类-->
+		<dependency>
+	 	    <groupId>cn.black-shop</groupId>
+	        <artifactId>black-shop-common-basic</artifactId>
+	        <version>${project.version}</version>
+        </dependency>
+        <!--springBoot整合swagger-->
+	     <dependency>
+			<groupId>com.spring4all</groupId>
+			<artifactId>swagger-spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>io.springfox</groupId>
+	           		<artifactId>springfox-swagger-ui</artifactId>
+				</exclusion>
+			</exclusions>
+			<version>${springboot.swagger.version}</version>
+	   	 </dependency>
+   	 
+	   	 <dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>swagger-bootstrap-ui</artifactId>
+			<version>1.8.8</version>
+		 </dependency>
+   		  <!--整合apollo-->
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-basic-apollo</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+</project>
