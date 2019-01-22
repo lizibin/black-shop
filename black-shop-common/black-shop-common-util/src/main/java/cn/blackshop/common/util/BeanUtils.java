@@ -4,8 +4,6 @@
 
 * <p>Copyright: Copyright (c) 2018</p>   
 
-* @version 1.0  
-
 * black-shop(黑店) 版权所有,并保留所有权利。
 
 */  
@@ -27,17 +25,10 @@ import org.springframework.util.CollectionUtils;
 
 import cn.blackshop.common.exception.BeanUtilsException;
 
-/**  
-
-* <p>Title: BeanUtils</p>  
-
-* <p>Description: bean互相转换的工具类</p>  
-
-* @author zibin  
-
-* @date 2019年1月17日  
-
-*/
+/**
+ * bean互相转换的工具类
+ * @author zibin
+ */
 public class BeanUtils {
 
 	  /**

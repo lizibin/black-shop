@@ -4,8 +4,6 @@
 
 * <p>Copyright: Copyright (c) 2018</p>   
 
-* @version 1.0  
-
 * black-shop(黑店) 版权所有,并保留所有权利。
 
 */  
@@ -16,17 +14,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-/**  
-
-* <p>Title: DateUtil</p>  
-
-* <p>Description: 日期工具类</p>  
-
-* @author zibin  
-
-* @date 2019年1月17日  
-
-*/
+/**
+ * 日期工具类
+ * @author zibin
+ */
 public class DateUtil {
 	
 	

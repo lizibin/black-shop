@@ -1,19 +1,29 @@
+/**  
+ 
+* <p>Company: www.black-shop.cn</p>  
+
+* <p>Copyright: Copyright (c) 2018</p>   
+
+* black-shop(黑店) 版权所有,并保留所有权利。
+
+*/
 package cn.blackshop.common.util;
 
 import java.security.MessageDigest;
 
 /**
-
-* <p>Title: MD5Util</p>  
-
-* <p>Description: md5加密工具类，带盐值</p>  
-
-* @author zibin  
-
-* @date 2018年12月11日
+ * md5加密工具类，带盐值
+ * @author zibin
  */
 public class MD5Util {
 
+	/**
+	 * Encode.
+	 *
+	 * @param password the password
+	 * @param salt the salt
+	 * @return the string
+	 */
 	public static String encode(String password,String salt) {
 		password = password + salt;
 		MessageDigest md5 = null;
@@ -40,6 +50,11 @@ public class MD5Util {
 		return hexValue.toString();
 	}
 	
+	/**
+	 * The main method.
+	 *
+	 * @param args the args
+	 */
 	public static void main(String[] args) {
 		System.out.println(MD5Util.encode("123456","blackshop"));
 

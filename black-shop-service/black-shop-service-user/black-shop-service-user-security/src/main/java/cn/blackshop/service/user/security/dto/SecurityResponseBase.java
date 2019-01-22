@@ -11,7 +11,7 @@
 */  
 package cn.blackshop.service.user.security.dto;
 
-import cn.blackshop.common.basic.base.ResponseBase;
+import cn.blackshop.common.basic.core.ResponseBase;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
