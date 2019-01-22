@@ -8,7 +8,7 @@
   <artifactId>black-shop-basic</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>black-shop-basic-apollo</module>
+  	<module>black-shop-basic-apolloconfig</module>
   	<!-- <module>black-shop-basic-eureka</module> -->
   	<module>black-shop-basic-redis</module>
   	<module>black-shop-basic-nacos</module>
