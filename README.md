@@ -89,8 +89,6 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 |-  |-black-shop-service   #服务实现
 |-  |-  |-black-shop-service-user   #用户服务实现
 |-  |-  |-  |-black-shop-service-user-basic   #用户基础服务实现
-|-  |-  |-  |-black-shop-service-user-oauth   #用户认证授权服务实现
-|-  |-  |-  |-black-shop-service-user-sso   #用户单点登录服务实现
 |-  |-  |-  |-black-shop-service-user-security   #用户安全框架实现
 |-  |-  |-black-shop-service-serach   #搜索服务
 |-  |-  |-  |-black-shop-service-serach-product   #商品搜索服务实现
