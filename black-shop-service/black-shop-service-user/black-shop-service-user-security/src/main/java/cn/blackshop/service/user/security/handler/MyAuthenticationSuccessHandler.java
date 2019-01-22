@@ -30,8 +30,8 @@ public class MyAuthenticationSuccessHandler implements AuthenticationSuccessHand
 	public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
 		SecurityResponseBase responseBody = new SecurityResponseBase();
 
-        responseBody.setRtnCode(200);
-        responseBody.setMsg("Login Success!");
+        responseBody.setCode(200);
+        responseBody.setMessage("Login Success!");
 
         httpServletResponse.getWriter().write(JSON.toJSONString(responseBody));
     }

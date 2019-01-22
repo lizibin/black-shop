@@ -40,8 +40,8 @@ public class AjaxAccessDeniedHandler implements AccessDeniedHandler{
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AccessDeniedException e) throws IOException, ServletException {
 		SecurityResponseBase responseBody = new SecurityResponseBase();
 
-        responseBody.setRtnCode(300);
-        responseBody.setMsg("Need Authorities!");
+        responseBody.setCode(300);
+        responseBody.setMessage("Need Authorities!");
 
         httpServletResponse.getWriter().write(JSON.toJSONString(responseBody));
     }

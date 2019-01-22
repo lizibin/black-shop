@@ -40,8 +40,8 @@ public class AjaxAuthenticationEntryPoint  implements AuthenticationEntryPoint {
 	    public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
 		 SecurityResponseBase responseBody = new SecurityResponseBase();
 
-	        responseBody.setRtnCode(000);
-	        responseBody.setMsg("Need Authorities!");
+	        responseBody.setCode(100);
+	        responseBody.setMessage("Need Authorities!");
 
 	        httpServletResponse.getWriter().write(JSON.toJSONString(responseBody));
 	    }
