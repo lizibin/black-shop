@@ -53,6 +53,8 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 
 **[Jenkins](https://jenkins.io/)**：Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。
 
+**[Jenkins Pipeline](https://jenkins.io/doc/book/pipeline/)**：pipeline将我们原来意义上的手动配置每一个Jenkins Job的具体配置项变成将所有配置代码化, 并再次配合Gitlab等版本控制系统去保存我们的代码配置, 这样子无论Job在未来需要更新, 或者需要回滚到之前的某一个配置, 又或者一个新的Job需要参考之前的老Job的配置并直接套用, 又或者我们需要去批量生成若干个Job配置, 我们都可以像管理软件代码的方式去管理我们的Jenkins Job配置. 这样就极大的简化我们自动化部署的结构, 将以前需要手动配置Job的这个步骤, 直接代码化. 最终体现出我们DevOps的最终目标. 
+
 **[kubernetes(k8s)](https://kubernetes.io/)**：kubernetes用于管理云平台中多个主机上的容器化的应用，Kubernetes的目标是让部署容器化的应用简单并且高效（powerful）,Kubernetes提供了应用部署，规划，更新，维护的一种机制，非常适合各种微服务的项目快速部署。
 
 #### 项目架构图
