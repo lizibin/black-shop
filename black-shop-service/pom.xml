@@ -22,6 +22,7 @@
 		<module>black-shop-service-payment</module>
 		<module>black-shop-service-thirdparty</module>
 		<module>black-shop-service-shoppingcart</module>
+		<module>black-shop-service-basic</module>
 	</modules>
 	<dependencies>
 		<!--mysql连接 组件 -->
