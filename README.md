@@ -43,9 +43,9 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 
 **[Apollo(~~SpringCloud Config~~)](https://github.com/ctripcorp/apollo)**：替换SpringCloud Config，apollo能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。
 
-**[SpringCloud Gateway(~~Zuul~~)](https://github.com/ctripcorp/apollo)**：替换Zuul，Spring Cloud Gateway作为Spring Cloud生态系中的网关，目标是替代Netflix ZUUL，其不仅提供统一的路由方式，并且基于Filter链的方式提供了网关基本的功能，例如：安全，监控/埋点，和限流等。
+**[SpringCloud Gateway(~~Zuul~~)](https://spring.io/projects/spring-cloud-gateway)**：替换Zuul，Spring Cloud Gateway作为Spring Cloud生态系中的网关，目标是替代Netflix ZUUL，其不仅提供统一的路由方式，并且基于Filter链的方式提供了网关基本的功能，例如：安全，监控/埋点，和限流等。
 
-## 部署组件(全部组件采用docker|docker-compose 进行部署)~
+## 部署组件~(全部组件采用docker|docker-compose|pod 进行部署)~
 
 **[Docker](https://www.docker.com/)**：Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。
 
