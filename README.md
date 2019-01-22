@@ -33,7 +33,7 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 #### 欢迎参与该项目贡献和讨论  QQ群：204528889
 ![qun.png](https://i.loli.net/2019/01/08/5c3485faed740.png)
 
-## 基础组件~
+## 开发组件~
 
 **[Nacos(~~Eureka~~)](https://github.com/alibaba/Nacos)**：替换Eureka，nacos是一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
 
@@ -44,6 +44,16 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 **[Apollo(~~SpringCloud Config~~)](https://github.com/ctripcorp/apollo)**：替换SpringCloud Config，apollo能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。
 
 **[SpringCloud Gateway(~~Zuul~~)](https://github.com/ctripcorp/apollo)**：替换Zuul，Spring Cloud Gateway作为Spring Cloud生态系中的网关，目标是替代Netflix ZUUL，其不仅提供统一的路由方式，并且基于Filter链的方式提供了网关基本的功能，例如：安全，监控/埋点，和限流等。
+
+## 部署组件(全部组件采用docker|docker-compose 进行部署)~
+
+**[Docker](https://www.docker.com/)**：Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。
+
+**[Harbor](https://www.docker.com/)**：Harbor是一个用于存储和分发Docker镜像的企业级Registry服务器，用来做镜像的存储。
+
+**[Jenkins](https://jenkins.io/)**：Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。
+
+**[kubernetes(k8s)](https://kubernetes.io/)**：kubernetes用于管理云平台中多个主机上的容器化的应用，Kubernetes的目标是让部署容器化的应用简单并且高效（powerful）,Kubernetes提供了应用部署，规划，更新，维护的一种机制，非常适合各种微服务的项目快速部署。
 
 #### 项目架构图
 正在抓紧时间画………………客观稍安勿躁。
