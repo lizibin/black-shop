@@ -5,9 +5,5 @@
     <artifactId>black-shop-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>black-shop-service-shoppingcart</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>black-shop-service-shoppingcart-basic</module>
-  </modules>
+  <artifactId>black-shop-service-basic</artifactId>
 </project>

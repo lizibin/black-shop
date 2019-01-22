@@ -31,8 +31,8 @@ public class MyAuthenticationFailureHandler implements AuthenticationFailureHand
 	    public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
 		  	SecurityResponseBase responseBody = new SecurityResponseBase();
 
-	        responseBody.setRtnCode(400);
-	        responseBody.setMsg("Login Failure!");
+	        responseBody.setCode(400);
+	        responseBody.setMessage("Login Failure!");
 
 	        httpServletResponse.getWriter().write(JSON.toJSONString(responseBody));
 	    }

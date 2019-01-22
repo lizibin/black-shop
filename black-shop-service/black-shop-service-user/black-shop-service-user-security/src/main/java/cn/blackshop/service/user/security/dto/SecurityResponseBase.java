@@ -11,7 +11,7 @@
 */  
 package cn.blackshop.service.user.security.dto;
 
-import cn.blackshop.common.basic.base.ResponseBase;
+import cn.blackshop.common.basic.core.ResponseResult;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -28,7 +28,7 @@ import lombok.EqualsAndHashCode;
 */
 @Data
 @EqualsAndHashCode(callSuper=false)
-public class SecurityResponseBase extends ResponseBase{
+public class SecurityResponseBase extends ResponseResult<SecurityResponseBase>{
 
 	 private String jwtToken;
 }

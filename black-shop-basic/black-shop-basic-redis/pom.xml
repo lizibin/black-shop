@@ -18,7 +18,7 @@
         </dependency>
         <dependency>
             <groupId>cn.black-shop</groupId>
-            <artifactId>black-shop-basic-apollo</artifactId>
+            <artifactId>black-shop-basic-apolloconfig</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

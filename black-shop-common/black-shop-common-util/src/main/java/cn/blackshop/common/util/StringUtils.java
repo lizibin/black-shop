@@ -4,8 +4,6 @@
 
 * <p>Copyright: Copyright (c) 2018</p>   
 
-* @version 1.0  
-
 * black-shop(黑店) 版权所有,并保留所有权利。
 
 */  
@@ -14,17 +12,10 @@ package cn.blackshop.common.util;
 import java.util.Collection;
 import java.util.Iterator;
 
-/**  
-
-* <p>Title: StringUtils</p>  
-
-* <p>Description: String 工具类</p>  
-
-* @author zibin  
-
-* @date 2019年1月17日  
-
-*/
+/**
+ * String 工具类
+ * @author zibin
+ */
 public class StringUtils {
 
 	 public static final String EMPTY = "";

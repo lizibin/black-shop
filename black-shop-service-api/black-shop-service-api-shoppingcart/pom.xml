@@ -2,16 +2,12 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>cn.black-shop</groupId>
-    <artifactId>black-shop</artifactId>
+    <artifactId>black-shop-service-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>black-shop-service-api</artifactId>
+  <artifactId>black-shop-service-api-shoppingcart</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>black-shop-service-api-user</module>
-  	<module>black-shop-service-api-search</module>
-  	<module>black-shop-service-api-product</module>
-  	<module>black-shop-service-api-order</module>
-  	<module>black-shop-service-api-shoppingcart</module>
+  	<module>black-shop-service-api-shoppingcart-basic</module>
   </modules>
 </project>

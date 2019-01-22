@@ -41,8 +41,8 @@ public class MyLogoutSuccessHandler implements LogoutSuccessHandler{
 	    public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
 		 	SecurityResponseBase responseBody = new SecurityResponseBase();
 
-	        responseBody.setRtnCode(100);
-	        responseBody.setMsg("Logout Success!");
+	        responseBody.setCode(100);
+	        responseBody.setMessage("Logout Success!");
 
 	        httpServletResponse.getWriter().write(JSON.toJSONString(responseBody));
 	    }
