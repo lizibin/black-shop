@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cn.black-shop</groupId>
+    <artifactId>black-shop</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>black-shop-basic</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>black-shop-basic-apollo</module>
+  	<!-- <module>black-shop-basic-eureka</module> -->
+  	<module>black-shop-basic-redis</module>
+  	<module>black-shop-basic-nacos</module>
+  	<module>black-shop-basic-gateway</module>
+  	<module>black-shop-basic-elasticsearch</module>
+  	<module>black-shop-basic-zipkin</module>
+  	<module>black-shop-basic-scheduler</module>
+  </modules>
+  <dependencies>
+  	<!--整合通用基础类-->
+	<dependency>
+ 	    <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-common-basic</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+</project>
