@@ -165,6 +165,12 @@
 			<artifactId>spring-boot-starter-log4j</artifactId>
 			<version>${springboot.log4j.version}</version>
 		</dependency>
+		<!-- SpringBoot整合jasypt加密 -->
+		<dependency>
+	        <groupId>com.github.ulisesbocchio</groupId>
+	        <artifactId>jasypt-spring-boot-starter</artifactId>
+		    <version>2.1.0</version>
+	    </dependency>
 	</dependencies>
 	
 	<repositories>
