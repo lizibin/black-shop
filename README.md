@@ -60,6 +60,14 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 #### 项目架构图
 正在抓紧时间画………………客观稍安勿躁。
 
+#### 参与贡献
+* 本项目严格按照阿里巴巴P3C的开发标准来执行，如不了解，请先行了解一下：https://github.com/alibaba/p3c
+1. Fork 本项目
+2. 新建 Feat_xxx 分支
+3. 提交代码
+4. 新建 Pull Request
+
+
 #### 软件架构
 
 ```
@@ -103,10 +111,3 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 
 
 ```
-
-#### 参与贡献
-
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
