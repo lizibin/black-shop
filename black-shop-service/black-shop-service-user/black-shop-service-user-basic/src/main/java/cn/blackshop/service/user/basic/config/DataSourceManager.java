@@ -4,8 +4,6 @@
 
 * <p>Copyright: Copyright (c) 2018</p>   
 
-* @version 1.0  
-
 * black-shop(黑店) 版权所有,并保留所有权利。
 
 */  
@@ -24,17 +22,10 @@ import com.alibaba.druid.pool.DruidDataSource;
 
 import lombok.extern.slf4j.Slf4j;
 
-/**  
-
-* <p>Title: DataSourceManager</p>  
-
-* <p>Description:数据源管理 </p>  
-
-* @author zibin  
-
-* @date 2019年1月11日  
-
-*/
+/**
+ * 数据源管理
+ * @author zibin
+ */
 @Component
 @Slf4j
 public class DataSourceManager {
