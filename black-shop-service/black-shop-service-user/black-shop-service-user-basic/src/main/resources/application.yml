@@ -5,3 +5,6 @@ server:
 spring:
     application:
         name: bs-user-basic-service
+jasypt:
+  encryptor:
+    password: black-shop
