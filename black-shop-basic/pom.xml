@@ -9,7 +9,6 @@
   <packaging>pom</packaging>
   <modules>
   	<module>black-shop-basic-apolloconfig</module>
-  	<!-- <module>black-shop-basic-eureka</module> -->
   	<module>black-shop-basic-redis</module>
   	<module>black-shop-basic-nacos</module>
   	<module>black-shop-basic-gateway</module>
@@ -17,6 +16,49 @@
   	<module>black-shop-basic-zipkin</module>
   	<module>black-shop-basic-scheduler</module>
   </modules>
+  
+   <dependencyManagement>
+      <!-- 模块说明：这里声明多个子模块 -->
+         <dependencies>
+            <!--子版本依赖-->
+            <dependency>
+                <groupId>cn.black-shop</groupId>
+                <artifactId>black-shop-basic-apolloconfig</artifactId>
+                <version>${project.version}</version>
+            </dependency>  
+             <dependency>
+                <groupId>cn.black-shop</groupId>
+                <artifactId>black-shop-basic-redis</artifactId>
+                <version>${project.version}</version>
+            </dependency> 
+            <dependency>
+                <groupId>cn.black-shop</groupId>
+                <artifactId>black-shop-basic-nacos</artifactId>
+                <version>${project.version}</version>
+            </dependency> 
+            <dependency>
+                <groupId>cn.black-shop</groupId>
+                <artifactId>black-shop-basic-gateway</artifactId>
+                <version>${project.version}</version>
+            </dependency> 
+            <dependency>
+                <groupId>cn.black-shop</groupId>
+                <artifactId>black-shop-basic-elasticsearch</artifactId>
+                <version>${project.version}</version>
+            </dependency> 
+            <dependency>
+                <groupId>cn.black-shop</groupId>
+                <artifactId>black-shop-basic-zipkin</artifactId>
+                <version>${project.version}</version>
+            </dependency> 
+            <dependency>
+                <groupId>cn.black-shop</groupId>
+                <artifactId>black-shop-basic-scheduler</artifactId>
+                <version>${project.version}</version>
+            </dependency> 
+        </dependencies>
+    </dependencyManagement>
+  
   <dependencies>
   	<!--整合通用基础类-->
 	<dependency>

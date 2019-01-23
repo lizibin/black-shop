@@ -11,4 +11,21 @@
   	<module>black-shop-common-util</module>
   	<module>black-shop-common-basic</module>
   </modules>
+  
+  <dependencyManagement>
+      <!-- 模块说明：这里声明多个子模块 -->
+         <dependencies>
+            <!--子版本依赖-->
+            <dependency>
+                <groupId>cn.black-shop</groupId>
+                <artifactId>black-shop-common-util</artifactId>
+                <version>${project.version}</version>
+            </dependency>  
+             <dependency>
+                <groupId>cn.black-shop</groupId>
+                <artifactId>black-shop-common-basic</artifactId>
+                <version>${project.version}</version>
+            </dependency> 
+        </dependencies>
+    </dependencyManagement>
 </project>
