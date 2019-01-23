@@ -15,6 +15,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import cn.blackshop.common.basic.core.ResponseResult;
 import cn.blackshop.model.user.entity.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -28,9 +29,9 @@ public interface UserBasicService {
 
 	 @GetMapping("/getUserByNickName")
 	 @ApiOperation(value = "根据用户昵称获取用户信息", httpMethod = "GET", notes = "根据用户昵称获取用户信息",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	 User getUserByNickName(@RequestParam String nickName);
+	 ResponseResult<User> getUserByNickName(@RequestParam String nickName);
 
 	 @GetMapping("queryUserList")
 	 @ApiOperation(value = "获取用户的集合", httpMethod = "GET", notes = "获取用户的集合",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	 List<User> queryUserList();
+	 ResponseResult<List<User>> queryUserList();
 }

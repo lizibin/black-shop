@@ -27,7 +27,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableDiscoveryClient
 @MapperScan("cn.blackshop.service.user.basic.mapper")
 @EnableApolloConfig({ApolloNamespaceConstant.PUBLIC_NACOS_CONFIG,ApolloNamespaceConstant.PUBLIC_RIBBON_CONFIG}) 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages="cn.blackshop")
 public class UserBasicApp {
 
 	public static void main(String[] args) {
