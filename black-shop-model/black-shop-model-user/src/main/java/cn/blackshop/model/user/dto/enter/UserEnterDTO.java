@@ -11,6 +11,8 @@ package cn.blackshop.model.user.dto.enter;
 
 import java.io.Serializable;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
@@ -21,21 +23,26 @@ import lombok.ToString;
 
 @Data
 @ToString
+@ApiModel(value = "用户信息实体类")
 public class UserEnterDTO implements Serializable {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -2708848879471364900L;
 
 	/** 用户唯一的id. */
+	@ApiModelProperty(value = "用户id")
 	private Integer userId;
 	
 	/** 用户昵称. */
+	@ApiModelProperty(value = "用户昵称")
 	private String nickName;
 
 	/** 用户手机号. */
+	@ApiModelProperty(value = "用户手机号")
 	private String mobile;
 
     /** 用户头像. */
+	@ApiModelProperty(value = "用户头像")
     private String portraitPic;
 
 }

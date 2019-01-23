@@ -4,8 +4,6 @@
 
 * <p>Copyright: Copyright (c) 2018</p>   
 
-* @version 1.0  
-
 * black-shop(黑店) 版权所有,并保留所有权利。
 
 */  
@@ -17,41 +15,37 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RestController;
 
+import cn.blackshop.common.basic.core.ApiService;
+import cn.blackshop.common.basic.core.ResponseResult;
 import cn.blackshop.model.user.entity.User;
 import cn.blackshop.service.api.user.basic.UserBasicService;
 import cn.blackshop.service.user.basic.mapper.UserBasicMapper;
 
-/**  
-
-* <p>Title: UserBasicServiceImpl</p>  
-
-* <p>Description: </p>  
-
-* @author zibin  
-
-* @date 2019年1月11日  
-
-*/
+/**
+ * UserBasicServiceImpl
+ * @author zibin
+ */
 @RestController
 @Service(value="userBasicService")
-public class UserBasicServiceImpl implements UserBasicService{
+public class UserBasicServiceImpl extends ApiService<User> implements UserBasicService{
 
 	@Autowired
 	private UserBasicMapper userBasicMapper;
+	
 	/**
 	 * 根据用户名查询用户
 	 */
 	@Override
-	public User getUserByNickName(String nickName) {
-		return userBasicMapper.getUserByNickName(nickName);
+	public ResponseResult<User> getUserByNickName(String nickName) {
+		return setResultSuccess(userBasicMapper.getUserByNickName(nickName));
 	}
 
 	/**
 	 * 批量查询用户集合
 	 */
 	@Override
-	public List<User> queryUserList() {
-		return userBasicMapper.queryUserList();
+	public ResponseResult<List<User>> queryUserList() {
+		return null;/*setResultSuccess(userBasicMapper.queryUserList());*/
 	}
 
 }

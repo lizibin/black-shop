@@ -14,4 +14,13 @@
   	<module>black-shop-service-api-order</module>
   	<module>black-shop-service-api-shoppingcart</module>
   </modules>
+  
+  <dependencies>
+  	 <!--整合通用基础类-->
+	 <dependency>
+ 	    <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-common-basic</artifactId>
+        <version>${project.version}</version>
+     </dependency>
+  </dependencies>
 </project>

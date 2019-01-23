@@ -75,10 +75,10 @@
 	        <artifactId>black-shop-common-util</artifactId>
 	        <version>${project.version}</version>
         </dependency>
-        <!--整合通用基础类-->
-		<dependency>
+        <!--整合redis-->
+        <dependency>
 	 	    <groupId>cn.black-shop</groupId>
-	        <artifactId>black-shop-common-basic</artifactId>
+	        <artifactId>black-shop-basic-redis</artifactId>
 	        <version>${project.version}</version>
         </dependency>
         <!--springBoot整合swagger-->

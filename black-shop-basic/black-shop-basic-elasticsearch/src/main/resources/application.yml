@@ -1,0 +1,8 @@
+server:
+  port: 8083
+#ES配置
+spring: 
+  data: 
+    elasticsearch: 
+      cluster-nodes: bs-node-1
+      cluster-name: 127.0.0.1:9300
