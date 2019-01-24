@@ -28,7 +28,7 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 
 ### 本地启动部署手册(未完待续~)
 
-——[查看本地启动部署手册](https://github.com/lizibin/black-shop/tree/master/doc)
+——[查看本地启动文档指南](https://github.com/lizibin/black-shop/wiki/%E6%9C%AC%E5%9C%B0%E5%90%AF%E5%8A%A8%E6%96%87%E6%A1%A3%E6%8C%87%E5%8D%97)
 
 #### 欢迎参与该项目贡献和讨论  QQ群：204528889
 ![qun.png](https://i.loli.net/2019/01/08/5c3485faed740.png)
