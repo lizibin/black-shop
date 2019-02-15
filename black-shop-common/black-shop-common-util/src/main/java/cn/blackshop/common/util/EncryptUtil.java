@@ -1,3 +1,12 @@
+/**  
+ 
+* <p>Company: www.black-shop.cn</p>  
+
+* <p>Copyright: Copyright (c) 2018</p>   
+
+* black-shop(黑店) 版权所有,并保留所有权利。
+
+*/
 package cn.blackshop.common.util;
 
 import java.io.ByteArrayOutputStream;
@@ -10,6 +19,11 @@ import java.util.regex.Pattern;
 import org.jasypt.intf.cli.JasyptPBEStringEncryptionCLI;
 import org.springframework.util.StringUtils;
 
+/**
+ * 加密类
+ * @author zibin
+ *
+ */
 public class EncryptUtil {
 
 	 /**
@@ -27,7 +41,13 @@ public class EncryptUtil {
      */
     private static String ALGORITHM = "PBEWithMD5AndDES";
 
-    public static Map getEncryptedParams(String input) {
+    /**
+     * Gets the encrypted params.
+     *
+     * @param input the input
+     * @return the encrypted params
+     */
+    public static Map<String,String> getEncryptedParams(String input) {
         //输出流
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(1024);
         PrintStream cacheStream = new PrintStream(byteArrayOutputStream);
@@ -44,7 +64,7 @@ public class EncryptUtil {
         int index = str.lastIndexOf("-");
 
         //返回加密后的数据
-        Map result = new HashMap();
+        Map<String,String> result = new HashMap<String,String>();
         result.put("input", str.substring(index + 1));
         result.put("password", PASSWORD);
         return result;
