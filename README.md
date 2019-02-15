@@ -30,7 +30,7 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 
 ——[查看本地启动文档指南](https://github.com/lizibin/black-shop/wiki/%E6%9C%AC%E5%9C%B0%E5%90%AF%E5%8A%A8%E6%96%87%E6%A1%A3%E6%8C%87%E5%8D%97)
 
-#### 欢迎参与该项目贡献和讨论  QQ群：204528889 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=2a90a69143d4fb1075bcdb4992fa3255ad896ca20cadd634b5e01e4f49cf1d19"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="black-shop(黑店)" title="black-shop(黑店)"></a>
+#### 欢迎参与该项目贡献和讨论  QQ群：204528889 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=2a90a69143d4fb1075bcdb4992fa3255ad896ca20cadd634b5e01e4f49cf1d19"><img border="0" src="https://i.loli.net/2019/02/15/5c6691f5a7906.png" alt="black-shop(黑店)" title="black-shop(黑店)"></a>
 ![qun.png](https://i.loli.net/2019/02/15/5c668eda177f8.png)
 
 ## 开发组件~
