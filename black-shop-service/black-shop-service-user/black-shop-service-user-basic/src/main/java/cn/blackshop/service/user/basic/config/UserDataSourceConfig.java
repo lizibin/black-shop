@@ -30,15 +30,21 @@ import lombok.EqualsAndHashCode;
 @EnableApolloConfig(ApolloNamespaceConstant.DEFAULT)
 public class UserDataSourceConfig extends DataSourceConfig{
 
-	/** The url. */
+	/**
+	 * 数据库url
+	 */
 	@Value("${spring.datasource.url}")
     private String url;
 
-    /** The user name. */
+    /**
+     * 数据用户名
+     */
     @Value("${spring.datasource.username}")
     private String userName;
 
-    /** The pass word. */
+    /**
+     * 数据库密码
+     */
     @Value("${spring.datasource.password}")
     private String passWord;
 }
