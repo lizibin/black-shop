@@ -9,7 +9,7 @@
 * black-shop(黑店) 版权所有,并保留所有权利。
 
 */  
-package cn.blackshop.basic.apollo.constans;
+package cn.blackshop.common.basic.constants;
 
 /**  
 
@@ -23,11 +23,6 @@ package cn.blackshop.basic.apollo.constans;
 
 */
 public interface ServerNameConstant {
-	
-	/**
-	 * 用户基础服务
-	 */
-	String USER_BASIC_SERVICE="bs-user-basic";
 	
 	/**
 	 * 订单基础服务

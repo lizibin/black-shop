@@ -1,0 +1,52 @@
+logging:
+  level:
+    org.springframework.web: INFO
+    com.github.binarywang.demo.wx.mp: DEBUG
+    me.chanjar.weixin: DEBUG
+wx:
+  mp:
+    configs:
+      - appId: wx5c43fde3c9733d9e #（一个公众号的appid）
+        secret: b8b217126c33a5fb7074927d5e72a81a #（公众号的appsecret）
+        token: black-shop #（接口配置里的Token值）
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:8100/eureka        
+server:
+  port: 8200
+
+  
+mayikt: 
+  weixin: 
+    registration:
+       code: 
+       ###微信注册码消息
+        message:  您的注册码为:%s，请关注<a href="https://github.com/lizibin/black-shop">black-shop的代码更新。官方QQ群：<a href='https://jq.qq.com/?_wv=1027&k=5TVfAMF'>204528889 </a>，期待你的加入，感谢！
+    ###默认提示消息
+    default: 
+      registration:
+        code: 
+          message: 您的消息，我们已经收到,会及时回复给您的!
+  
+spring:
+  application:
+    name: app-mayikt-weixin
+  redis:
+    host: 188.131.155.46
+    password: 123456
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
+###数据库相关连接      
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/meite_weixin
+
+  

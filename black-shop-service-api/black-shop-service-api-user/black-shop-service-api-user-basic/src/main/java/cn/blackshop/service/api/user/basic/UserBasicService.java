@@ -13,10 +13,11 @@ import java.util.List;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import cn.blackshop.common.basic.core.ResponseResult;
-import cn.blackshop.model.user.entity.User;
+import cn.blackshop.model.user.dto.out.UserOutDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
@@ -29,9 +30,13 @@ public interface UserBasicService {
 
 	 @GetMapping("/getUserByNickName")
 	 @ApiOperation(value = "根据用户昵称获取用户信息", httpMethod = "GET", notes = "根据用户昵称获取用户信息",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	 ResponseResult<User> getUserByNickName(@RequestParam String nickName);
+	 ResponseResult<UserOutDTO> getUserByNickName(@RequestParam String nickName);
 
-	 @GetMapping("queryUserList")
+	 @GetMapping("/queryUserList")
 	 @ApiOperation(value = "获取用户的集合", httpMethod = "GET", notes = "获取用户的集合",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	 ResponseResult<List<User>> queryUserList();
+	 ResponseResult<List<UserOutDTO>> queryUserList();
+	 
+	 @PostMapping("/existMobileNumber")
+     @ApiOperation(value = "判断手机号码是否存在", httpMethod = "POST", notes = "判断手机号码是否存在",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	 ResponseResult<UserOutDTO> existMobileNumber(@RequestParam("mobileNumber") String mobileNumber);
 }

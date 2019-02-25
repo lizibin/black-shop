@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>cn.black-shop</groupId>
@@ -6,5 +7,41 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>black-shop-service-thirdpart-wechat</artifactId>
-  <packaging>pom</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>cn.black-shop</groupId>
+      <artifactId>black-shop-service-api-thirdparty-wechat</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>cn.black-shop</groupId>
+      <artifactId>black-shop-service-api-user-basic</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.binarywang</groupId>
+      <artifactId>weixin-java-mp</artifactId>
+      <version>3.3.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>xstream</artifactId>
+          <groupId>com.thoughtworks.xstream</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <artifactId>xstream</artifactId>
+      <groupId>com.thoughtworks.xstream</groupId>
+      <version>1.4.10</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
 </project>
