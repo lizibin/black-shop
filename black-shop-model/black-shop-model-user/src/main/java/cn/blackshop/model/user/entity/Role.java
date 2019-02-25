@@ -8,20 +8,25 @@
 
 * black-shop(黑店) 版权所有,并保留所有权利。
 
-*/  
+*/
 package cn.blackshop.model.user.entity;
 
-/**  
+import javax.persistence.Table;
 
-* <p>Title: Permission</p>  
+import lombok.Data;
+import lombok.ToString;
 
-* <p>Description: </p>  
-
-* @author zibin  
-
-* @date 2018年12月19日  
-
-*/
+/**
+ * 角色表实体对象
+ * @author zibin
+ *
+ */
+@Data
+@ToString
+@Table(name = "bs_role")
 public class Role {
 
+  private Long id;
+
+  private String name;
 }

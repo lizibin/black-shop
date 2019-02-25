@@ -24,4 +24,6 @@ public interface UserBasicMapper extends BaseMapper<User> {
     
     List<User> queryUserList();
 
+    User existMobileNumber();
+
 }
