@@ -10,6 +10,7 @@
   <modules>
   	<module>black-shop-common-util</module>
   	<module>black-shop-common-basic</module>
+  	<module>black-shop-common-web</module>
   </modules>
   
   <dependencyManagement>

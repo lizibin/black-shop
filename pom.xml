@@ -105,6 +105,7 @@
 		<module>black-shop-service</module>
 		<module>black-shop-service-api</module>
 		<module>black-shop-model</module>
+		<module>black-shop-portal</module>
 	</modules>
 
 	<parent>
