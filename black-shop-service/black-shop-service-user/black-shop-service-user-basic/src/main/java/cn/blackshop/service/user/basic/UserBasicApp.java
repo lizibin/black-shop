@@ -21,7 +21,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * UserBasicApp用户基础服务启动类
- * @author zibin
+ * @author zibin1
  */
 @EnableFeignClients
 @EnableDiscoveryClient
