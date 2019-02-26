@@ -32,5 +32,9 @@ public class UserEnterDTO implements Serializable {
 	/** 用户手机号. */
 	@ApiModelProperty(value = "用户手机号")
 	private String mobileNumber;
+	
+	/** 用户密码. */
+    @ApiModelProperty(value = "用户密码")
+	private String password;
 
 }

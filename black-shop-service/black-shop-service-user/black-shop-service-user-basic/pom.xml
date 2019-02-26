@@ -13,6 +13,12 @@
             <artifactId>black-shop-service-api-user-basic</artifactId>
             <version>${project.version}</version>
         </dependency>
+        
+         <dependency>
+            <groupId>cn.black-shop</groupId>
+            <artifactId>black-shop-service-api-thirdparty-wechat</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
     
 	<build>

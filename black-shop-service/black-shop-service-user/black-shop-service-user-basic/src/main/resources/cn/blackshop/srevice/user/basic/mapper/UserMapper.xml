@@ -10,4 +10,7 @@
       SELECT * FROM bs_user 
     </select>
     
+    <insert id="register">
+       INSERT INTO `bs_user` VALUES (null,#{mobileNumber}, #{password}, #{userName}, '1', null, null, null, null, null, null,null);
+    </insert>
 </mapper>
