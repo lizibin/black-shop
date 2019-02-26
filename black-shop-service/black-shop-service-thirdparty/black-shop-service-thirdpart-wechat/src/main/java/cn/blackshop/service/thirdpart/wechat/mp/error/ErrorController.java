@@ -7,10 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * <pre>
  * 出错页面控制器
- * Created by Binary Wang on 2018/8/25.
  * </pre>
- *
- * @author <a href="https://github.com/binarywang">Binary Wang</a>
  */
 @Controller
 @RequestMapping("/error")

@@ -6,19 +6,15 @@ logging:
 wx:
   mp:
     configs:
-      - appId: wx5c43fde3c9733d9e #（一个公众号的appid）
-        secret: b8b217126c33a5fb7074927d5e72a81a #（公众号的appsecret）
+      - appId: wx66183902b7264ba7 #（一个公众号的appid）
+        secret: fd6c283f874e6fed478e518a961dc48f #（公众号的appsecret）
         token: black-shop #（接口配置里的Token值）
-###服务注册到eureka地址
-eureka:
-  client:
-    service-url:
-           defaultZone: http://localhost:8100/eureka        
+       
 server:
   port: 8200
 
   
-mayikt: 
+black-sohp: 
   weixin: 
     registration:
        code: 
@@ -32,7 +28,7 @@ mayikt:
   
 spring:
   application:
-    name: app-mayikt-weixin
+    name: bs-wechet
   redis:
     host: 188.131.155.46
     password: 123456
@@ -47,6 +43,6 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/meite_weixin
+    url: jdbc:mysql://127.0.0.1:3306/bs_wechet
 
   

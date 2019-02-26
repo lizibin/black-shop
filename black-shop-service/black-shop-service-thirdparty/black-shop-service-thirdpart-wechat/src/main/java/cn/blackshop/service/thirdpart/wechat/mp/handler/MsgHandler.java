@@ -22,9 +22,6 @@ import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.bean.message.WxMpXmlMessage;
 import me.chanjar.weixin.mp.bean.message.WxMpXmlOutMessage;
 
-/**
- * @author Binary Wang(https://github.com/binarywang)
- */
 @Component
 @SuppressWarnings("static-access")
 public class MsgHandler extends AbstractHandler {

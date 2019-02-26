@@ -10,8 +10,6 @@ import java.util.Map;
 
 /**
  * 门店审核事件处理
- *
- * @author Binary Wang(https://github.com/binarywang)
  */
 @Component
 public class StoreCheckNotifyHandler extends AbstractHandler {
