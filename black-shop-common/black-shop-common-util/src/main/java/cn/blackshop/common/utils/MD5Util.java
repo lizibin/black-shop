@@ -7,7 +7,7 @@
 * black-shop(黑店) 版权所有,并保留所有权利。
 
 */
-package cn.blackshop.common.util;
+package cn.blackshop.common.utils;
 
 import java.security.MessageDigest;
 

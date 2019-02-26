@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import cn.blackshop.common.basic.constants.Constants;
 import cn.blackshop.common.basic.core.ApiService;
 import cn.blackshop.common.basic.core.ResponseResult;
-import cn.blackshop.common.util.BeanUtils;
-import cn.blackshop.common.util.StringUtils;
+import cn.blackshop.common.utils.BeanUtils;
+import cn.blackshop.common.utils.StringUtils;
 import cn.blackshop.model.user.dto.out.UserOutDTO;
 import cn.blackshop.model.user.entity.User;
 import cn.blackshop.service.api.user.basic.UserBasicService;
@@ -70,4 +70,8 @@ public class UserBasicServiceImpl extends ApiService<UserOutDTO> implements User
     return setResultSuccess(userOutDTO);
   }
 
+  @Override
+  public ResponseResult<UserOutDTO> getUserInfo(String token) {
+    return null;
+  }
 }

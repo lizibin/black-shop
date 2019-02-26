@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import cn.blackshop.basic.redis.util.RedisUtil;
 import cn.blackshop.common.basic.constants.Constants;
 import cn.blackshop.common.basic.core.ResponseResult;
-import cn.blackshop.common.util.RegexUtils;
+import cn.blackshop.common.utils.RegexUtils;
 import cn.blackshop.model.user.dto.out.UserOutDTO;
 import cn.blackshop.service.thirdpart.wechat.client.UserBasicServiceClient;
 import cn.blackshop.service.thirdpart.wechat.mp.builder.TextBuilder;
