@@ -17,10 +17,10 @@ import cn.blackshop.common.basic.constants.ServerNameConstant;
  * 微信基础服务名
  * @author zibin
  */
-public interface WechetServerNameConstant extends ServerNameConstant{
+public interface WechatServerNameConstant extends ServerNameConstant{
 	
 	/**
-	 * 用户基础服务
+	 * 微信基础服务
 	 */
-	String USER_BASIC_SERVICE="bs-wechet";
+	String WECHAT_SERVICE="bs-wechat";
 }

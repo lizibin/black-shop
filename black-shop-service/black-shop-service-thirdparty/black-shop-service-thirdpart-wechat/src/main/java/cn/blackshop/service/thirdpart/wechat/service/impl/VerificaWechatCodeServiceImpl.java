@@ -1,3 +1,12 @@
+/**  
+ 
+* <p>Company: www.black-shop.cn</p>  
+
+* <p>Copyright: Copyright (c) 2018</p>   
+
+* black-shop(黑店) 版权所有,并保留所有权利。
+
+*/
 package cn.blackshop.service.thirdpart.wechat.service.impl;
 
 import org.apache.commons.lang.StringUtils;
@@ -10,16 +19,19 @@ import cn.blackshop.basic.redis.util.RedisUtil;
 import cn.blackshop.common.basic.constants.Constants;
 import cn.blackshop.common.basic.core.ApiService;
 import cn.blackshop.common.basic.core.ResponseResult;
-import cn.blackshop.service.api.thrdpary.wechet.VerificaWechetCodeService;
+import cn.blackshop.service.api.thrdpary.wechet.VerificaWechatCodeService;
 
+/**
+ * 微信校验验证码的实现类
+ */
 @RestController
-public class VerificaWechetCodeServiceImpl extends ApiService<JSONObject> implements VerificaWechetCodeService {
+public class VerificaWechatCodeServiceImpl extends ApiService<JSONObject> implements VerificaWechatCodeService {
 
   @Autowired
   private RedisUtil redisUtil;
 
   @Override
-  public ResponseResult<JSONObject> verificaWechetCode(String phone, String weixinCode) {
+  public ResponseResult<JSONObject> verificaWechatCode(String phone, String weixinCode) {
     // 1.验证码参数是否为空
     if (StringUtils.isEmpty(phone)) {
       return setResultError("手机号码不能为空!");
