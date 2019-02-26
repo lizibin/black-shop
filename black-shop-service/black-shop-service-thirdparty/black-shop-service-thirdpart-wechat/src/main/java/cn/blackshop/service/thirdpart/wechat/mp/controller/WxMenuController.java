@@ -24,7 +24,7 @@ import me.chanjar.weixin.mp.bean.menu.WxMpGetSelfMenuInfoResult;
 import me.chanjar.weixin.mp.bean.menu.WxMpMenu;
 
 /**
- * @author Binary Wang(https://github.com/binarywang)
+ * 微信菜单控制器
  */
 @RestController
 @RequestMapping("/wx/menu/{appid}")

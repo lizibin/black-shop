@@ -10,9 +10,6 @@ import java.util.Map;
 
 import static me.chanjar.weixin.common.api.WxConsts.MenuButtonType;
 
-/**
- * @author Binary Wang(https://github.com/binarywang)
- */
 @Component
 public class MenuHandler extends AbstractHandler {
 

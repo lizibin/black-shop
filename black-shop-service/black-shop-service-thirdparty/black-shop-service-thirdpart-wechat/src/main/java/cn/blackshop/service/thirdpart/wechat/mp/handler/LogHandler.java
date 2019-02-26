@@ -10,9 +10,6 @@ import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.bean.message.WxMpXmlMessage;
 import me.chanjar.weixin.mp.bean.message.WxMpXmlOutMessage;
 
-/**
- * @author Binary Wang(https://github.com/binarywang)
- */
 @Component
 public class LogHandler extends AbstractHandler {
 	@Override

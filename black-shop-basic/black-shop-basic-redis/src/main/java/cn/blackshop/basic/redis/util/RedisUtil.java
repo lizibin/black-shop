@@ -42,9 +42,10 @@ public class RedisUtil {
 	 * 
 	 * @param key
 	 */
-	public void delete(String key) {
-		redisTemplate.delete(key);
+	public Boolean delete(String key) {
+		return redisTemplate.delete(key);
 	}
+	
 
 	/**
 	 * 批量删除key

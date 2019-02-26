@@ -10,4 +10,11 @@
   <modules>
     <module>black-shop-service-api-thirdparty-wechat</module>
   </modules>
+    <dependencies>
+      <dependency>
+          <groupId>cn.black-shop</groupId>
+          <artifactId>black-shop-model-user</artifactId>
+          <version>${project.version}</version>
+      </dependency>
+  </dependencies>
 </project>

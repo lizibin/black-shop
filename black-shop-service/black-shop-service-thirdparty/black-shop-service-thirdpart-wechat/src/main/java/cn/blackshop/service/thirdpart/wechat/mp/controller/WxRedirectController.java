@@ -12,9 +12,6 @@ import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.bean.result.WxMpOAuth2AccessToken;
 import me.chanjar.weixin.mp.bean.result.WxMpUser;
 
-/**
- * @author Edward
- */
 @Controller
 @RequestMapping("/wx/redirect/{appid}")
 public class WxRedirectController {
