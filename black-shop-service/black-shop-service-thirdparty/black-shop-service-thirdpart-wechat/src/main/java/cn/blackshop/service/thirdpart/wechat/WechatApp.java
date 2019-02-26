@@ -26,6 +26,10 @@ import com.spring4all.swagger.EnableSwagger2Doc;
 @SpringBootApplication(scanBasePackages="cn.blackshop")
 public class WechatApp {
 
+  /**
+   * 启动类
+   * @param args
+   */
   public static void main(String[] args) {
     SpringApplication.run(WechatApp.class, args);
   }
