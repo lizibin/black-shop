@@ -52,7 +52,6 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-openfeign</artifactId>
-      <version>${openfegin.version}</version>
     </dependency>
     <!--service 整合sentinel监控 -->
     <dependency>

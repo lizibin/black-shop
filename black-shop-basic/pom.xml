@@ -15,6 +15,7 @@
   	<module>black-shop-basic-elasticsearch</module>
   	<module>black-shop-basic-zipkin</module>
   	<module>black-shop-basic-scheduler</module>
+  	<module>black-shop-basic-sso</module>
   </modules>
   
    <dependencyManagement>

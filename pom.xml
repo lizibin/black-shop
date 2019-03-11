@@ -1,187 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	
-	<groupId>cn.black-shop</groupId>
-	<artifactId>black-shop</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>black-shop</name>
-	<packaging>pom</packaging>
-	<description>black-shop 微服务商城</description>
-    <url>http://www.black-shop.cn</url>
-    
-    
-    <organization>
-		<name>Lee Zzi βin</name>
-		<url>http://resume.1000m.xin/</url>
-	</organization>
-  
-  	<licenses>
-		<license>
-			<name>Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
-		</license>
-	</licenses>
-	
-	<scm>
-		<url>https://github.com/lizibin/black-shop</url>
-		<connection>scm:git:git://github.com/lizibin/black-shop.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:lizibin/black-shop.git</developerConnection>
-	</scm>
-	
-	<issueManagement>
-		<system>github</system>
-		<url>https://github.com/lizibin/black-shop/issues</url>
-	</issueManagement>
-	
-	<developers>
-		<developer>
-			<id>nobodyiam</id>
-			<name>Lee Zzi βin</name>
-			<email>12572024@qq.com</email>
-			<organization>black-shop</organization>
-			<organizationUrl>http://www.black-shop.cn</organizationUrl>
-			<roles>
-				<role>Developer</role>
-			</roles>
-		</developer>
-		<developer>
-			<id>molost</id>
-			<name>Lin Da Zhen</name>
-			<email>445081559@qq.com</email>
-			<organization>black-shop</organization>
-			<organizationUrl>http://www.black-shop.cn</organizationUrl>
-			<roles>
-				<role>Developer</role>
-			</roles>
-		</developer>
-		<developer>
-			<id>Cynic-b</id>
-			<name>Liu Sui Biao</name>
-			<email>1416669157@qq.com</email>
-			<organization>black-shop</organization>
-			<organizationUrl>http://www.black-shop.cn</organizationUrl>
-			<roles>
-				<role>Developer</role>
-			</roles>
-		</developer>
-		<developer>
-			<id>EDaoren</id>
-			<name>Chen Chu Wen</name>
-			<email>550790375@qq.com</email>
-			<organization>black-shop</organization>
-			<organizationUrl>http://www.black-shop.cn</organizationUrl>
-			<roles>
-				<role>Developer(Inactive)</role>
-			</roles>
-		</developer>
-		<developer>
-			<id>kaifahm</id>
-			<name>Guan Kai Fa</name>
-			<email>770813563@qq.com</email>
-			<organization>black-shop</organization>
-			<organizationUrl>http://www.black-shop.cn</organizationUrl>
-			<roles>
-				<role>Developer(Inactive)</role>
-			</roles>
-		</developer>
-	</developers>
-  
-	 <properties>
-	   <java.version>1.8</java.version>
-	   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	   <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	   <springboot.swagger.version>1.8.0.RELEASE</springboot.swagger.version>
-	   <springboot.log4j.version>1.3.8.RELEASE</springboot.log4j.version>
-	   <springcloud.alibaba.version>0.2.1.RELEASE</springcloud.alibaba.version>
-	   <openfegin.version>2.0.2.RELEASE</openfegin.version>
-	   <springboot.mybatis.version>1.3.2</springboot.mybatis.version>
-	</properties>
-	
-	<modules>
-		<module>black-shop-common</module>
-		<module>black-shop-basic</module>
-		<module>black-shop-service</module>
-		<module>black-shop-service-api</module>
-		<module>black-shop-model</module>
-		<module>black-shop-portal</module>
-	</modules>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.4.RELEASE</version>
-	</parent>
+  <groupId>cn.black-shop</groupId>
+  <artifactId>black-shop</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>black-shop</name>
+  <packaging>pom</packaging>
+  <description>black-shop 微服务商城</description>
+  <url>http://www.black-shop.cn</url>
 
-	<!-- 管理依赖springcloud -->
-	<dependencyManagement>
-		<dependencies>
-			 <dependency>
-	            <groupId>org.springframework.cloud</groupId>
-	            <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-	            <version>${springcloud.alibaba.version}</version>
-	            <type>pom</type>
-	            <scope>import</scope>
-	        </dependency>
-        </dependencies>
-	</dependencyManagement>
 
-	<dependencies>
-		<!-- SpringBoot整合Web组件 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<!-- SpringBoot整合undertow -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-undertow</artifactId>
-		</dependency>
-		<!-- SpringBoot test-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- SpringBoot整合lombok组件 -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
-		<!-- SpringBoot整合nacos服务发现组件 -->
-		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-		</dependency>
-		<!-- SpringBoot整合log4j -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-log4j</artifactId>
-			<version>${springboot.log4j.version}</version>
-		</dependency>
-		<!-- SpringBoot整合jasypt加密 -->
-		<dependency>
-	        <groupId>com.github.ulisesbocchio</groupId>
-	        <artifactId>jasypt-spring-boot-starter</artifactId>
-		    <version>2.1.0</version>
-	    </dependency>
-	</dependencies>
-	
-	<repositories>
-		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/libs-milestone</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
+  <organization>
+    <name>Lee Zzi βin</name>
+    <url>http://www.black-shop.cn/</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/lizibin/black-shop</url>
+    <connection>scm:git:git://github.com/lizibin/black-shop.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:lizibin/black-shop.git</developerConnection>
+  </scm>
+
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/lizibin/black-shop/issues</url>
+  </issueManagement>
+
+  <developers>
+    <developer>
+      <id>nobodyiam</id>
+      <name>Lee Zzi βin</name>
+      <email>12572024@qq.com</email>
+      <organization>black-shop</organization>
+      <organizationUrl>http://www.black-shop.cn</organizationUrl>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>molost</id>
+      <name>Lin Da Zhen</name>
+      <email>445081559@qq.com</email>
+      <organization>black-shop</organization>
+      <organizationUrl>http://www.black-shop.cn</organizationUrl>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>Cynic-b</id>
+      <name>Liu Sui Biao</name>
+      <email>1416669157@qq.com</email>
+      <organization>black-shop</organization>
+      <organizationUrl>http://www.black-shop.cn</organizationUrl>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>EDaoren</id>
+      <name>Chen Chu Wen</name>
+      <email>550790375@qq.com</email>
+      <organization>black-shop</organization>
+      <organizationUrl>http://www.black-shop.cn</organizationUrl>
+      <roles>
+        <role>Developer(Inactive)</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>kaifahm</id>
+      <name>Guan Kai Fa</name>
+      <email>770813563@qq.com</email>
+      <organization>black-shop</organization>
+      <organizationUrl>http://www.black-shop.cn</organizationUrl>
+      <roles>
+        <role>Developer(Inactive)</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <properties>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
+    <spring-cloud.version>Finchley.SR2</spring-cloud.version>
+    <springboot.swagger.version>1.8.0.RELEASE</springboot.swagger.version>
+    <springboot.log4j.version>1.3.8.RELEASE</springboot.log4j.version>
+    <springcloud.alibaba.version>0.2.1.RELEASE</springcloud.alibaba.version>
+    <springboot.mybatis.version>1.3.2</springboot.mybatis.version>
+  </properties>
+
+  <modules>
+    <module>black-shop-common</module>
+    <module>black-shop-basic</module>
+    <module>black-shop-service</module>
+    <module>black-shop-service-api</module>
+    <module>black-shop-model</module>
+    <module>black-shop-portal</module>
+  </modules>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.6.RELEASE</version>
+  </parent>
+
+  <!-- 管理依赖springcloud -->
+  <dependencyManagement>
+    <dependencies>
+      <!-- spring Cloud 依赖 -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!-- spring Cloud Alibaba依赖 -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+        <version>${springcloud.alibaba.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <!-- SpringBoot整合Web组件 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-tomcat</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <!-- SpringBoot整合undertow -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-undertow</artifactId>
+    </dependency>
+    <!-- SpringBoot test -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- SpringBoot整合lombok组件 -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+    <!-- SpringBoot整合nacos服务发现组件 -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+    </dependency>
+    <!-- SpringBoot整合log4j -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-log4j</artifactId>
+      <version>${springboot.log4j.version}</version>
+    </dependency>
+    <!-- SpringBoot整合jasypt加密 -->
+    <dependency>
+      <groupId>com.github.ulisesbocchio</groupId>
+      <artifactId>jasypt-spring-boot-starter</artifactId>
+      <version>2.1.0</version>
+    </dependency>
+  </dependencies>
+
+  <repositories>
+    <repository>
+      <id>spring-milestones</id>
+      <name>Spring Milestones</name>
+      <url>https://repo.spring.io/libs-milestone</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 </project>
