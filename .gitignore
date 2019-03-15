@@ -12,6 +12,7 @@
 
 ### Intellij Patch ###
 *.iml
+.idea
 
 # Package Files #
 *.jar
