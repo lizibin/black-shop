@@ -9,15 +9,18 @@
 */
 package cn.blackshop.baisc.auth;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * 
+ * 认证服务器 oauth2.0
  * @author zibin
- *
  */
 @SpringCloudApplication
-
+@EnableFeignClients
 public class AuthService {
-
+  public static void main(String[] args) {
+    SpringApplication.run(AuthService.class, args);
+  }
 }

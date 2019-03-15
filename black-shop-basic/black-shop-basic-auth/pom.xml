@@ -10,12 +10,10 @@
   <description>black-shop 认证授权中心，基于 springSecurity OAuth2</description>
   <dependencies>
 
-    <!-- 安全相关 -->
     <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-security</artifactId>
+      <groupId>cn.black-shop</groupId>
+      <artifactId>black-shop-common-security</artifactId>
     </dependency>
-
     <!-- 缓存相关 -->
     <dependency>
       <groupId>org.springframework.boot</groupId>

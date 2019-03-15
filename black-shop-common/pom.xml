@@ -12,5 +12,6 @@
   	<module>black-shop-common-basic</module>
   	<module>black-shop-common-web</module>
   	<module>black-shop-common-bom</module>
+  	<module>black-shop-common-security</module>
   </modules>
 </project>
