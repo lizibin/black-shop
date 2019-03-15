@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>spring-cloud-dependencies-parent</artifactId>
+    <groupId>org.springframework.cloud</groupId>
+    <version>2.0.5.RELEASE</version>
+    <relativePath />
+  </parent>
+
+  <artifactId>black-shop-common-bom</artifactId>
+  <packaging>pom</packaging>
+  <version>${blackshop.version}</version>
+  <description>blackshop版本控制</description>
+
+  <properties>
+    <blackshop.version>1.0.0</blackshop.version>
+  </properties>
+
+  <dependencyManagement>
+    <!-- 模块说明：这里声明多个子模块 -->
+    <dependencies>
+      <!--子版本依赖 -->
+      <dependency>
+        <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-basic-apolloconfig</artifactId>
+        <version>${blackshop.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-basic-redis</artifactId>
+        <version>${blackshop.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-basic-nacos</artifactId>
+        <version>${blackshop.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-basic-gateway</artifactId>
+        <version>${blackshop.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-basic-elasticsearch</artifactId>
+        <version>${blackshop.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-basic-zipkin</artifactId>
+        <version>${blackshop.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-basic-scheduler</artifactId>
+        <version>${blackshop.version}</version>
+      </dependency>
+      <!--子版本依赖 -->
+      <dependency>
+        <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-common-util</artifactId>
+        <version>${blackshop.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-common-basic</artifactId>
+        <version>${blackshop.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

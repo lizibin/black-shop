@@ -4,7 +4,7 @@
   <parent>
     <groupId>cn.black-shop</groupId>
     <artifactId>black-shop</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>black-shop-portal</artifactId>
   <packaging>pom</packaging>

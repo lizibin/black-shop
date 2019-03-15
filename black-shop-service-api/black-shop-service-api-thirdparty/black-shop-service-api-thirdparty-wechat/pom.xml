@@ -3,7 +3,7 @@
   <parent>
     <groupId>cn.black-shop</groupId>
     <artifactId>black-shop-service-api-thirdparty</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+     <version>1.0.0</version>
   </parent>
   <artifactId>black-shop-service-api-thirdparty-wechat</artifactId>
 </project>

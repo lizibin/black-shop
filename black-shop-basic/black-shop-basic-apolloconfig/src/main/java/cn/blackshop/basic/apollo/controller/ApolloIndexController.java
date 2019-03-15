@@ -12,20 +12,12 @@
 package cn.blackshop.basic.apollo.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-/**  
-
-* <p>Title: ApolloIndexController</p>  
-
-* <p>Description: </p>  
-
-* @author zibin  
-
-* @date 2018年11月26日  
-
-*/
-@RestController
+/**
+ * 获取apollo
+ * @author zibin
+ *
+ */
 public class ApolloIndexController {
 
 	private String apollo;

@@ -4,7 +4,7 @@
   <parent>
     <groupId>cn.black-shop</groupId>
     <artifactId>black-shop</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>black-shop-service</artifactId>
   <packaging>pom</packaging>
@@ -42,6 +42,11 @@
       <artifactId>mapper-spring-boot-starter</artifactId>
       <version>${springboot.mapper.version}</version>
     </dependency>
+    <!--undertow容器 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-undertow</artifactId>
+    </dependency>
     <!-- 分页插件 -->
     <dependency>
       <groupId>com.github.pagehelper</groupId>
@@ -73,13 +78,11 @@
     <dependency>
       <groupId>cn.black-shop</groupId>
       <artifactId>black-shop-common-util</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <!--整合redis -->
     <dependency>
       <groupId>cn.black-shop</groupId>
       <artifactId>black-shop-basic-redis</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <!--springBoot整合swagger -->
     <dependency>
@@ -103,7 +106,6 @@
     <dependency>
       <groupId>cn.black-shop</groupId>
       <artifactId>black-shop-basic-apolloconfig</artifactId>
-      <version>${project.version}</version>
     </dependency>
   </dependencies>
 </project>
