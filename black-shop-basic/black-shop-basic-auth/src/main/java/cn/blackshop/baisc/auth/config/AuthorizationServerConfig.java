@@ -1,10 +1,12 @@
-/**
- * 
- * LegendShop微服务商城系统
- * 
- * ©版权所有,并保留所有权利。
- * 
- */
+/**  
+ 
+* <p>Company: www.black-shop.cn</p>  
+
+* <p>Copyright: Copyright (c) 2018</p>   
+
+* black-shop(黑店) 版权所有,并保留所有权利。
+
+*/
 package cn.blackshop.baisc.auth.config;
 
 import javax.sql.DataSource;
@@ -36,14 +38,16 @@ import lombok.SneakyThrows;
 @AllArgsConstructor
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
-
   private final AuthenticationManager authenticationManager;
   private final RedisConnectionFactory redisConnectionFactory;
   private final DataSource dataSource;
   private final CustomerUserDetailsService customerUserDetailsService;
 
   /**
-   * 设置client去数据库读取信息
+   * 设置client去数据库读取信息.
+   *
+   * @param clients the clients
+   * @throws Exception the exception
    */
   @Override
   @SneakyThrows
@@ -55,7 +59,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
   }
 
   /**
-   * 检查tokenURL开启 /oauth/check_token
+   * 检查tokenURL开启 /oauth/check_token.
+   *
    */
   @Override
   public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
@@ -63,7 +68,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
   }
 
   /**
-   * 设置redis读取token以及保存token
+   * 设置redis读取token以及保存token.
    */
   @Override
   public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
@@ -76,6 +81,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         .tokenStore(tokenStore());
   }
 
+  /**
+   * Token store.
+   */
   @Bean
   public TokenStore tokenStore() {
     RedisTokenStore tokenStore = new RedisTokenStore(redisConnectionFactory);
