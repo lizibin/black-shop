@@ -3,22 +3,24 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>cn.black-shop</groupId>
-    <artifactId>black-shop-common</artifactId>
+    <artifactId>black-shop-basic</artifactId>
     <version>1.0.0</version>
   </parent>
-  <artifactId>black-shop-common-web</artifactId>
-
+  <artifactId>black-shop-basic-auth</artifactId>
+  <description>black-shop 认证授权中心，基于 springSecurity OAuth2</description>
   <dependencies>
+
+    <!-- 安全相关 -->
     <dependency>
-      <groupId>cn.black-shop</groupId>
-      <artifactId>black-shop-common-basic</artifactId>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-security</artifactId>
     </dependency>
 
+    <!-- 缓存相关 -->
     <dependency>
-      <groupId>cn.black-shop</groupId>
-      <artifactId>black-shop-common-util</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
     </dependency>
-
 
     <!--undertow容器 -->
     <dependency>
@@ -26,10 +28,5 @@
       <artifactId>spring-boot-starter-undertow</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>nl.bitwalker</groupId>
-      <artifactId>UserAgentUtils</artifactId>
-      <version>1.2.4</version>
-    </dependency>
   </dependencies>
 </project>

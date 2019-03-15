@@ -1,27 +1,27 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>cn.black-shop</groupId>
     <artifactId>black-shop</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>black-shop-service-api</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>black-shop-service-api-user</module>
-  	<module>black-shop-service-api-search</module>
-  	<module>black-shop-service-api-product</module>
-  	<module>black-shop-service-api-order</module>
-  	<module>black-shop-service-api-shoppingcart</module>
-  	<module>black-shop-service-api-thirdparty</module>
+    <module>black-shop-service-api-user</module>
+    <module>black-shop-service-api-search</module>
+    <module>black-shop-service-api-product</module>
+    <module>black-shop-service-api-order</module>
+    <module>black-shop-service-api-shoppingcart</module>
+    <module>black-shop-service-api-thirdparty</module>
   </modules>
-  
+
   <dependencies>
-  	 <!--整合通用基础类-->
-	 <dependency>
- 	    <groupId>cn.black-shop</groupId>
-        <artifactId>black-shop-common-basic</artifactId>
-        <version>${project.version}</version>
-     </dependency>
+    <!--整合通用基础类 -->
+    <dependency>
+      <groupId>cn.black-shop</groupId>
+      <artifactId>black-shop-common-basic</artifactId>
+    </dependency>
   </dependencies>
 </project>

@@ -4,7 +4,7 @@
   <parent>
     <groupId>cn.black-shop</groupId>
     <artifactId>black-shop-portal</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>black-shop-portal-web</artifactId>
 
@@ -24,11 +24,8 @@
       <artifactId>black-shop-service-api-user-basic</artifactId>
       <version>${project.version}</version>
     </dependency>
-   <!--  <dependency>
-      <groupId>com.tengxun</groupId>
-      <artifactId>sdk4j</artifactId>
-      <version>1.0</version>
-    </dependency> -->
+    <!-- <dependency> <groupId>com.tengxun</groupId> <artifactId>sdk4j</artifactId> 
+      <version>1.0</version> </dependency> -->
     <!--spring session 与redis应用基本环境配置,需要开启redis后才可以使用，不然启动Spring boot会报错 -->
     <dependency>
       <groupId>org.springframework.session</groupId>

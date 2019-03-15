@@ -4,7 +4,7 @@
   <parent>
     <groupId>cn.black-shop</groupId>
     <artifactId>black-shop-service-thirdparty</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>black-shop-service-thirdpart-wechat</artifactId>
 
@@ -14,7 +14,7 @@
       <artifactId>black-shop-service-api-thirdparty-wechat</artifactId>
       <version>${project.version}</version>
     </dependency>
-    
+
     <dependency>
       <groupId>cn.black-shop</groupId>
       <artifactId>black-shop-service-api-user-basic</artifactId>

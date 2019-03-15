@@ -3,7 +3,7 @@
   <parent>
     <groupId>cn.black-shop</groupId>
     <artifactId>black-shop</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>black-shop-common</artifactId>
   <packaging>pom</packaging>
@@ -11,22 +11,6 @@
   	<module>black-shop-common-util</module>
   	<module>black-shop-common-basic</module>
   	<module>black-shop-common-web</module>
+  	<module>black-shop-common-bom</module>
   </modules>
-  
-  <dependencyManagement>
-      <!-- 模块说明：这里声明多个子模块 -->
-         <dependencies>
-            <!--子版本依赖-->
-            <dependency>
-                <groupId>cn.black-shop</groupId>
-                <artifactId>black-shop-common-util</artifactId>
-                <version>${project.version}</version>
-            </dependency>  
-             <dependency>
-                <groupId>cn.black-shop</groupId>
-                <artifactId>black-shop-common-basic</artifactId>
-                <version>${project.version}</version>
-            </dependency> 
-        </dependencies>
-    </dependencyManagement>
 </project>
