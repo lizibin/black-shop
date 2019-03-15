@@ -11,13 +11,13 @@
 */  
 package cn.blackshop.service.api.thrdpary.constant;
 
-import cn.blackshop.common.basic.constants.ServerNameConstant;
+import cn.blackshop.common.basic.constants.ServerNameConstants;
 
 /**
  * 微信基础服务名
  * @author zibin
  */
-public interface WechatServerNameConstant extends ServerNameConstant{
+public interface WechatServerNameConstant extends ServerNameConstants{
 	
 	/**
 	 * 微信基础服务

@@ -67,6 +67,11 @@
         <artifactId>black-shop-common-basic</artifactId>
         <version>${blackshop.version}</version>
       </dependency>
+      <dependency>
+        <groupId>cn.black-shop</groupId>
+        <artifactId>black-shop-common-security</artifactId>
+        <version>${blackshop.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 </project>

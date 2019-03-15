@@ -11,13 +11,13 @@
 */  
 package cn.blackshop.service.api.user.constant;
 
-import cn.blackshop.common.basic.constants.ServerNameConstant;
+import cn.blackshop.common.basic.constants.ServerNameConstants;
 
 /**
  * 用户基础服务名
  * @author zibin
  */
-public interface UserBasicServerNameConstant extends ServerNameConstant{
+public interface UserBasicServerNameConstant extends ServerNameConstants{
 	
 	/**
 	 * 用户基础服务
