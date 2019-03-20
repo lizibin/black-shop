@@ -17,5 +17,5 @@ import cn.blackshop.service.api.user.service.UserService;
 /**
  * The Interface UserServiceClient.
  */
-@FeignClient(UserServerNameConstant.USER_BASIC_SERVICE)
+@FeignClient(UserServerNameConstant.BS_USER_SERVICE)
 public interface UserServiceClient extends UserService{}

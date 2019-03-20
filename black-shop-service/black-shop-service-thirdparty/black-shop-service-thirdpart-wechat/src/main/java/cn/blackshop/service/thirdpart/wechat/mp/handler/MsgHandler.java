@@ -13,7 +13,7 @@ import cn.blackshop.common.basic.constants.Constants;
 import cn.blackshop.common.basic.core.ResponseResult;
 import cn.blackshop.common.utils.RegexUtils;
 import cn.blackshop.model.user.dto.out.UserOutDTO;
-import cn.blackshop.service.thirdpart.wechat.client.UserBasicServiceClient;
+import cn.blackshop.service.thirdpart.wechat.client.UserServiceClient;
 import cn.blackshop.service.thirdpart.wechat.mp.builder.TextBuilder;
 import me.chanjar.weixin.common.api.WxConsts.XmlMsgType;
 import me.chanjar.weixin.common.error.WxErrorException;
@@ -36,7 +36,7 @@ public class MsgHandler extends AbstractHandler {
 	private RedisUtil redisUtil;
 
 	@Autowired
-	private UserBasicServiceClient userBasicServiceClient;
+	private UserServiceClient userBasicServiceClient;
 
 	@Override
 	public WxMpXmlOutMessage handle(WxMpXmlMessage wxMessage, Map<String, Object> context, WxMpService weixinService,
