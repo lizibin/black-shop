@@ -17,8 +17,7 @@
 
     <dependency>
       <groupId>cn.black-shop</groupId>
-      <artifactId>black-shop-service-api-user-basic</artifactId>
-      <version>${project.version}</version>
+      <artifactId>black-shop-service-api-user</artifactId>
     </dependency>
 
     <dependency>
@@ -37,11 +36,6 @@
       <artifactId>xstream</artifactId>
       <groupId>com.thoughtworks.xstream</groupId>
       <version>1.4.10</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-configuration-processor</artifactId>
-      <optional>true</optional>
     </dependency>
   </dependencies>
 </project>
