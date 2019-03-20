@@ -7,10 +7,6 @@
     <version>1.0.0</version>
   </parent>
   <artifactId>black-shop-service-api-user</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-    <module>black-shop-service-api-user-basic</module>
-  </modules>
 
   <dependencies>
     <dependency>

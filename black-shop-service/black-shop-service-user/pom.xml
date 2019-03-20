@@ -7,8 +7,30 @@
     <version>1.0.0</version>
   </parent>
   <artifactId>black-shop-service-user</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-    <module>black-shop-service-user-basic</module>
-  </modules>
+
+  <dependencies>
+    <dependency>
+      <groupId>cn.black-shop</groupId>
+      <artifactId>black-shop-service-api-user</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>cn.black-shop</groupId>
+      <artifactId>black-shop-service-api-thirdparty-wechat</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>com.spotify</groupId>
+        <artifactId>docker-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 </project>

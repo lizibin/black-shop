@@ -19,11 +19,11 @@
     <module>black-shop-service-user</module>
     <module>black-shop-service-search</module>
     <module>black-shop-service-product</module>
-    <module>black-shop-service-order</module>
     <module>black-shop-service-payment</module>
     <module>black-shop-service-thirdparty</module>
     <module>black-shop-service-shoppingcart</module>
     <module>black-shop-service-basic</module>
+    <module>black-shop-service-order</module>
   </modules>
   <dependencies>
     <!--mysql连接 组件 -->
