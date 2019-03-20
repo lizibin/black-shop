@@ -6,8 +6,4 @@
     <version>1.0.0</version>
   </parent>
   <artifactId>black-shop-service-order</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>black-shop-service-order-basic</module>
-  </modules>
 </project>
