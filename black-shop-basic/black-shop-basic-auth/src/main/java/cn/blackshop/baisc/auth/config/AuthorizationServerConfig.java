@@ -72,7 +72,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
    */
   @Override
   public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-    // 建立一个Token存储的配置项，此时将Token直接保存在Redis之中
     endpoints
         .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST)
         .tokenStore(tokenStore())
@@ -87,30 +86,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
   @Bean
   public TokenStore tokenStore() {
     RedisTokenStore tokenStore = new RedisTokenStore(redisConnectionFactory);
-   /* tokenStore.setPrefix(SecurityConstants.B2C_PREFIX + "-" + SecurityConstants.OAUTH_PREFIX);*/
     return tokenStore;
   }
-
-  /**
-   * token增强
-   * 
-   * @return TokenEnhancer
-   */
- /* @Bean
-  public TokenEnhancer tokenEnhancer() {
-    return (accessToken, authentication) -> {
-      if (SecurityConstants.CLIENT_CREDENTIALS.equals(authentication.getOAuth2Request().getGrantType())) {
-        return accessToken;
-      }
-
-      final Map<String, Object> additionalInfo = new HashMap<>(8);
-      SecurityUserDetail securityUserDetail = (SecurityUserDetail) authentication.getUserAuthentication()
-          .getPrincipal();
-
-      additionalInfo.put("id", securityUserDetail.getId());
-      additionalInfo.put("username", securityUserDetail.getUsername());
-      ((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(additionalInfo);
-      return accessToken;
-    };
-  }*/
 }

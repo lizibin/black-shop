@@ -20,7 +20,7 @@
   <dependencyManagement>
     <!-- 模块说明：这里声明多个子模块 -->
     <dependencies>
-      <!--子版本依赖 -->
+      <!--基础服务依赖 -->
       <dependency>
         <groupId>cn.black-shop</groupId>
         <artifactId>black-shop-basic-apolloconfig</artifactId>
@@ -56,7 +56,7 @@
         <artifactId>black-shop-basic-scheduler</artifactId>
         <version>${blackshop.version}</version>
       </dependency>
-      <!--子版本依赖 -->
+      <!--公共工具版本依赖 -->
       <dependency>
         <groupId>cn.black-shop</groupId>
         <artifactId>black-shop-common-util</artifactId>
@@ -70,6 +70,12 @@
       <dependency>
         <groupId>cn.black-shop</groupId>
         <artifactId>black-shop-common-security</artifactId>
+        <version>${blackshop.version}</version>
+      </dependency>
+       <!--用户基础服务接口-->
+       <dependency>
+        <groupId>cn.black-shop</groupId>
+        <artifactId> black-shop-service-api-user-basic</artifactId>
         <version>${blackshop.version}</version>
       </dependency>
     </dependencies>
