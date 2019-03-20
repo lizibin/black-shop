@@ -74,4 +74,9 @@ public class UserBasicServiceImpl extends ApiService<UserOutDTO> implements User
   public ResponseResult<UserOutDTO> getUserInfo(String token) {
     return null;
   }
+
+  @Override
+  public ResponseResult<UserOutDTO> getUserByUserName(String userName) {
+    return null;
+  }
 }
