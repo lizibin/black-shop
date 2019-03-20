@@ -12,13 +12,13 @@ import cn.blackshop.common.utils.StringUtils;
 import cn.blackshop.common.web.base.BaseWebController;
 import cn.blackshop.common.web.constant.WebConstants;
 import cn.blackshop.model.user.dto.out.UserOutDTO;
-import cn.blackshop.protal.web.client.UserBasicServiceClient;
+import cn.blackshop.protal.web.client.UserServiceClient;
 import cn.blackshop.protal.web.utils.CookieUtils;
 
 public class IndexController extends BaseWebController{
 
   @Autowired
-  private UserBasicServiceClient userBasicServiceClient;
+  private UserServiceClient userServiceClient;
   /**
    * 跳转到index页面
    */
@@ -30,7 +30,7 @@ public class IndexController extends BaseWebController{
       String token = CookieUtils.getCookieValue(request, WebConstants.LOGIN_TOKEN_COOKIENAME, true);
       if (!StringUtils.isEmpty(token)) {
           // 2.调用会员服务接口,查询会员用户信息
-        ResponseResult<UserOutDTO> userInfo = userBasicServiceClient.getUserInfo(token);
+        ResponseResult<UserOutDTO> userInfo = userServiceClient.getUserInfo(token);
           if (isSuccess(userInfo)) {
               UserOutDTO data = userInfo.getData();
               if (data != null) {
