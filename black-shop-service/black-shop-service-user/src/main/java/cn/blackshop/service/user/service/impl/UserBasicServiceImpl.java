@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RestController;
 
+import cn.blackshop.basic.redis.util.RedisUtil;
 import cn.blackshop.common.basic.constants.Constants;
 import cn.blackshop.common.basic.core.ApiService;
 import cn.blackshop.common.basic.core.ResponseResult;
@@ -35,6 +36,9 @@ public class UserBasicServiceImpl extends ApiService<UserOutDTO> implements User
 
 	@Autowired
 	private UserMapper userMapper;
+	
+	@Autowired
+	private RedisUtil redisUtil;
 	
 	/**
 	 * 根据用户名查询用户

@@ -42,6 +42,11 @@
       <artifactId>mapper-spring-boot-starter</artifactId>
       <version>${springboot.mapper.version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
     <!--undertow容器 -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -78,11 +83,6 @@
     <dependency>
       <groupId>cn.black-shop</groupId>
       <artifactId>black-shop-common-util</artifactId>
-    </dependency>
-    <!--整合redis -->
-    <dependency>
-      <groupId>cn.black-shop</groupId>
-      <artifactId>black-shop-basic-redis</artifactId>
     </dependency>
     <!--springBoot整合swagger -->
     <dependency>

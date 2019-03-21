@@ -31,11 +31,11 @@ public interface UserService {
 
   @GetMapping("/getUserByNickName")
   @ApiOperation(value = "根据用户昵称获取用户信息", httpMethod = "GET", notes = "根据用户昵称获取用户信息", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-  ResponseResult<UserOutDTO> getUserByNickName(@RequestParam String nickName);
+  ResponseResult<UserOutDTO> getUserByNickName(@RequestParam("nickName") String nickName);
   
   @GetMapping("/getUserByUserName")
   @ApiOperation(value = "根据用户昵称获取用户信息", httpMethod = "GET", notes = "根据用户名获取用户信息", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-  ResponseResult<UserOutDTO> getUserByUserName(@RequestParam String userName);
+  ResponseResult<UserOutDTO> getUserByUserName(@RequestParam("userName") String userName);
 
   @GetMapping("/queryUserList")
   @ApiOperation(value = "获取用户的集合", httpMethod = "GET", notes = "获取用户的集合", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

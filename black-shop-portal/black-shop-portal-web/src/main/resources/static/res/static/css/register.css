@@ -1,0 +1,448 @@
+/**
+ 
+ @Name: 家居商城模板
+ @Author: star1029
+ @Copyright: layui.com
+ 
+ */
+
+
+/** 图标字体 **/
+@font-face {font-family: 'layui-icon';
+  src: url('../font/iconfont.eot?v=230');
+  src: url('../font/iconfont.eot?v=230#iefix') format('embedded-opentype'),
+  url('../font/iconfont.svg?v=230#iconfont') format('svg'),
+  url('../font/iconfont.woff?v=230') format('woff'),
+  url('../font/iconfont.ttf?v=230') format('truetype');
+}
+
+/* font-class */
+.layui-icon-house-find:before{content:"\e619"}
+.layui-icon-house-person:before{content:"\e660"}
+.layui-icon-house-service:before{content:"\e621"}
+.layui-icon-house-diamond:before{content:"\e811"}
+.layui-icon-house-tel:before{content:"\e6a3"}
+.layui-icon-house-quality:before{content:"\e688"}
+.layui-icon-house-car:before{content:"\e6cd"}
+.layui-icon-house-shield:before{content:"\e600"}
+.layui-icon-house-shop:before{content:"\e673"}
+.layui-icon-house-mobile:before{content:"\e631"}
+.layui-icon-house-up:before{content:"\e603"}
+
+body{background-color: #FFF;}
+body.user{background-color: #FAFAFA;}
+
+/* 头部 */
+.house-header .layui-container{overflow: hidden; transition: all 400ms ease-out;}
+.house-header{width: 100%; background-color: #FFF; border-bottom: 2px solid #E8E8E6;}
+.house-header .house-nav{height: 50px; line-height: 50px; position: relative;}
+.house-header .house-nav .layui-breadcrumb{display: none; position: absolute; right: 23px;}
+.house-header .house-nav .layui-breadcrumb span[lay-separator]{margin: 0 20px;}
+.house-header .house-nav .layui-breadcrumb a:hover{color: #dabb92 !important;}
+.house-header .house-nav .house-breadcrumb-icon{display: block; position: absolute; right: 40px;}
+.house-header .house-nav .house-breadcrumb-icon span[lay-separator]{margin: 0 5px;}
+.house-header .house-nav .house-breadcrumb-icon i{font-size: 24px; color: #dabb92; line-height: 50px;}
+.house-header .house-banner{position: absolute; top: 0; line-height: 50px;}
+.house-header .house-banner a.banner{display: inline-block; width: 100px;}
+.house-header .house-banner a.banner img{width: 100%;}
+.house-header .house-banner .layui-input-inline{display: none; position: absolute; top: 35px; right: 95px;}
+.house-header .house-banner .layui-input-inline input{width: 387px; height: 38px; padding-left: 16px; line-height: 38px; border-color: #dabb92;}
+.house-header .house-banner .layui-input-inline .layui-icon-house-find{cursor: pointer; color: #dabb92; font-size: 20px; font-weight: bold; position: absolute; top: 0; right: 10px; line-height: 38px;}
+.house-header .house-banner a.shop{display: none; position: absolute; line-height: 30px; top: 38px; right: 35px; color: #dabb92;}
+.house-header .house-banner a.shop i{font-size: 25px;}
+.house-header .house-banner a.shop .layui-badge{width: 16px; height: 16px; border-radius: 50%; padding: 0; position: absolute; top: -3px; right: -5px;} 
+.house-header .layui-nav{width: 100%; background: #FFF; text-align: center; left: 0; top: 50px;}
+.house-header .layui-nav .layui-nav-item{display: block;}
+.house-header .layui-nav .layui-nav-item a{font-size: 16px; color: #000; padding: 0 30px;}
+.house-header .layui-nav .layui-nav-item a:hover, .house-header .layui-nav .layui-this a{color: #dabb92;}
+.house-header .layui-nav .layui-this:after, .house-header .layui-nav .layui-nav-bar{height: 1px; background-color: #dabb92;}
+.house-header #switch{position: absolute; top: 12px; right: 15px; width: 25px; height: 25px; background-color: #FFF; cursor: pointer; transition: 0.3s; border: 1px solid #FFF; border-radius: 3px;}
+.house-header #switch:hover{border-color: #dabb92; transition: 0.3s;}
+.house-header #switch span{position: absolute; top: 25%; left: 3px; width: 18px; height: 1px; background-color: #dabb92;}
+.house-header #switch span.second{position: absolute; top: 50%;}
+.house-header #switch span.third{position: absolute; top: 75%;}
+.house-carousel{height: 500px; text-align: center;}
+.house-carousel>*[carousel-item] > *
+,.house-carousel .layui-carousel{background: none;}
+
+/* 中间 */
+.layui-carousel img{max-width: 100%; height: 500px;}
+.house-title{margin-top: 45px; font-size: 18px; line-height: 78px; position: relative;}
+.house-title a{color: #999; font-size: 14px; position: absolute; right: 0;}
+.hot-cate .cateFir{background-color: #f5efec;}
+.hot-cate .cateSec{background-color: #f5f3ec;}
+.hot-cate .cateThir{background-color: #ecedf5;}
+.hot-cate .cate{height: 180px; line-height: 180px; cursor: pointer;}
+.hot-cate .cate img{width: 40%; transition: 1.2s;}
+.hot-cate .cate div{width: 60%; position: absolute; right: 0; display: inline-block; vertical-align: middle; padding-top: 45px; height: 175px; text-align: center;}
+.hot-cate .cate div p{font-size: 14px; line-height: 40px; color: #555;}
+.hot-cate .cate div span{display: block; margin: 0 auto; width: 48px; border-top: 1px solid #333; line-height: 30px; color: #555;}
+.hot-cate .cate:hover img{transform: scale(1.1); transition: 1.2s;}
+.hot-sell a.text{cursor: pointer; text-align: center;}
+.hot-sell a.text img{width: 100%; transition: 1.2s;}
+.hot-sell a.text div{overflow: hidden;}
+.hot-sell a.text p{color: #999; font-size: 12px; line-height: 18px; padding-top: 22px; transition: 0.5s; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.hot-sell a.text p.price{color: #333; font-size: 14px; line-height: 38px; padding-top: 0; padding-bottom: 5px;}
+.hot-sell a.text:hover p{color: #FFF; background-color: #e6c9a2; transition: 0.5s;}
+.hot-sell a.text:hover p.price{color: #F00;}
+.hot-sell a.text:hover img{transform: scale(1.1); transition: 1.2s;}
+
+#goodsAll{height: 400px; margin: 72px 0 65px; background: url(../img/banner_small.jpg) no-repeat center center; background-size: cover;}
+
+#champ{margin-top: 90px;}
+#champ a{overflow: hidden;}
+#champ a img{width: 100%; transition: 1.2s;}
+#champ a img:hover{transform: scale(1.1); transition: 1.2s;}
+
+/* 尾部 */
+.house-footer{background: #2F2F2F; position: relative;}
+.house-footer:after{content: ''; position: absolute; left: 0; bottom: 110px; width: 100%; height: 1px; background-color: #3d3d3d;}
+.house-footer .intro{height: 72px; line-height: 72px; color: #FFF; font-size: 12px; position: relative;}
+.house-footer .intro i{font-size: 12px; display: inline-block; vertical-align: middle; margin-right: 0px;}
+.house-footer .intro span.first{position: absolute; left: 0;}
+.house-footer .intro span.second{position: absolute; left: 25%;}
+.house-footer .intro span.third{position: absolute; left: 52%; top: 0;}
+.house-footer .intro span.last{position: absolute; right: 0; top: 0;}
+.house-footer .about{padding-top: 35px; padding-bottom: 30px; text-align: center;}
+.house-footer .about .layui-breadcrumb a{font-size: 12px;}
+.house-footer .about .layui-breadcrumb a:hover{color: #dabb92 !important;}
+.house-footer .about .layui-breadcrumb span[lay-separator]{margin: 0 10px;}
+.house-footer .about p{color: #999; margin-top: 10px;}
+
+/* 登录页面 */
+#house-login{height: 575px; padding-top: 125px; background: url(../img/load_bg.jpg)  no-repeat center center;}
+#house-login .layui-form{width: 300px; height: 560px; padding: 0 28px 0 32px; margin:0 auto; background-color: #FFF; box-shadow: 0 0 0 10px rgba(255,255,255,0.3);}
+#house-login .layui-form p{font-size: 20px; line-height: 120px; text-align: center;}
+#house-login .layui-form .layui-input-block{margin-left: 0; }
+#house-login .layui-form .layui-input-block input{height: 50px; padding-left: 15px; color: #999;}
+#house-login .layui-form .layui-input-block.login i{position: absolute; top: 9px; left: 10px; font-size: 30px; color: #AAA;}
+#house-login .layui-form .layui-input-block.login input{padding-left: 40px;}
+#house-login .layui-form .layui-input-block.getCode button{width: 33%; height: 48px; font-size: 14px; color: #555; margin-top: 0; position: absolute; top: 1px; right: 1px; background-color: #EEE;}
+#house-login .layui-form button{font-size: 18px; height: 42px; margin-top: 20px; width: 100%; background-color: #e8d6c0;}
+#house-login .layui-form  .layui-input-block-weixinQRcode img{ height: 110px;height: 110px; text-align: center;}
+#house-login .layui-form  .layui-input-block-weixinQRcode {  text-align: center;}
+
+
+/* 关于 */
+.house-about{text-align: center;}
+.house-about .house-about-banner{height: 765px; background: url(../img/us_banner.jpg)  no-repeat center center; background-size: cover;}
+.house-about p.title{color: #555; font-size: 42px; line-height: 114px; letter-spacing: 10px; padding-top: 84px; position: relative;}
+.house-about p.title:after{content: ''; position: absolute; left: 50%; margin-left: -108px; bottom: 0px; width: 200px; height: 2px; background-color: #bb966a;}
+.house-about p{color: #e3ceaf; font-size: 18px; font-weight: lighter; line-height: 84px;}
+.house-about div.buy{padding-top: 54px; overflow: hidden;}
+.house-about div.buy div img{width: 70%; box-shadow: -5px -5px 5px #e3ceaf;}
+.house-about div.screen{background-image: url(../img/us_imgbg.jpg); padding-top: 125px; padding-bottom: 220px; overflow: hidden;}
+.house-about div.screen div img{width: 70%;}
+.house-about div.after{padding-top: 94px; padding-bottom: 108px; overflow: hidden;}
+.house-about div.after span{display: inline-block; width: 100px; height: 100px; border: 2px solid #daba91; border-radius: 50%; background-color: #FFF; line-height: 100px; text-align: center;}
+.house-about div.after span i{color: #daba91; font-size: 56px;}
+.house-about div.after p{font-size: 12px; line-height: 88px;}
+
+/* 列表 */
+.house-list p.classify{padding-top: 10px; color: #555; line-height: 54px;}
+.house-list p.classify a{color: #555;}
+.house-list div.list-banner{height: 258px; background: url(../img/paging_banner.jpg);}
+.house-list div.filter{border: 1px solid #EEE; margin-top: 60px; margin-bottom: 60px; color: #555;}
+.house-list div.filter div{line-height: 44px; border-top: 1px solid #EEE; padding-left: 15px;}
+.house-list div.filter div:first-child{border: none;}
+.house-list div.filter div span{display: inline-block; width: 45px; vertical-align: top;}
+.house-list div.filter div ul{display: inline-block; width: 80%; vertical-align: top;}
+.house-list div.filter div ul li{display: inline-block; cursor: pointer; padding: 0 10px; position: relative;}
+.house-list div.filter div ul li.active{color: #daba91;}
+.house-list div.filter div ul li i.layui-icon-house-up{font-size: 5px; position: absolute; top: -3px;}
+.house-list div.filter div ul li i.layui-icon-triangle-d{font-size: 5px; position: absolute; bottom: -3px;}
+.house-list .layui-row div.list-detail{border: 1px solid #EEE;}
+.house-list .layui-row div.list-detail .img{overflow: hidden;}
+.house-list .layui-row div.list-detail img{width: 100%; transform: scale(1.1); transition: 1s;}
+.house-list .layui-row div.list-detail:hover img{transform: scale(1); transition: 1s;}
+.house-list .layui-row div.list-detail p{padding-left: 15px; padding-right: 13px; text-align: right; color: #AAA; font-size: 12px; line-height: 44px; position: relative;}
+.house-list .layui-row div.list-detail p.title{text-align: left; font-size: 16px; color: #333; line-height: 26px; padding-top: 15px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.house-list .layui-row div.list-detail p span.price{font-size: 12px; color: #e52c32; position: absolute; left: 15px;}
+.house-list #houseList{margin-top: 70px; margin-bottom: 80px;}
+.house-list #houseList .layui-laypage,.house-usercol #userList .layui-laypage
+,.house-detail #detailList .layui-laypage{display: block; text-align: center;}
+.house-list #houseList .layui-laypage a,.house-list #houseList .layui-laypage span
+,.house-usercol #userList .layui-laypage a,.house-usercol #userList .layui-laypage span{padding: 0 12px; font-size: 14px; line-height: 30px; height: 30px; margin-right: 4px; border-radius: 3px; color: #e3e3e3;}
+.house-list #houseList .layui-laypage span em
+,.house-usercol #userList .layui-laypage span em
+,.house-detail #detailList .layui-laypage span em{background-color: #daba91 !important;}
+
+/* 详情 */
+.house-detail{margin-bottom: 95px;}
+.house-detail > p.title{color: #999; line-height: 80px; padding-top: 7px;}
+.house-detail > p.title a{color: #999;}
+.house-detail div.price div{font-size: 0;}
+.house-detail div.price div div.intro-img{width: 80%; display: inline-block; vertical-align: middle;}
+.house-detail div.price div div.intro-img img, .house-detail div.price div ul.thumb img{width: 100%;}
+.house-detail div.price div ul.thumb{width: 18%; margin-left: 2%; display: inline-block; vertical-align: middle;}
+.house-detail div.price div ul.thumb li{margin-top: 15%;}
+.house-detail div.price div ul.thumb li:first-child{margin-top: 0;}
+.house-detail div.price .shopChoose{padding-top: 20px; font-size: 14px;}
+.house-detail div.price .shopChoose div.title{font-size: 16px; line-height: 28px; text-align: right; position: relative;}
+.house-detail div.price .shopChoose div.title span{color: #e36822;}
+.house-detail div.price .shopChoose div.title p{font-size: 16px; position: absolute; left: 0; font-weight: bold;}
+.house-detail div.price .shopChoose div.title p span{font-size: 14px; font-weight: normal; width: 40px; height: 24px; line-height: 24px; display: inline-block; vertical-align: middle; margin-right: 8px; background-color: #dd924e; color: #FFF;}
+.house-detail div.price .shopChoose > p{height: 50px; line-height: 50px; color: #999; font-size: 16px; padding-left: 22px; background-color: #fbf6f0; border-radius: 2px; margin: 10px 0;}
+.house-detail div.price .shopChoose > p big{font-size: 28px;}
+.house-detail div.price .shopChoose > p span{color: #d02b18; margin-right: 12px;}
+.house-detail div.price .shopChoose dl{padding: 5px 0; color: #333;}
+.house-detail div.price .shopChoose dl dt, .house-detail div.price .shopChoose dl dd{display: inline-block;}
+.house-detail div.price .shopChoose dl dd{box-sizing: border-box; width: 60px; height: 30px; line-height: 28px; text-align: center; border: 1px solid #CCC; margin: 0 10px; cursor: pointer; position: relative;}
+.house-detail div.price .shopChoose dl dd.active{border: 2px solid #dbbb92;}
+.house-detail div.price .shopChoose dl dd.active:after{content: ''; position: absolute; right: 0; bottom: 0; z-index: 100; width: 0; height: 0; border-width: 8px; border-style: solid; border-color: transparent #dbbb92 #dbbb92 transparent;}
+.house-detail div.price .shopChoose dl dd.active i.active{color: #FFF; font-size: 10px; line-height: 8px;position: absolute; right: 0; margin-right: -2px; bottom: 0; z-index: 200;}
+.house-detail div.price .shopChoose .number{font-size: 14px; padding-top: 5px; position: relative;}
+.house-detail div.price .shopChoose .number label{margin-right: 12px;}
+.house-detail div.price .shopChoose .number .btn-input{border: 1px solid #CCC;}
+.house-detail div.price .shopChoose .number .btn-input input{font-size: 12px; height: 30px; padding: 0; display: inline-block; vertical-align: middle; width: 45px; text-align: center; border: none; border-left: 1px solid #CCC; border-right: 1px solid #CCC; border-radius: 0;}
+.house-detail div.price .shopChoose .number .btn-input button{width: 28px; height: 30px; font-size: 16px; line-height: 30px; padding: 0; border: none;}
+.house-detail div.price .shopChoose .number .inputTips{position: absolute; top: 45px; left: 0; display: none; padding: 0 10px; color: #F00; font-size: 14px; height: 20px; line-height: 20px; background-color: #EEE; border: 1px solid #DDD;}
+.house-detail div.price .shopChoose .shopBtn{padding-top: 32px; padding-bottom: 20px;}
+.house-detail div.price .shopChoose .shopBtn button{width: 120px; height: 40px; font-size: 14px;}
+.house-detail div.price .shopChoose .shopBtn button.sale{border-color: #dbbb92; background-color: #fbf6f0; color: #dbbb92;}
+.house-detail div.price .shopChoose .shopBtn button.shop{color: #FFF; background-color: #dbbb92;}
+.house-detail div.price .shopChoose .shopBtn button.shop i{font-size: 16px;}
+.house-detail div.price .shopChoose .shopBtn button.collect{width: 48px; padding: 0; font-size: 12px; line-height: 60px; position: relative;}
+.house-detail div.price .shopChoose .shopBtn button.collect i{position: absolute; top: -20px; left: 50%; margin-left: -8px;}
+.house-detail div.price .shopChoose .shopBtn button.collect:hover{border-color: #dbbb92;}
+.house-detail div.detailTab .layui-tab-content{padding: 0;}
+.house-detail div.detailTab .layui-tab-brief > .layui-tab-title .layui-this
+,.userpublic .layui-tab-brief > .layui-tab-title .layui-this{color: #dbbb92;}
+.house-detail div.detailTab .layui-tab-brief > .layui-tab-title .layui-this:after
+,.userpublic .layui-tab-brief > .layui-tab-title .layui-this:after{border-bottom: 2px solid #dbbb92}
+.house-detail div.detailTab .layui-tab-brief > .layui-tab-title span{color: #dbbb92;}
+.house-detail div.detailTab .layui-tab-content img{width: 100%;}
+.house-detail div.detailTab .layui-tab-item .comment{border: 1px solid #e6e6e6; border-top: 0;}
+.house-detail div.detailTab .layui-tab-item .comment ul{padding: 0 7px;}
+.house-detail div.detailTab .layui-tab-item .comment ul li{position: relative; padding-top: 40px; padding-bottom: 26px; border-bottom: 1px solid #e6e6e6;}
+.house-detail div.detailTab .layui-tab-item .comment ul .img{width: 45px;}
+.house-detail div.detailTab .layui-tab-item .comment ul .img img{width: 100%;}
+.house-detail div.detailTab .layui-tab-item .comment ul .txt{font-size: 12px; color: #555; position: absolute; top: 40px; left: 63px;}
+.house-detail div.detailTab .layui-tab-item .comment ul .time{color: #CCC; font-size: 12px; position: absolute; top: 70px; left: 63px;}
+.house-detail #detailList{margin-top: 40px; margin-bottom: 40px;}
+.house-detail #detailList .layui-laypage a,.house-detail #detailList .layui-laypage span{padding: 0 10px; font-size: 14px; line-height: 26px; height: 26px; margin-right: 4px; border-radius: 3px; color: #e3e3e3;}
+.house-detail div.detailCom p.title{line-height: 50px; padding-left: 18px; font-weight: bold;}
+.house-detail div.detailCom .detailCom-content li{display: inline-block; width: 19%;}
+.house-detail div.detailCom .detailCom-content li p.price{color: #F00;}
+
+
+
+/* 个人中心 */
+.userpublic.layui-container{padding-top: 20px; padding-bottom: 140px;}
+.userpublic ul.user-list, .userpublic .layui-tab{border: 1px solid #EEE; background: #FFF; margin-top: 0; margin-bottom: 0;}
+.userpublic p.title{color: #999; line-height: 50px; padding: 17px 10px 0;}
+.userpublic .user-list{text-align: center;}
+.userpublic .user-list li{display: inline-block; width: 16%; padding: 20px 0 18px; cursor: pointer;}
+.userpublic .user-list li a{color: #555;}
+.userpublic .user-list li.active a{color: #dbbb92;}
+/* 收藏 */
+.house-usercol .layui-tab .layui-tab-content{padding: 25px;}
+.house-usercol .layui-tab .layui-tab-content .goods{position: relative;}
+.house-usercol .layui-tab .layui-tab-content .goods img{width: 100%;}
+.house-usercol .layui-tab .layui-tab-content .goods p{text-align: center; line-height: 22px; padding-top: 8px;}
+.house-usercol .layui-tab .layui-tab-content .goods p.price{font-size: 12px; padding-top: 0; color: #F00;}
+.house-usercol .layui-tab .layui-tab-content .goods span.del{display: none; width: 32px; height: 32px; text-align: center; font-size: 30px; line-height: 32px; background-color: #7a7a7a; color: #FFF; position: absolute; top: 0; right: 0; cursor: pointer;}
+.house-usercol .layui-tab .layui-tab-content .goods:hover span.del{display: block;}
+.house-usercol #userList{margin-top: 20px; margin-bottom: 60px;}
+/* 地址 */
+#user-address, #user-address + div{margin: 0;}
+#user-address + div th .layui-table-cell{height: 50px; line-height: 50px;}
+#user-address + div td .layui-table-cell{height: 100px; line-height: 100px;}
+.useradd .address-add{width: 100%; height: 110px; color: #84a3bf; border: none; border-radius: 0; border-right: 1px solid #e6e6e6; border-left: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6;}
+.useradd .address-add i{display: inline-block; vertical-align: middle;}
+#default{display: inline-block; width: 46px; height: 26px; background-color: #e6d6bc; color: #FFF; line-height: 26px; text-align: center;}
+#useradd-iframe{position: relative;}
+#useradd-iframe .layui-input-inline{width: 170px; padding-top: 5px;}
+#useradd-iframe .layui-form-label span{color: #F00;}
+#useradd-iframe .layui-form-label.telephone{margin-left: 70px;}
+#useradd-iframe .layui-textarea{width: 530px;}
+#useradd-iframe .layui-input, #useradd-iframe .layui-select{height: 20px; line-height: 20px;}
+#useradd-iframe input.checkdef + div{position: absolute; left: 50px;}
+#useradd-iframe input.checkdef + .layui-form-checkbox[lay-skin=primary]:hover i{border-color: #eb6741;}
+#useradd-iframe input.checkdef + .layui-form-checked[lay-skin=primary] i{border-color: #CCC; background-color: #FFF; color: #eb6741; font-weight: bold;}
+body .address-class .layui-layer-title{font-size: 18px; height: 100px; padding-left: 45px; line-height: 100px; background-color: #FFF; border-bottom: none;}
+body .address-class .layui-layer-setwin{top: 40px; right: 40px;}
+body .address-class .layui-layer-btn{padding: 0; padding-bottom: 20px; text-align: center;}
+body .address-class .layui-layer-btn a{width: 160px; height: 42px; background-color: #e8d6c0; border: none; font-size: 18px; line-height: 42px; display: inline-block; vertical-align: top;}
+/* 个人中心 */
+.house-userPer .user-person{color: #333; padding: 20px 0 20px 10px; border: 1px solid #EEE; background-color: #FFF;}
+.house-userPer .user-person .person{display: inline-block; vertical-align: middle;}
+.house-userPer .user-person .person img{width: 80px;}
+.house-userPer .user-person .person .name{display: inline-block; vertical-align: middle; margin-left: 25px; text-align: left;}
+.house-userPer .user-person .person .name p{line-height: 32px;}
+.house-userPer .user-person .person .name span i{color: #e19b53;}
+.house-userPer .user-person ul li{width: 90px; padding: 10px 0; display: inline-block; margin-left: 10px;}
+.house-userPer .user-person ul li span{color: #e19b53; margin-left: 10px;}
+.house-userPer .layui-tab .layui-tab-content{padding: 0;}
+.house-userPer .layui-tab-brief > .layui-tab-title{border-bottom: none;}
+#house-user-order + div{border: none; margin: 0; margin-top: 1px;}
+#house-user-order + div .layui-table-header{border-bottom: none;}
+#house-user-order + div th .layui-table-cell{height: 50px; line-height: 50px;}
+#house-user-order + div td .layui-table-cell{height: 170px; line-height: 170px;}
+#house-user-order + div td .layui-table-cell p, #house-user-order + div td .layui-table-cell a.handel{line-height: 30px;}
+/* 购物车 */
+.house-usershop #house-usershop-table + div{margin-top: 40px; margin-bottom: 0;}
+#house-usershop-table + div th .layui-table-cell{height: 50px; line-height: 50px;}
+#house-usershop-table + div td .layui-table-cell{height: 220px; padding-top: 60px;}
+#house-usershop-table + div td .layui-table-cell p{line-height: 22px;}
+.numVal{background-color: #FFF; border: 1px solid #CCC;}
+.numVal input{font-size: 12px; height: 30px; padding: 0; display: inline-block; vertical-align: middle; width: 45px; text-align: center; border: none; border-left: 1px solid #CCC; border-right: 1px solid #CCC; border-radius: 0;}
+.numVal button{width: 28px; height: 30px; font-size: 16px; line-height: 30px; padding: 0; border: none;}
+.house-usershop .house-usershop-table-none{height: 550px; padding-top: 100px; text-align: center;}
+.house-usershop .house-usershop-table-none p{color: #555; line-height: 70px;}
+.house-usershop .house-usershop-table-none a.layui-btn{width: 100px; height: 30px; line-height: 30px; border-color: #d8bb93; color: #d8bb93;}
+.house-usershop .house-usershop-table-num{height: 60px; line-height: 60px; padding-left: 15px; background-color: #f5f5f5; border: 1px solid #e6e6e6; margin-top: -1px; position: relative;}
+.house-usershop .house-usershop-table-num *{display: inline-block;}
+.house-usershop .house-usershop-table-num span.numal{margin-left: 10px;}
+.house-usershop .house-usershop-table-num #batchDel{cursor: pointer; position: absolute; top: 20px; left: 45px;}
+.house-usershop .house-usershop-table-num #total{display: none; position: absolute; left: 35%; line-height: 60px; color: #AAA;}
+.house-usershop .house-usershop-table-num #toCope{position: absolute; left: 50%; line-height: 60px;}
+.house-usershop .house-usershop-table-num #toCope big{font-size: 22px; color: #cd2d15;}
+.house-usershop .house-usershop-table-num #toCope span{display: none; font-size: 12px; line-height: 12px; color: #cd2d15; position: absolute; top: 40px; right: 0;}
+.house-usershop .house-usershop-table-num button{width: 60px; height: 62px; border-radius: 0; padding: 0; font-size: 16px; background-color: #dbbb92; position: absolute; top: -1px; right: -1px; letter-spacing: 2px;}
+#house-usershop-table + div .layui-form-checkbox[lay-skin=primary]:hover i
+,.house-usershop .house-usershop-table-num .layui-form-checkbox[lay-skin=primary]:hover i{border-color: #eb6741;}
+#house-usershop-table + div .layui-form-checked[lay-skin=primary] i
+,.house-usershop .house-usershop-table-num .layui-form-checked[lay-skin=primary] i{border-color: #CCC; background-color: #FFF; color: #eb6741; font-weight: bold;}
+.house-usershop > p{font-size: 18px; padding-top: 60px; padding-left: 15px; line-height: 42px;}
+.house-usershop ul.house-usershop-like{border: 1px solid #e6e6e6; padding: 20px 10px; margin-bottom: 105px;}
+.house-usershop ul.house-usershop-like li{display: inline-block; width: 17%; margin-left: 2%; text-align: center;}
+.house-usershop ul.house-usershop-like li:first-child{margin-left: 0;}
+.house-usershop ul.house-usershop-like li img{width: 100%;}
+.house-usershop ul.house-usershop-like li p{font-size: 12px; line-height: 24px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.house-usershop ul.house-usershop-like li p.price{padding-top: 0; color: #F00;}
+
+
+@media screen and (max-width: 768px){
+  .house-header .layui-container{height: 50px;}
+  .house-carousel{height: 150px;}
+  .layui-carousel img{height: 150px;}
+  .house-title{margin-top: 0;}
+}
+
+
+@media screen and (max-width: 480px){
+  .house-footer .intro{line-height: 36px;}
+  .house-footer .intro span.first{left: 0;}
+  .house-footer .intro span.second{left: auto; right: 0;}
+  .house-footer .intro span.third{top: 30px; left: 0;}
+  .house-footer .intro span.last{top: 30px; right: 0;}
+  .userpublic .user-list li{width: 30%; padding: 10px 0;}
+  .house-usershop .house-usershop-table-num *{font-size: 12px;}
+  .house-usershop .house-usershop-table-num #toCope{left: 40%;}
+}
+@media screen and (min-width: 768px){
+  .house-header:after{content: ''; position: absolute; left: 0; top: 40px; width: 100%; height: 1px; background-color: #F2F2F2;}
+  .house-header .house-nav{height: 40px; line-height: 40px;}
+  .house-header .house-nav .layui-breadcrumb{display: block;}
+  .house-header .house-nav .house-breadcrumb-icon{display: none; right: 10px;}
+  .house-header .house-banner{position: relative; line-height: 95px;}
+  .house-header .house-banner a.banner{width: 203px;}
+  .house-header .house-banner .layui-input-inline{display: inline-block;}
+  .house-header .house-banner a.shop{display: inline-block;}
+  .house-header .layui-nav{top: auto; bottom: 0;}
+  .house-header .layui-nav .layui-nav-item{display: inline-block;}
+  .house-header .layui-nav .layui-this:after, .house-header .layui-nav .layui-nav-bar{height: 0;}
+  .house-header #switch{display: none;}
+  body.scroll{padding-top: 50px;}
+  .house-header.scroll:after{height: 0;}
+  .house-header.scroll .house-nav{height: 50px;}
+  .house-header.scroll .house-nav .layui-breadcrumb{display: none;}
+  .house-header.scroll .house-nav .house-breadcrumb-icon{display: block;}
+  .house-header.scroll .house-banner{position: absolute; top: 0; line-height: 48px;}
+  .house-header.scroll .house-banner a.banner{width: 100px;}
+  .house-header.scroll .house-banner .layui-input-inline{display: none;}
+  .house-header.scroll .house-banner a.shop{display: none;}
+  .house-header.scroll .layui-nav{height: 50px; top: 0; left: 120px; width: 65%;}
+  .house-header.scroll .layui-nav .layui-nav-item a{padding: 0 15px; line-height: 50px;}
+  .hot-sell a.text p{font-size: 16px;}
+  .house-footer .about .layui-breadcrumb a{font-size: 14px;}
+  .house-footer .about .layui-breadcrumb span[lay-separator]{margin: 0 24px;}
+  .house-footer .intro span.third{left: 55%;}
+  .house-footer .intro{height: 146px; line-height: 146px; font-size: 16px;}
+  .house-footer .intro i{font-size: 20px; margin-right: 10px;}
+  .house-about p.title{padding-top: 144px;}
+  .house-about p{font-size: 28px;}
+  .house-about div.after span{width: 200px; height: 200px; line-height: 200px;}
+  .house-about div.after span i{font-size: 86px;}
+  .house-about div.after p{font-size: 28px; line-height: 118px;}
+  .house-list #houseList .layui-laypage a,.house-list #houseList .layui-laypage span
+  ,.house-usercol #userList .layui-laypage a,.house-usercol #userList .layui-laypage span{padding: 0 15px; font-size: 18px; line-height: 40px; height: 40px; margin-right: 20px;}
+  .house-list div.filter div span{width: 65px;}
+  .house-list div.filter div ul li{padding: 0 24px;}
+  .house-detail div.price .shopChoose{padding-top: 0; padding-left: 10px;}
+  .house-detail div.detailCom .detailCom-content{padding: 0 15px; border: 1px solid #e6e6e6;}
+  .house-detail div.detailCom .detailCom-content li{width: auto; margin-top: 10px;}
+  .house-detail div.detailTab .layui-tab-item .comment ul{padding: 10px 28px;}
+  .house-detail div.detailTab .layui-tab-item .comment ul .txt{font-size: 14px;}
+  .house-detail #detailList .layui-laypage a,.house-detail #detailList .layui-laypage span{margin-right: 10px;}
+  .userpublic .user-list{padding: 10px 20px;}
+  .userpublic .user-list li{display: block; width: auto; border-top: 1px dashed #CCC;}
+  .userpublic .user-list li:first-child{border-top: 0;}
+  .house-userPer .user-person .person{border-right: 1px solid #e6e6e6; padding-right: 15px;}
+  .house-userPer .user-person ul{width: 65%; display: inline-block; vertical-align: middle;}
+  .house-userPer .user-person ul li{width: 110px;}
+  .house-usershop ul.house-usershop-like li{width: 17%; margin-left: 20px;}
+  .house-usershop ul.house-usershop-like li p{font-size: 14px; padding-top: 20px;}
+  .house-usershop .house-usershop-table-num{height: 80px; line-height: 80px;}
+  .house-usershop .house-usershop-table-num #batchDel{top: auto; left: 120px;}
+  .house-usershop .house-usershop-table-num #total{display: inline-block;}
+  .house-usershop .house-usershop-table-num #toCope{left: 55%;}
+  .house-usershop .house-usershop-table-num button{width: 160px; height: 82px; font-size: 22px;}
+}
+@media screen and (min-width: 992px){
+  .house-header .layui-nav .layui-nav-item a{padding: 0 49px;} 
+  .house-header.scroll .layui-nav{width: 70%;}
+  .house-header.scroll .layui-nav .layui-nav-item a{padding: 0 30px;}
+  .hot-cate .cate{height: 220px; line-height: 220px;}
+  .hot-cate .cate div p{font-size: 20px; line-height: 60px; letter-spacing: 1px;}
+  .hot-cate .cate div span{width: 60px; line-height: 58px;}
+  .house-footer .intro{font-size: 20px;}
+  .house-footer .intro i{font-size: 27px;}
+  .house-detail div.price .shopChoose{padding-left: 50px;}
+  .house-detail div.price .shopChoose div.title p{font-size: 18px;}
+  .house-detail div.price .shopChoose dl{padding: 12px 0;}
+  .house-detail div.price .shopChoose dl dd{width: 80px; margin: 0 15px;}
+  .house-detail div.price .shopChoose .number{padding-top: 16px;}
+  .house-detail div.price .shopChoose .number .inputTips{margin-top: 10px;}
+  .house-detail div.detailCom .detailCom-content{padding: 0 45px 45px;}
+  .house-detail div.detailCom .detailCom-content li{margin-top: 42px;}
+  .house-userPer .user-person{padding: 40px 0 40px 40px;}
+  .house-userPer .user-person .person{padding-right: 45px;}
+  .house-userPer .user-person ul li{margin-left: 46px;}
+  .house-usershop .house-usershop-table-num #batchDel{left: 185px;}
+  .house-usershop .house-usershop-table-num #total{left: 50%;}
+  .house-usershop .house-usershop-table-num #toCope{left: 65%;}
+  .house-usershop .house-usershop-table-num:after{content: ''; position: absolute; top: 15px; left: 62%; width: 1px; height: 50px; background-color: #e6e6e6;}
+  .house-usershop ul.house-usershop-like{padding: 40px 20px;}
+  .house-usershop ul.house-usershop-like li{width: 18%; margin-left: 2%;}
+}
+@media screen and (min-width: 1200px){
+  .house-header .house-nav .house-breadcrumb-icon span[lay-separator]{margin: 0 15px;}
+  .house-header.scroll .house-banner a.banner{width: 130px;}
+  .house-header.scroll .layui-nav{left: 150px;}
+  .house-header.scroll .layui-nav .layui-nav-item a{padding: 0 40px;}
+  .hot-cate .cateFir{padding-left: 10px;}
+  .hot-cate .cateSec{padding-left: 45px;}
+  .hot-cate .cateThir{padding-left: 60px;}
+  .house-about div.buy{padding-top: 84px; padding-bottom: 35px;}
+  .house-about div.screen{padding-top: 195px; padding-bottom: 290px;}
+  .house-about div.after{padding-top: 124px; padding-bottom: 148px;}
+  .house-detail div.price .shopChoose > p{height: 80px; line-height: 80px; margin: 24px 0;}
+  .house-detail div.price .shopChoose .shopBtn{padding-bottom: 0; padding-top: 42px;}
+  .house-detail div.price .shopChoose .shopBtn button{width: 200px; height: 50px; font-size: 20px;}
+  .house-detail div.price .shopChoose .shopBtn button.shop i{font-size: 22px;}
+  .house-detail div.price .shopChoose .shopBtn button.collect{line-height: 70px;} 
+  .house-userPer .user-person ul{width: 75%;}
+  .house-usershop .house-usershop-table-num #toCope{left: 70%;}
+  .house-usershop .house-usershop-table-num:after{left: 65%;}
+}
+@media screen and (min-width: 1300px){
+  .layui-container{width: 1200px !important; padding: 0;}
+  .house-userPer .user-person ul li{margin-right: 70px;}
+  .house-userPer .user-person ul li span{margin-left: 30px;}
+}
+@media \0screen{
+  .house-header{border-bottom: 1px solid #EEE;}
+  .house-usershop ul.house-usershop-like li{width: 17%; margin-left: 2%;}
+}

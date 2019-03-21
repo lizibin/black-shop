@@ -2,7 +2,7 @@
  
 * <p>Company: www.black-shop.cn</p>  
 
-* <p>Copyright: Copyright (c) 2018</p>   
+* <p>Copyright: Copyright (c) 2018-2050</p>   
 
 * @version 1.0  
 
@@ -17,17 +17,11 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 
-/**  
-
-* <p>Title: ApolloApp</p>  
-
-* <p>Description: </p>  
-
-* @author zibin  
-
-* @date 2018年11月26日  
-
-*/
+/**
+ * apollo测试启动
+ * @author zibin
+ *
+ */
 @SpringBootApplication
 @EnableApolloConfig
 @EnableDiscoveryClient
