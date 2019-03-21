@@ -20,6 +20,12 @@
       <artifactId>black-shop-service-api-user</artifactId>
     </dependency>
 
+    <!--整合redis -->
+    <dependency>
+      <groupId>cn.black-shop</groupId>
+      <artifactId>black-shop-basic-redis</artifactId>
+    </dependency>
+
     <dependency>
       <groupId>com.github.binarywang</groupId>
       <artifactId>weixin-java-mp</artifactId>
