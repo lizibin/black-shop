@@ -21,12 +21,12 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * UserBasicApp用户基础服务启动类
- * @author zibin1
+ * @author zibin
  */
 @EnableFeignClients
 @EnableDiscoveryClient
-@MapperScan("cn.blackshop.service.user.basic.mapper")
-@EnableApolloConfig({ApolloNamespaceConstant.PUBLIC_NACOS_CONFIG,ApolloNamespaceConstant.PUBLIC_RIBBON_CONFIG}) 
+@MapperScan("cn.blackshop.service.user.mapper")
+@EnableApolloConfig({ApolloNamespaceConstant.PUBLIC_NACOS_CONFIG,ApolloNamespaceConstant.PUBLIC_RIBBON_CONFIG,ApolloNamespaceConstant.PUBLIC_REDIS_CONFIG}) 
 @SpringBootApplication(scanBasePackages="cn.blackshop")
 public class UserServiceApp {
 

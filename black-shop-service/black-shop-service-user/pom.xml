@@ -9,15 +9,23 @@
   <artifactId>black-shop-service-user</artifactId>
 
   <dependencies>
+    <!--整合用户api -->
     <dependency>
       <groupId>cn.black-shop</groupId>
       <artifactId>black-shop-service-api-user</artifactId>
     </dependency>
 
+    <!--整合微信api -->
     <dependency>
       <groupId>cn.black-shop</groupId>
       <artifactId>black-shop-service-api-thirdparty-wechat</artifactId>
       <version>${project.version}</version>
+    </dependency>
+
+    <!--整合redis -->
+    <dependency>
+      <groupId>cn.black-shop</groupId>
+      <artifactId>black-shop-basic-redis</artifactId>
     </dependency>
   </dependencies>
 

@@ -7,11 +7,4 @@
   </parent>
   <artifactId>black-shop-common-util</artifactId>
   
-  <dependencies>
-     <!--整合redis -->
-    <dependency>
-      <groupId>cn.black-shop</groupId>
-      <artifactId>black-shop-basic-redis</artifactId>
-    </dependency>
-  </dependencies>
 </project>
