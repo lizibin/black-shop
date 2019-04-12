@@ -12,19 +12,9 @@
 package cn.blackshop.basic.apollo.constans;
 
 /**
- * 
- * <p>
- * Title: 阿波罗命名空间常量
- * </p>
- * 
- * <p>
- * Description:
- * </p>
- * 
+ *	阿波罗命名空间常量
  * @author zibin
- * 
- * @date 2019年1月11日
- * 
+ *
  */
 public interface ApolloNamespaceConstant {
 
