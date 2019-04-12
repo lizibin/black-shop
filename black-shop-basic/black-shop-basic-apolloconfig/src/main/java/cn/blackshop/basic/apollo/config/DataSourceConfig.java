@@ -19,15 +19,8 @@ import cn.blackshop.basic.apollo.constans.ApolloNamespaceConstant;
 import lombok.Data;
 
 /**  
-
-* <p>Title: DataSourceConfig</p>  
-
 * <p>Description: 加载apollo 公共命名空间的DataSource数据源</p>  
-
 * @author zibin  
-
-* @date 2019年1月11日  
-
 */
 @Data
 @EnableApolloConfig(ApolloNamespaceConstant.PUBLIC_DATASOURCE_CONFIG)
