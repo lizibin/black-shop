@@ -2,7 +2,7 @@
  
 * <p>Company: www.black-shop.cn</p>  
 
-* <p>Copyright: Copyright (c) 2018</p>   
+* <p>Copyright: Copyright (c) 2018-2050</p>   
 
 * black-shop(黑店) 版权所有,并保留所有权利。
 
@@ -20,7 +20,7 @@ import cn.blackshop.basic.apollo.constans.ApolloNamespaceConstant;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
- * UserBasicApp用户基础服务启动类
+ * UserServiceApp用户基础服务启动类
  * @author zibin
  */
 @EnableFeignClients

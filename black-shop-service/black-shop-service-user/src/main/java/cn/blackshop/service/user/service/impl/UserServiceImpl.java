@@ -31,8 +31,7 @@ import cn.blackshop.service.user.mapper.UserMapper;
  * @author zibin
  */
 @RestController
-@Service(value="userBasicService")
-public class UserBasicServiceImpl extends ApiService<UserOutDTO> implements UserService{
+public class UserServiceImpl extends ApiService<UserOutDTO> implements UserService{
 
 	@Autowired
 	private UserMapper userMapper;
