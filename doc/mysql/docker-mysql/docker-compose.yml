@@ -1,0 +1,21 @@
+version: "3.3"  
+services: 
+  mysql:   
+    container_name: mysql
+    image: mysql:5.6
+    restart: always
+    volumes:  
+      - ./db/mysql/data:/var/lib/mysql 
+      - ./db/mysql/init-db/:/docker-entrypoint-initdb.d
+      - ./db/mysql/conf.d:/etc/mysql/conf.d 
+    environment:
+      #MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+      TZ: ${GLOBAL_TIME_ZONE}
+    ports:  
+      - "${MYSQL_PORT}:3306" 
+    networks:
+      - bs-backend  
+networks:
+  bs-backend:  
+    driver: bridge

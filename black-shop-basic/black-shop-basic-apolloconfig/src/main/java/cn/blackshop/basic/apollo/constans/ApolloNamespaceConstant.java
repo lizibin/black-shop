@@ -2,7 +2,7 @@
  
 * <p>Company: www.black-shop.cn</p>  
 
-* <p>Copyright: Copyright (c) 2018</p>   
+* <p>Copyright: Copyright (c) 2018-2050</p>   
 
 * @version 1.0  
 

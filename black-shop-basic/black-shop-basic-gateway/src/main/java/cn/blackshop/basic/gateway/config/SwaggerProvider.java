@@ -35,9 +35,10 @@ public class SwaggerProvider implements SwaggerResourcesProvider{
     List<SwaggerResource> resources = new ArrayList<>();
     resources.add(swaggerResource("用户服务", "/user" + API_URI));
     resources.add(swaggerResource("商品服务", "/product" + API_URI));
-    resources.add(swaggerResource("订单服务", "/order" + API_URI));
+    resources.add(swaggerResource("搜索服务", "/portal" + API_URI));
     resources.add(swaggerResource("购物车服务", "/cart" + API_URI));
-    resources.add(swaggerResource("protal App服务", "/portal" + API_URI));
+    resources.add(swaggerResource("订单服务", "/order" + API_URI));
+    resources.add(swaggerResource("支付服务", "/portal" + API_URI));
     return resources;
 
   }

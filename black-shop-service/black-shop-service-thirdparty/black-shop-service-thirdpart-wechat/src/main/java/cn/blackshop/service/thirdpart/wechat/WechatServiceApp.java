@@ -2,7 +2,7 @@
  
 * <p>Company: www.black-shop.cn</p>  
 
-* <p>Copyright: Copyright (c) 2018</p>   
+* <p>Copyright: Copyright (c) 2018-2050</p>   
 
 * black-shop(黑店) 版权所有,并保留所有权利。
 
@@ -17,20 +17,17 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import com.spring4all.swagger.EnableSwagger2Doc;
 
 /**
- * 启动类.
+ * wechat run
  * @author zibin
+ *  
  */
 @EnableDiscoveryClient
 @EnableSwagger2Doc
 @EnableFeignClients
 @SpringBootApplication(scanBasePackages="cn.blackshop")
-public class WechatApp {
+public class WechatServiceApp {
 
-  /**
-   * 启动类
-   * @param args
-   */
   public static void main(String[] args) {
-    SpringApplication.run(WechatApp.class, args);
+    SpringApplication.run(WechatServiceApp.class, args);
   }
 }

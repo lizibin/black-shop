@@ -15,7 +15,7 @@ import cn.blackshop.model.user.entity.User;
 import tk.mybatis.mapper.common.BaseMapper;
 
 /**
- * 用户mapper类
+ *       用户mapper类
  * @author zibin
  */
 public interface UserMapper extends BaseMapper<User> {

@@ -1,4 +1,4 @@
-package cn.blackshop.protal.web.utils;
+package cn.blackshop.portal.web.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
