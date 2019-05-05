@@ -1,0 +1,10 @@
+###服务启动端口号
+server:
+  port: 9999
+###服务名称(服务注册到eureka名称)
+spring:
+    application:
+        name: bs-gateway-service
+jasypt:
+  encryptor:
+    password: black-shop
