@@ -20,7 +20,7 @@
     <!--整合微信api -->
     <dependency>
       <groupId>cn.black-shop</groupId>
-      <artifactId>black-shop-service-api-thirdparty-wechat</artifactId>
+      <artifactId>black-shop-wechat-api</artifactId>
       <version>${project.version}</version>
     </dependency>
 
