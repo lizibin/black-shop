@@ -11,4 +11,13 @@
   </parent>
   <artifactId>black-shop-user</artifactId>
   <packaging>pom</packaging>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.black-shop</groupId>
+            <artifactId>black-shop-model-user</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 </project>
