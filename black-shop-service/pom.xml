@@ -79,6 +79,11 @@
       <artifactId>druid-spring-boot-starter</artifactId>
       <version>${springboot.druid.version}</version>
     </dependency>
+      <!--整合通用工具 -->
+      <dependency>
+          <groupId>cn.black-shop</groupId>
+          <artifactId>black-shop-common-basic</artifactId>
+      </dependency>
     <!--整合通用工具 -->
     <dependency>
       <groupId>cn.black-shop</groupId>

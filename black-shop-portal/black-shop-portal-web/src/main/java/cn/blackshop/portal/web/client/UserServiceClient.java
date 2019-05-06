@@ -9,10 +9,9 @@
 */
 package cn.blackshop.portal.web.client;
 
+import cn.blackshop.user.api.UserServiceApi;
+import cn.blackshop.user.api.constant.UserServerNameConstant;
 import org.springframework.cloud.openfeign.FeignClient;
 
-import cn.blackshop.service.api.user.constant.UserServerNameConstant;
-import cn.blackshop.service.api.user.service.UserService;
-
 @FeignClient(UserServerNameConstant.BS_USER_SERVICE)
-public interface UserServiceClient extends UserService{}
+public interface UserServiceClient extends UserServiceApi {}
