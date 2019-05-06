@@ -15,3 +15,4 @@ import org.springframework.cloud.openfeign.FeignClient;
 
 @FeignClient(UserServerNameConstant.BS_USER_SERVICE)
 public interface UserServiceClient extends UserServiceApi {}
+
