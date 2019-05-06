@@ -21,7 +21,7 @@
     </dependency>
     <dependency>
       <groupId>cn.black-shop</groupId>
-      <artifactId>black-shop-service-api-user</artifactId>
+      <artifactId>black-shop-user-api</artifactId>
     </dependency>
     <!-- <dependency> <groupId>com.tengxun</groupId> <artifactId>sdk4j</artifactId> 
       <version>1.0</version> </dependency> -->

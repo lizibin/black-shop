@@ -111,7 +111,6 @@
     <module>black-shop-common</module>
     <module>black-shop-basic</module>
     <module>black-shop-service</module>
-    <module>black-shop-service-api</module>
     <module>black-shop-model</module>
     <module>black-shop-portal</module>
   </modules>
