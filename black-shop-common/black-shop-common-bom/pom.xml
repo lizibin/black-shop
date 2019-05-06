@@ -75,7 +75,7 @@
        <!--用户基础服务接口-->
        <dependency>
         <groupId>cn.black-shop</groupId>
-        <artifactId> black-shop-service-api-user</artifactId>
+        <artifactId> black-shop-user-api</artifactId>
         <version>${blackshop.version}</version>
       </dependency>
     </dependencies>
