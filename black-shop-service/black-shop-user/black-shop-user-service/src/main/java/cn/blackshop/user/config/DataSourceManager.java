@@ -1,26 +1,23 @@
-/**  
- 
-* <p>Company: www.black-shop.cn</p>  
+/**
 
-* <p>Copyright: Copyright (c) 2018</p>   
+ * <p>Company: www.black-shop.cn</p>
 
-* black-shop(黑店) 版权所有,并保留所有权利。
+ * <p>Copyright: Copyright (c) 2018-2050</p>
 
-*/  
+ * black-shop(黑店) 版权所有,并保留所有权利。
+
+ */
 package cn.blackshop.user.config;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.Properties;
-
-import javax.sql.DataSource;
-
+import com.alibaba.druid.pool.DruidDataSource;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.alibaba.druid.pool.DruidDataSource;
-
-import lombok.extern.slf4j.Slf4j;
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Properties;
 
 /**
  * 数据源管理

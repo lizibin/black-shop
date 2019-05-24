@@ -9,12 +9,12 @@
 */
 package cn.blackshop.user.client;
 
-import cn.blackshop.service.api.thrdpary.constant.WechatServerNameConstant;
-import cn.blackshop.service.api.thrdpary.wechet.VerificaWechatCodeService;
+import cn.blackshop.wechat.api.constant.VerificaWechatCodeApi;
+import cn.blackshop.wechat.api.constant.WechatServerNameConstant;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**
  * The Interface VerificaWechatCodeServiceClient.
  */
 @FeignClient(WechatServerNameConstant.WECHAT_SERVICE)
-public interface VerificaWechatCodeServiceClient extends VerificaWechatCodeService{}
+public interface VerificaWechatCodeServiceClient extends VerificaWechatCodeApi {}
