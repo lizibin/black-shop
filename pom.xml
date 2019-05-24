@@ -91,10 +91,10 @@
 
 
   <properties>
-    <springboot.version>2.0.6.RELEASE</springboot.version>
+    <springboot.version>2.0.9.RELEASE</springboot.version>
     <springcloud.version>Finchley.SR2</springcloud.version>
     <spring-platform.version>Cairo-SR6</spring-platform.version>
-    <springcloud.alibaba.version>0.2.1.RELEASE</springcloud.alibaba.version>
+    <springcloud.alibaba.version>0.9.0.RELEASE</springcloud.alibaba.version>
     <springboot.jasypt.version>2.1.0</springboot.jasypt.version>
     <springboot.swagger.version>1.8.0.RELEASE</springboot.swagger.version>
     <springboot.log4j.version>1.3.8.RELEASE</springboot.log4j.version>
