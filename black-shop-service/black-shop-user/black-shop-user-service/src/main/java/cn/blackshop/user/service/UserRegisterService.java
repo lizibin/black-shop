@@ -15,7 +15,6 @@ import cn.blackshop.common.utils.MD5Util;
 import cn.blackshop.common.utils.StringUtils;
 import cn.blackshop.model.user.dto.enter.UserEnterDTO;
 import cn.blackshop.model.user.entity.User;
-import cn.blackshop.user.client.VerificaWechatCodeServiceClient;
 import cn.blackshop.user.mapper.UserMapper;
 import com.alibaba.fastjson.JSONObject;
 import lombok.AllArgsConstructor;

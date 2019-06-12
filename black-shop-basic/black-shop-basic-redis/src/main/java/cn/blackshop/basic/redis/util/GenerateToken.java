@@ -1,11 +1,11 @@
 package cn.blackshop.basic.redis.util;
 
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 @Component
 public class GenerateToken {
@@ -15,7 +15,7 @@ public class GenerateToken {
 
   /**
    * 生成令牌
-   * @param prefix 令牌key前缀
+   * @param keyPrefix 令牌key前缀
    * @param redisValue redis存放的值
    * @return 返回token
    */
@@ -25,7 +25,7 @@ public class GenerateToken {
 
   /**
    * 生成令牌
-   * @param prefix 令牌key前缀
+   * @param keyPrefix 令牌key前缀
    * @param redisValue redis存放的值
    * @param time 有效期
    * @return 返回token

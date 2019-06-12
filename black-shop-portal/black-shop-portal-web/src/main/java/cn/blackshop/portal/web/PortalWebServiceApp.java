@@ -24,12 +24,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableDiscoveryClient
 public class PortalWebServiceApp {
 
-  /**
-   * The main method.
-   *
-   * @param args
-   *          the args
-   */
   public static void main(String[] args) {
     SpringApplication.run(PortalWebServiceApp.class, args);
   }

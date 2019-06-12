@@ -3,7 +3,7 @@ server:
   port: 8080
 spring:
  application:
-   name: bs-portal-web-service
+   name: bs-portal-web
  cloud:
    nacos:
      discovery:
