@@ -26,7 +26,7 @@
         <dependency>
             <groupId>com.github.binarywang</groupId>
             <artifactId>weixin-java-mp</artifactId>
-            <version>3.3.0</version>
+            <version>3.4.0</version>
             <exclusions>
                 <exclusion>
                     <artifactId>xstream</artifactId>
