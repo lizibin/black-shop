@@ -5,14 +5,13 @@
 * @version 1.0  
 * black-shop(黑店) 版权所有,并保留所有权利。
 */
-package cn.blackshop.model.user.entity;
-
-import java.util.Date;
-
-import javax.persistence.Table;
+package cn.blackshop.user.api.entity;
 
 import lombok.Data;
 import lombok.ToString;
+
+import javax.persistence.Table;
+import java.util.Date;
 
 /**
  * 用户登录token实体表

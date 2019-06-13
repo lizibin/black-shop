@@ -9,27 +9,30 @@
 */
 package cn.blackshop.common.web.base;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.springframework.ui.Model;
-
-import cn.blackshop.common.basic.constants.Constants;
+import cn.blackshop.common.basic.constants.HttpStatusConstants;
 import cn.blackshop.common.basic.core.ResponseResult;
 import nl.bitwalker.useragentutils.Browser;
 import nl.bitwalker.useragentutils.UserAgent;
 import nl.bitwalker.useragentutils.Version;
+import org.springframework.ui.Model;
+
+import javax.servlet.http.HttpServletRequest;
 
 public class BaseWebController {
 	
 	/** 500页面. */
 	protected static final String ERROR_500_FTL = "500.ftl";
 
-	// 接口直接返回true 或者false
+	/**
+	 * 接口直接返回true 或者false
+	 * @param baseResp
+	 * @return
+	 */
 	public Boolean isSuccess(ResponseResult<?> baseResp) {
 		if (baseResp == null) {
 			return false;
 		}
-		if (baseResp.getCode().equals(Constants.HTTP_RES_CODE_500_VALUE)) {
+		if (baseResp.getStatus().equals(HttpStatusConstants.HTTP_RES_CODE_500)) {
 			return false;
 		}
 		return true;

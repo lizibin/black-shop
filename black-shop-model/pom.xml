@@ -11,7 +11,6 @@
 
 
   <modules>
-    <module>black-shop-model-user</module>
     <module>black-shop-model-product</module>
     <module>black-shop-model-order</module>
     <module>black-shop-model-common</module>

@@ -9,22 +9,21 @@
 */
 package cn.blackshop.wechat;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
-
 import com.spring4all.swagger.EnableSwagger2Doc;
+import org.springframework.boot.SpringApplication;
+import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * wechat run
  * @author zibin
  *  
  */
-@EnableDiscoveryClient
 @EnableSwagger2Doc
 @EnableFeignClients
-@SpringBootApplication(scanBasePackages="cn.blackshop")
+@SpringCloudApplication
+@ComponentScan("cn.blackshop")
 public class WechatServiceApp {
 
   public static void main(String[] args) {

@@ -7,14 +7,13 @@
 * black-shop(黑店) 版权所有,并保留所有权利。
 
 */
-package cn.blackshop.model.user.entity;
-
-import java.util.Date;
-
-import javax.persistence.Table;
+package cn.blackshop.user.api.entity;
 
 import lombok.Data;
 import lombok.ToString;
+
+import javax.persistence.Table;
+import java.util.Date;
 
 /**
  * 用户收货地址表实体

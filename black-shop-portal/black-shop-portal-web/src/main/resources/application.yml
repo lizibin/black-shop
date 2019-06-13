@@ -2,22 +2,22 @@
 server:
   port: 8080
 spring:
- application:
-   name: bs-portal-web
- cloud:
-   nacos:
-     discovery:
-       server-addr: 192.168.0.238:8848
- freemarker:
-        cache: false
-        charset: UTF-8
-        check-template-location: true
-        content-type: text/html
-        expose-request-attributes: true
-        expose-session-attributes: true
-        request-context-attribute: request
-        suffix: .ftl
-        template-loader-path:
-        - classpath:/templates
+  application:
+    name: bs-portal-web
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.0.238:8848
+  freemarker:
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+    suffix: .ftl
+    template-loader-path:
+      - classpath:/templates
 
   

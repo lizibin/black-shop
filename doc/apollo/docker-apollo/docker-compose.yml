@@ -7,7 +7,7 @@ services:
     restart: always
     volumes:
       - ./logs:/opt/logs
-#   - ./application-ldap.yml:/apollo-portal/config/application-ldap.yml:ro #ldap配置文件挂载路径
+#   - ./application-ldap.yml:/apollo-portal/util/application-ldap.yml:ro #ldap配置文件挂载路径
 #启动前,确认对应环境的数据库已经建立，否则apollo无法启动.
 #默认端口:portal:8070; dev:8080,8090; fat:8081,8091; uat:8082,8092; pro:8083,8093
     environment:
