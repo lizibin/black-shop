@@ -7,20 +7,20 @@
  */
 package cn.blackshop.user.config;
 
+import cn.blackshop.common.datasource.config.DataSourceConfig;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 
-import cn.blackshop.basic.apollo.config.DataSourceConfig;
 import cn.blackshop.basic.apollo.constans.ApolloNamespaceConstant;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
  * 加载apllo数据源
- * @author zibin
  *
+ * @author zibin
  */
 @Configuration
 @Data

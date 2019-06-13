@@ -7,7 +7,7 @@
  */
 package cn.blackshop.user.mapper;
 
-import cn.blackshop.model.user.entity.User;
+import cn.blackshop.user.api.entity.User;
 import tk.mybatis.mapper.common.BaseMapper;
 
 import java.util.List;

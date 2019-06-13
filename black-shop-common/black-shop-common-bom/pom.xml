@@ -49,6 +49,13 @@
 				<version>${blackshop.version}</version>
 			</dependency>
 
+			<!--数据库相关的依赖-->
+			<dependency>
+				<groupId>cn.black-shop</groupId>
+				<artifactId>black-shop-common-datasource</artifactId>
+				<version>${blackshop.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>cn.black-shop</groupId>
 				<artifactId>black-shop-common-web</artifactId>

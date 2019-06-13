@@ -21,7 +21,6 @@
 		<module>black-shop-payment</module>
 		<module>black-shop-thirdparty</module>
 		<module>black-shop-shoppingcart</module>
-		<module>black-shop-service-basic</module>
 		<module>black-shop-order</module>
 	</modules>
 	<dependencies>
@@ -71,7 +70,6 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
-			<version>${springboot.druid.version}</version>
 		</dependency>
 		<!--整合通用工具 -->
 		<dependency>
