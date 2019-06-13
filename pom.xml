@@ -94,7 +94,7 @@
 		<springboot.version>2.0.9.RELEASE</springboot.version>
 		<springcloud.version>Finchley.SR2</springcloud.version>
 		<spring-platform.version>Cairo-SR6</spring-platform.version>
-		<springcloud.alibaba.version>0.9.0.RELEASE</springcloud.alibaba.version>
+		<springcloud.alibaba.version>0.2.2.RELEASE</springcloud.alibaba.version>
 		<springboot.jasypt.version>2.1.0</springboot.jasypt.version>
 		<springboot.swagger.version>1.8.0.RELEASE</springboot.swagger.version>
 		<springboot.mybatis.version>1.3.2</springboot.mybatis.version>

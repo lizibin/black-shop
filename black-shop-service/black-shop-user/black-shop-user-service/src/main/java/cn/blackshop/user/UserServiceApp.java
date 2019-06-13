@@ -19,7 +19,7 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @author zibin
  */
 @MapperScan("cn.blackshop.user.mapper")
-@EnableApolloConfig({ApolloNamespaceConstant.PUBLIC_NACOS_CONFIG, ApolloNamespaceConstant.PUBLIC_RIBBON_CONFIG, ApolloNamespaceConstant.PUBLIC_REDIS_CONFIG})
+@EnableApolloConfig({ApolloNamespaceConstant.PUBLIC_NACOS_CONFIG})
 @SpringCloudApplication
 @ComponentScan("cn.blackshop")
 public class UserServiceApp {

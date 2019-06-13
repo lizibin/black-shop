@@ -9,7 +9,7 @@ package cn.blackshop.user.controller;
 
 import cn.blackshop.common.basic.core.ResponseResult;
 import cn.blackshop.common.basic.core.ResponseResultManager;
-import cn.blackshop.model.user.dto.out.UserOutDTO;
+import cn.blackshop.user.api.dto.o.UserOutDTO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

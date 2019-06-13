@@ -1,17 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>cn.black-shop</groupId>
-    <artifactId>black-shop</artifactId>
-    <version>1.0.0</version>
-  </parent>
-  <artifactId>black-shop-common</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>black-shop-common-util</module>
-  	<module>black-shop-common-basic</module>
-  	<module>black-shop-common-web</module>
-  	<module>black-shop-common-bom</module>
-  	<module>black-shop-common-security</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cn.black-shop</groupId>
+		<artifactId>black-shop</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>black-shop-common</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>black-shop-common-util</module>
+		<module>black-shop-common-basic</module>
+		<module>black-shop-common-web</module>
+		<module>black-shop-common-bom</module>
+		<module>black-shop-common-security</module>
+		<module>black-shop-common-datasource</module>
+	</modules>
 </project>
