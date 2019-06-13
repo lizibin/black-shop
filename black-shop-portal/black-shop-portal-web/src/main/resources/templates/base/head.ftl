@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>蚂蚁商城-首页</title>
+  <title>黑店-首页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="../res/layui/css/layui.css">
   <link rel="stylesheet" href="../res/static/css/index.css">

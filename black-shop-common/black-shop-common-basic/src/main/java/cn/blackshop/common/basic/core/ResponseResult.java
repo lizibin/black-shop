@@ -9,6 +9,8 @@
 */ 
 package cn.blackshop.common.basic.core;
 
+import cn.blackshop.common.basic.constants.HttpStatusConstants;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -16,35 +18,43 @@ import lombok.Data;
  * @author zibin
  */
 @Data
+@AllArgsConstructor
 public class ResponseResult<T> {
 
-	/**
-	 * 返回状态码
-	 */
-	private Integer code;
-	/**
-	 * 返回消息
-	 */
-	private String message;
+	/** 状态码, 200: 代表成功, 其他值代表失败, -999: 代表未知错误 */
+	private Integer status;
+
+	/** 返回消息说明, sucess: 代表成功, fail: 代表失败 **/
+	private String msg;
 	/**
 	 * 返回对象
 	 */
-	private T data;
+	private T result;
 
 	public ResponseResult() {
-
-	}
-
-	public ResponseResult(Integer code, String message, T data) {
 		super();
-		this.code = code;
-		this.message = message;
-		this.data = data;
 	}
 
-	@Override
-	public String toString() {
-		return "ResponseBase [code=" + code + ", message=" + message + ", data=" + data + "]";
+	public ResponseResult(T result) {
+		super();
+		this.status = HttpStatusConstants.HTTP_RES_CODE_200;
+		this.result = result;
+	}
+
+	public ResponseResult(T result, String msg) {
+		super();
+		this.result = result;
+		this.msg = msg;
+	}
+
+	public ResponseResult(Throwable e) {
+		super();
+		this.msg = e.getMessage();
+		this.status = HttpStatusConstants.HTTP_RES_CODE_500;
+	}
+
+	public boolean hasBody() {
+		return this.result != null;
 	}
 
 }

@@ -9,7 +9,6 @@
 */
 package cn.blackshop.baisc.auth.client;
 
-import cn.blackshop.user.api.UserServiceApi;
 import cn.blackshop.user.api.constant.UserServerNameConstant;
 import org.springframework.cloud.openfeign.FeignClient;
 
@@ -17,4 +16,4 @@ import org.springframework.cloud.openfeign.FeignClient;
  * The Interface UserServiceClient.
  */
 @FeignClient(UserServerNameConstant.BS_USER_SERVICE)
-public interface UserServiceClient extends UserServiceApi {}
+public interface UserServiceClient extends cn.blackshop.user.api.client.UserServiceClient {}

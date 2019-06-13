@@ -1,12 +1,10 @@
-/**  
- 
-* <p>Company: www.black-shop.cn</p>  
-
-* <p>Copyright: Copyright (c) 2018</p>   
-
-* black-shop(黑店) 版权所有,并保留所有权利。
-
-*/  
+/**
+ * <p>Company: www.black-shop.cn</p>
+ *
+ * <p>Copyright: Copyright (c) 2018-2050</p>
+ * <p>
+ * black-shop(黑店) 版权所有,并保留所有权利。
+ */
 package cn.blackshop.user.config;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -26,25 +24,25 @@ import lombok.EqualsAndHashCode;
  */
 @Configuration
 @Data
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 @EnableApolloConfig(ApolloNamespaceConstant.DEFAULT)
-public class UserDataSourceConfig extends DataSourceConfig{
+public class UserDataSourceConfig extends DataSourceConfig {
 
 	/**
 	 * 数据库url
 	 */
 	@Value("${spring.datasource.url}")
-    private String url;
+	private String url;
 
-    /**
-     * 数据用户名
-     */
-    @Value("${spring.datasource.username}")
-    private String userName;
+	/**
+	 * 数据用户名
+	 */
+	@Value("${spring.datasource.username}")
+	private String userName;
 
-    /**
-     * 数据库密码
-     */
-    @Value("${spring.datasource.password}")
-    private String passWord;
+	/**
+	 * 数据库密码
+	 */
+	@Value("${spring.datasource.password}")
+	private String passWord;
 }

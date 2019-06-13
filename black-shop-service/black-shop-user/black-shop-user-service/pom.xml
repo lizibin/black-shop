@@ -21,7 +21,6 @@
     <dependency>
       <groupId>cn.black-shop</groupId>
       <artifactId>black-shop-wechat-api</artifactId>
-      <version>${project.version}</version>
     </dependency>
 
     <!--整合redis -->

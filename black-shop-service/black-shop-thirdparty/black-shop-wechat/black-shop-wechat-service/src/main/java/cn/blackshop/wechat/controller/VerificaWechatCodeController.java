@@ -11,24 +11,25 @@ package cn.blackshop.wechat.controller;
 
 import cn.blackshop.common.basic.core.ResponseResult;
 import cn.blackshop.wechat.service.VerificaWechatCodeService;
-import com.alibaba.fastjson.JSONObject;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@AllArgsConstructor
-@RequestMapping("wechet")
+
 /**
  * 验证微信验证码
  * @author zibin
  */
+@RestController
+@AllArgsConstructor
+@RequestMapping("/wechet")
 public class VerificaWechatCodeController {
     private final VerificaWechatCodeService verificaWechatCodeService;
 
-    @PostMapping("verificaWechatCode")
-    public ResponseResult<JSONObject> verificaWechatCode(String phone, String weixinCode){
+    @PostMapping("/verificaWechatCode")
+    public ResponseResult<Boolean> verificaWechatCode(@RequestParam  String phone,@RequestParam  String weixinCode){
        return verificaWechatCodeService.verificaWechatCode(phone,weixinCode);
     }
 

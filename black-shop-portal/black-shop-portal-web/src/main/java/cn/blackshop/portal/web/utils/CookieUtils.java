@@ -1,12 +1,18 @@
+/**
+ * <p>Company: www.black-shop.cn</p>
+ *
+ * <p>Copyright: Copyright (c) 2018-2050</p>
+ * <p>
+ * black-shop(黑店) 版权所有,并保留所有权利。
+ */
 package cn.blackshop.portal.web.utils;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 
 
 public final class CookieUtils {

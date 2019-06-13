@@ -9,15 +9,13 @@
 */
 package cn.blackshop.common.basic.handler;
 
+import cn.blackshop.common.basic.core.ResponseResult;
+import cn.blackshop.common.basic.core.ResponseResultManager;
+import com.alibaba.fastjson.JSONObject;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.alibaba.fastjson.JSONObject;
-
-import cn.blackshop.common.basic.core.ApiService;
-import cn.blackshop.common.basic.core.ResponseResult;
-import lombok.extern.slf4j.Slf4j;
 
 
 /**
@@ -26,12 +24,12 @@ import lombok.extern.slf4j.Slf4j;
  */
 @ControllerAdvice
 @Slf4j
-public class GlobalExceptionHandler extends ApiService<JSONObject> {
+public class GlobalExceptionHandler {
 	
 	@ExceptionHandler(RuntimeException.class)
 	@ResponseBody
 	public ResponseResult<JSONObject> exceptionHandler(Exception e) {
 		log.info("全局异常捕获,error:{}", e);
-		return setResultError("系统发生错误，请及时调整");
+		return ResponseResultManager.setResultError("系统发生错误，请及时调整");
 	}
 }
