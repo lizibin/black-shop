@@ -66,11 +66,7 @@
 			<groupId>com.alibaba.csp</groupId>
 			<artifactId>sentinel-transport-simple-http</artifactId>
 		</dependency>
-		<!--数据库连接池 -->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid-spring-boot-starter</artifactId>
-		</dependency>
+
 		<!--整合通用工具 -->
 		<dependency>
 			<groupId>cn.black-shop</groupId>
@@ -97,7 +93,7 @@
 		<dependency>
 			<groupId>com.github.xiaoymin</groupId>
 			<artifactId>swagger-bootstrap-ui</artifactId>
-			<version>1.8.8</version>
+			<version>${swagger-bootstrap-ui.version}</version>
 		</dependency>
 		<!--整合apollo -->
 		<dependency>

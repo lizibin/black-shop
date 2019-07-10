@@ -11,11 +11,9 @@
   <modules>
     <module>black-shop-basic-apolloconfig</module>
     <module>black-shop-basic-redis</module>
-    <module>black-shop-basic-gateway</module>
     <module>black-shop-basic-elasticsearch</module>
     <module>black-shop-basic-zipkin</module>
     <module>black-shop-basic-scheduler</module>
-    <module>black-shop-basic-auth</module>
   </modules>
 
 
