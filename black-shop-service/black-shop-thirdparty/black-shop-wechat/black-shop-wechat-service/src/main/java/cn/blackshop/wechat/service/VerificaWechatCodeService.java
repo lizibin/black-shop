@@ -10,9 +10,9 @@
 package cn.blackshop.wechat.service;
 
 import cn.blackshop.basic.redis.util.RedisUtil;
-import cn.blackshop.common.basic.constants.Constants;
-import cn.blackshop.common.basic.core.ResponseResult;
-import cn.blackshop.common.basic.core.ResponseResultManager;
+import cn.blackshop.common.core.basic.ResponseResult;
+import cn.blackshop.common.core.basic.ResponseResultManager;
+import cn.blackshop.common.core.constants.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

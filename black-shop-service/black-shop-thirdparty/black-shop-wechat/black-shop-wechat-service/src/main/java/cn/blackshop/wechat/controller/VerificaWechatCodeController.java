@@ -9,7 +9,7 @@
  */
 package cn.blackshop.wechat.controller;
 
-import cn.blackshop.common.basic.core.ResponseResult;
+import cn.blackshop.common.core.basic.ResponseResult;
 import cn.blackshop.wechat.service.VerificaWechatCodeService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

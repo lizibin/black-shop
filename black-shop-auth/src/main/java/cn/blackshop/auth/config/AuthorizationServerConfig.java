@@ -1,16 +1,14 @@
-/**  
- 
-* <p>Company: www.black-shop.cn</p>  
-
-* <p>Copyright: Copyright (c) 2018</p>   
-
-* black-shop(黑店) 版权所有,并保留所有权利。
-
-*/
+/**
+ * <p>Company: www.black-shop.cn</p>
+ *
+ * <p>Copyright: Copyright (c) 2018</p>
+ * <p>
+ * black-shop(黑店) 版权所有,并保留所有权利。
+ */
 package cn.blackshop.auth.config;
 
-import cn.blackshop.auth.service.CustomerUserDetailsService;
-import cn.blackshop.common.basic.constants.SecurityConstants;
+import cn.blackshop.common.core.constants.SecurityConstants;
+import cn.blackshop.common.security.service.BsUserDetailsService;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.context.annotation.Bean;
@@ -37,54 +35,54 @@ import javax.sql.DataSource;
 @AllArgsConstructor
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
-  private final AuthenticationManager authenticationManager;
-  private final RedisConnectionFactory redisConnectionFactory;
-  private final DataSource dataSource;
-  private final CustomerUserDetailsService customerUserDetailsService;
+	private final AuthenticationManager authenticationManager;
+	private final RedisConnectionFactory redisConnectionFactory;
+	private final DataSource dataSource;
+	private final BsUserDetailsService bsUserDetailsService;
 
-  /**
-   * 设置client去数据库读取信息.
-   *
-   * @param clients the clients
-   * @throws Exception the exception
-   */
-  @Override
-  @SneakyThrows
-  public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-    JdbcClientDetailsService jdbcClientDetailsService = new JdbcClientDetailsService(dataSource);
-    jdbcClientDetailsService.setSelectClientDetailsSql(SecurityConstants.DEFAULT_SELECT_STATEMENT);
-    jdbcClientDetailsService.setFindClientDetailsSql(SecurityConstants.DEFAULT_FIND_STATEMENT);
-    clients.withClientDetails(jdbcClientDetailsService);
-  }
+	/**
+	 * 设置client去数据库读取信息.
+	 *
+	 * @param clients the clients
+	 * @throws Exception the exception
+	 */
+	@Override
+	@SneakyThrows
+	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+		JdbcClientDetailsService jdbcClientDetailsService = new JdbcClientDetailsService(dataSource);
+		jdbcClientDetailsService.setSelectClientDetailsSql(SecurityConstants.DEFAULT_SELECT_STATEMENT);
+		jdbcClientDetailsService.setFindClientDetailsSql(SecurityConstants.DEFAULT_FIND_STATEMENT);
+		clients.withClientDetails(jdbcClientDetailsService);
+	}
 
-  /**
-   * 检查tokenURL开启 /oauth/check_token.
-   *
-   */
-  @Override
-  public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
-    oauthServer.allowFormAuthenticationForClients().checkTokenAccess("isAuthenticated()");
-  }
+	/**
+	 * 检查tokenURL开启 /oauth/check_token.
+	 *
+	 */
+	@Override
+	public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
+		oauthServer.allowFormAuthenticationForClients().checkTokenAccess("isAuthenticated()");
+	}
 
-  /**
-   * 设置redis读取token以及保存token.
-   */
-  @Override
-  public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-    endpoints
-        .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST)
-        .tokenStore(tokenStore())
-        .userDetailsService(customerUserDetailsService)
-        .authenticationManager(authenticationManager)
-        .tokenStore(tokenStore());
-  }
+	/**
+	 * 设置redis读取token以及保存token.
+	 */
+	@Override
+	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+		endpoints
+				.allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST)
+				.tokenStore(tokenStore())
+				.userDetailsService(bsUserDetailsService)
+				.authenticationManager(authenticationManager)
+				.tokenStore(tokenStore());
+	}
 
-  /**
-   * Token store.
-   */
-  @Bean
-  public TokenStore tokenStore() {
-    RedisTokenStore tokenStore = new RedisTokenStore(redisConnectionFactory);
-    return tokenStore;
-  }
+	/**
+	 * Token store.
+	 */
+	@Bean
+	public TokenStore tokenStore() {
+		RedisTokenStore tokenStore = new RedisTokenStore(redisConnectionFactory);
+		return tokenStore;
+	}
 }

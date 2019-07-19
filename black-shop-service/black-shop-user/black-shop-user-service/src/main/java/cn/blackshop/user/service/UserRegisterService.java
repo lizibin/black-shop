@@ -7,13 +7,13 @@
  */
 package cn.blackshop.user.service;
 
-import cn.blackshop.common.basic.core.ResponseResult;
-import cn.blackshop.common.basic.core.ResponseResultManager;
+import cn.blackshop.common.core.basic.ResponseResult;
+import cn.blackshop.common.core.basic.ResponseResultManager;
 import cn.blackshop.common.utils.BeanUtils;
 import cn.blackshop.common.utils.MD5Util;
 import cn.blackshop.common.utils.StringUtils;
 import cn.blackshop.user.api.dto.e.UserEnterDTO;
-import cn.blackshop.user.api.entity.User;
+import cn.blackshop.user.entity.User;
 import cn.blackshop.user.mapper.UserMapper;
 import cn.blackshop.wechat.api.client.VerificaWechatCodeClient;
 import com.alibaba.fastjson.JSONObject;

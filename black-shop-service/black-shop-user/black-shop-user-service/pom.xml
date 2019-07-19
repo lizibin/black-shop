@@ -16,6 +16,11 @@
 			<groupId>cn.black-shop</groupId>
 			<artifactId>black-shop-common-datasource</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-data</artifactId>
+		</dependency>
 		<!--整合用户api -->
 		<dependency>
 			<groupId>cn.black-shop</groupId>

@@ -21,7 +21,7 @@
     <!--整合通用基础类 -->
     <dependency>
       <groupId>cn.black-shop</groupId>
-      <artifactId>black-shop-common-basic</artifactId>
+      <artifactId>black-shop-common-core</artifactId>
     </dependency>
   </dependencies>
 </project>

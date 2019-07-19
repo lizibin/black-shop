@@ -8,7 +8,7 @@
 package cn.blackshop.portal.web.controller;
 
 import cn.blackshop.common.web.base.BaseWebController;
-import cn.blackshop.user.api.client.UserServiceClient;
+import cn.blackshop.user.api.client.SysUserServiceClient;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,7 +28,7 @@ public class IndexController extends BaseWebController {
 
 	private static final String INDEX_FTL = "index";
 
-	private final UserServiceClient userServiceClient;
+	private final SysUserServiceClient userServiceClient;
 
 	/**
 	 * Index.

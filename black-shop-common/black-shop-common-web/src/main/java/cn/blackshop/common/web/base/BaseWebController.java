@@ -9,8 +9,8 @@
 */
 package cn.blackshop.common.web.base;
 
-import cn.blackshop.common.basic.constants.HttpStatusConstants;
-import cn.blackshop.common.basic.core.ResponseResult;
+import cn.blackshop.common.core.constants.HttpStatusConstants;
+import cn.blackshop.common.core.basic.ResponseResult;
 import nl.bitwalker.useragentutils.Browser;
 import nl.bitwalker.useragentutils.UserAgent;
 import nl.bitwalker.useragentutils.Version;
