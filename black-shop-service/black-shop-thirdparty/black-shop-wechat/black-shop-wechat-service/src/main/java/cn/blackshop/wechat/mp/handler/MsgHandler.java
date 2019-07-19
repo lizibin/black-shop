@@ -1,8 +1,8 @@
 package cn.blackshop.wechat.mp.handler;
 
 import cn.blackshop.basic.redis.util.RedisUtil;
-import cn.blackshop.common.basic.constants.Constants;
-import cn.blackshop.common.basic.core.ResponseResult;
+import cn.blackshop.common.core.basic.ResponseResult;
+import cn.blackshop.common.core.constants.Constants;
 import cn.blackshop.common.utils.RegexUtils;
 import cn.blackshop.wechat.client.UserServiceClient;
 import cn.blackshop.wechat.mp.builder.TextBuilder;
@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
+
 
 @Component
 @SuppressWarnings("static-access")

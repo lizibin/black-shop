@@ -9,7 +9,7 @@
 */
 package cn.blackshop.auth.config;
 
-import cn.blackshop.auth.service.CustomerUserDetailsService;
+import cn.blackshop.common.security.service.BsUserDetailsService;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -35,14 +35,14 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Autowired
-  private CustomerUserDetailsService customerUserDetailsService;
+  private BsUserDetailsService bsUserDetailsService;
   
   /**
    * 授权认证的用户.
    */
   @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-    auth.userDetailsService(customerUserDetailsService);  
+    auth.userDetailsService(bsUserDetailsService);
   }
   
 
@@ -54,10 +54,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   protected void configure(HttpSecurity http) throws Exception {
     http.
     authorizeRequests()
-    .antMatchers("/actuator/**", "/oauth/removeToken","/p/**").permitAll()
+    .antMatchers("/actuator/**", "/oauth/removeToken").permitAll()
     .anyRequest().authenticated()
     .and().csrf().disable();
-    ;
   }
   
   /**

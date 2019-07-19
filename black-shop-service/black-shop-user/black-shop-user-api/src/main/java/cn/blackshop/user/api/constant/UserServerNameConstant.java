@@ -7,7 +7,7 @@
  */
 package cn.blackshop.user.api.constant;
 
-import cn.blackshop.common.basic.constants.ServerNameConstants;
+import cn.blackshop.common.core.constants.ServerNameConstants;
 
 /**
  * 用户基础服务名

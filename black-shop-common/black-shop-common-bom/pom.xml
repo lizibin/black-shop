@@ -16,6 +16,7 @@
 	<properties>
 		<blackshop.version>1.0.0</blackshop.version>
 		<druid.version>1.1.17</druid.version>
+		<mybatis-plus.version>3.1.0</mybatis-plus.version>
 	</properties>
 
 	<dependencyManagement>
@@ -41,11 +42,10 @@
 				<version>${blackshop.version}</version>
 			</dependency>
 
-
 			<!--公共工具版本依赖 -->
 			<dependency>
 				<groupId>cn.black-shop</groupId>
-				<artifactId>black-shop-common-basic</artifactId>
+				<artifactId>black-shop-common-core</artifactId>
 				<version>${blackshop.version}</version>
 			</dependency>
 
@@ -53,6 +53,13 @@
 			<dependency>
 				<groupId>cn.black-shop</groupId>
 				<artifactId>black-shop-common-datasource</artifactId>
+				<version>${blackshop.version}</version>
+			</dependency>
+
+			<!--数据库相关的依赖-->
+			<dependency>
+				<groupId>cn.black-shop</groupId>
+				<artifactId>black-shop-common-data</artifactId>
 				<version>${blackshop.version}</version>
 			</dependency>
 
@@ -84,6 +91,25 @@
 				<groupId>cn.black-shop</groupId>
 				<artifactId>black-shop-wechat-api</artifactId>
 				<version>${blackshop.version}</version>
+			</dependency>
+
+			<!--mybatis plus extension,包含了mybatis plus core-->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-extension</artifactId>
+				<version>${mybatis-plus.version}</version>
+			</dependency>
+			<!--mybatis-->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${mybatis-plus.version}</version>
+			</dependency>
+			<!-- druid 连接池 -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid-spring-boot-starter</artifactId>
+				<version>${druid.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

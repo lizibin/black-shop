@@ -35,6 +35,6 @@ public class UserOutDTO implements Serializable {
 	private String mobile;
 
     /** 用户头像. */
-    private String portraitPic;
+    private String avatar;
 
 }

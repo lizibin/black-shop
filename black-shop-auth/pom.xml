@@ -19,12 +19,6 @@
 			<artifactId>black-shop-common-security</artifactId>
 		</dependency>
 
-		<!-- 调用用户服务 -->
-		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-user-api</artifactId>
-		</dependency>
-
 		<!-- 缓存相关 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

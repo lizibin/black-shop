@@ -7,7 +7,7 @@
  */
 package cn.blackshop.wechat.api.constant;
 
-import cn.blackshop.common.basic.constants.ServerNameConstants;
+import cn.blackshop.common.core.constants.ServerNameConstants;
 
 /**
  * 微信基础服务名

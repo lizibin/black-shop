@@ -7,7 +7,7 @@
  */
 package cn.blackshop.wechat.api.client;
 
-import cn.blackshop.common.basic.core.ResponseResult;
+import cn.blackshop.common.core.basic.ResponseResult;
 import cn.blackshop.wechat.api.constant.WechatServerNameConstant;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
