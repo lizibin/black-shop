@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * UserDetail实现
+ *
  * @author zibin
  */
 @AllArgsConstructor

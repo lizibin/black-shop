@@ -12,6 +12,11 @@
     <artifactId>black-shop-wechat-service</artifactId>
 
     <dependencies>
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-util</artifactId>
+		</dependency>
+
         <dependency>
             <groupId>cn.black-shop</groupId>
             <artifactId>black-shop-user-api</artifactId>

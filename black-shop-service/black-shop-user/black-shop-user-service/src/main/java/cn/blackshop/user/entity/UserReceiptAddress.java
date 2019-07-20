@@ -10,7 +10,6 @@ package cn.blackshop.user.entity;
 import lombok.Data;
 import lombok.ToString;
 
-import javax.persistence.Table;
 import java.util.Date;
 
 /**
@@ -19,7 +18,7 @@ import java.util.Date;
  */
 @Data
 @ToString
-@Table(name = "bs_user_receipt_address")
+//@Table(name = "bs_user_receipt_address")
 public class UserReceiptAddress {
 
 	/**

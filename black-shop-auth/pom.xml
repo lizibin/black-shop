@@ -13,6 +13,12 @@
 	<description>black-shop 认证授权中心，基于 springSecurity OAuth2</description>
 	<dependencies>
 
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-core</artifactId>
+		</dependency>
+
+
 		<!-- 安全相关 -->
 		<dependency>
 			<groupId>cn.black-shop</groupId>
@@ -29,6 +35,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-undertow</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-feign</artifactId>
 		</dependency>
 
 	</dependencies>

@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Configuration;
  * @author zibin
  */
 @Configuration
-@MapperScan("com.blackshop.**.mapper")
+@MapperScan("cn.blackshop.**.mapper")
 public class MybatisPlusConfig {
 
 

@@ -39,6 +39,7 @@ public class SysUser implements Serializable {
 	@TableId(value = "user_id")
 	private Long userId;
 
+
 	/**
 	 * 用户名
 	 */
@@ -52,6 +53,10 @@ public class SysUser implements Serializable {
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private String password;
 
+	/**
+	 * 头像
+	 */
+	private String avatar;
 	/**
 	 * 邮箱
 	 */
@@ -83,4 +88,9 @@ public class SysUser implements Serializable {
 	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date createTime;
 
+	/**
+	 * 修改时间
+	 */
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	private Date updateTime;
 }

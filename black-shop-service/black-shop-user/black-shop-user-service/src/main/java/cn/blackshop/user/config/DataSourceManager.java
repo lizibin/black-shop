@@ -12,8 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.sql.DataSource;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
 
@@ -73,23 +71,4 @@ public class DataSourceManager {
 		return dataSource;
 	}
 
-	public DruidDataSource createAndTestDataSource() throws SQLException {
-		DruidDataSource newDataSource = createDataSource();
-		try {
-			testConnection(newDataSource);
-		} catch (SQLException ex) {
-			log.error("Testing connection for data source failed: {}", newDataSource.getRawJdbcUrl(), ex);
-			newDataSource.close();
-			throw ex;
-		}
-
-		return newDataSource;
-	}
-
-	private void testConnection(DataSource dataSource) throws SQLException {
-		//borrow a connection
-		Connection connection = dataSource.getConnection();
-		//return the connection
-		connection.close();
-	}
 }

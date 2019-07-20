@@ -11,7 +11,7 @@
 package cn.blackshop.user.mapper;
 
 import cn.blackshop.user.entity.SysUser;
-import tk.mybatis.mapper.common.BaseMapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
 

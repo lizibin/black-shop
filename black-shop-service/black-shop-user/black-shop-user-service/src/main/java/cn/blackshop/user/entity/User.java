@@ -10,7 +10,6 @@ package cn.blackshop.user.entity;
 import lombok.Data;
 import lombok.ToString;
 
-import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -20,7 +19,7 @@ import java.util.Date;
  */
 @Data
 @ToString
-@Table(name = "bs_user")
+//@Table(name = "bs_user")
 public class User implements Serializable {
 
 	/** serialVersionUID */
