@@ -11,6 +11,10 @@
 
 	<artifactId>black-shop-common-data</artifactId>
 
+	<properties>
+		<springboot.pagehelper.version>1.2.10</springboot.pagehelper.version>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>cn.black-shop</groupId>
@@ -21,6 +25,17 @@
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-extension</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+		</dependency>
+		<!-- 分页插件 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>${springboot.pagehelper.version}</version>
 		</dependency>
 
 	</dependencies>

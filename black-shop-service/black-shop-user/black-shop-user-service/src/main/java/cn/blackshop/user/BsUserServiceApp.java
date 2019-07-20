@@ -8,10 +8,10 @@
 package cn.blackshop.user;
 
 import cn.blackshop.basic.apollo.constans.ApolloNamespaceConstant;
+import cn.blackshop.common.feign.annotation.EnableBsFeignClients;
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * BsUserServiceApp用户基础服务启动类
@@ -20,7 +20,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @EnableApolloConfig({ApolloNamespaceConstant.PUBLIC_NACOS_CONFIG})
 @SpringCloudApplication
-@ComponentScan("cn.blackshop")
+@EnableBsFeignClients
 public class BsUserServiceApp {
 
 	public static void main(String[] args) {

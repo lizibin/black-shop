@@ -16,5 +16,6 @@
 		<module>black-shop-common-security</module>
 		<module>black-shop-common-datasource</module>
 		<module>black-shop-common-data</module>
+		<module>black-shop-common-feign</module>
 	</modules>
 </project>

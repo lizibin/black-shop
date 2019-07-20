@@ -16,7 +16,7 @@
 	<properties>
 		<blackshop.version>1.0.0</blackshop.version>
 		<druid.version>1.1.17</druid.version>
-		<mybatis-plus.version>3.1.0</mybatis-plus.version>
+		<mybatis-plus.version>3.1.2</mybatis-plus.version>
 	</properties>
 
 	<dependencyManagement>
@@ -60,6 +60,13 @@
 			<dependency>
 				<groupId>cn.black-shop</groupId>
 				<artifactId>black-shop-common-data</artifactId>
+				<version>${blackshop.version}</version>
+			</dependency>
+
+			<!--公共工具版本依赖 -->
+			<dependency>
+				<groupId>cn.black-shop</groupId>
+				<artifactId>black-shop-common-feign</artifactId>
 				<version>${blackshop.version}</version>
 			</dependency>
 

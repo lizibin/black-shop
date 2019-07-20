@@ -21,7 +21,7 @@ public interface SecurityConstants {
       + "refresh_token_validity, additional_information, autoapprove";
 
   /** JdbcClientDetailsService 查询语句. */
-  String BASE_FIND_STATEMENT = "select " + CLIENT_FIELDS + " from ls_oauth_client_details";
+  String BASE_FIND_STATEMENT = "select " + CLIENT_FIELDS + " from bs_oauth_client_details";
 
   /** 默认的查询语句. */
   String DEFAULT_FIND_STATEMENT = BASE_FIND_STATEMENT + " order by client_id";

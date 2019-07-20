@@ -13,6 +13,8 @@ import lombok.Data;
 import lombok.ToString;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 /**
  * UserOutDTO 用户返回的参数DTO
@@ -25,16 +27,46 @@ public class UserOutDTO implements Serializable {
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -2708848879471364900L;
 
-	/** 用户唯一的id. */
-	private Integer userId;
-	
-	/** 用户昵称. */
-	private String nickName;
 
-	/** 用户手机号. */
-	private String mobile;
+	/**
+	 * 用户ID
+	 */
+	private Long userId;
 
-    /** 用户头像. */
-    private String avatar;
+	/**
+	 * 用户名
+	 */
+	private String username;
+
+	/**
+	 * 密码
+	 */
+	private String password;
+
+	/**
+	 * 邮箱
+	 */
+	private String email;
+
+	/**
+	 * 手机号
+	 */
+	private String phoneNumber;
+
+	/**
+	 * 状态  0：禁用   1：正常
+	 */
+	private Integer status;
+
+
+	/**
+	 * 角色ID列表
+	 */
+	private List<Long> roleIdList;
+
+	/**
+	 * 创建时间
+	 */
+	private Date createTime;
 
 }

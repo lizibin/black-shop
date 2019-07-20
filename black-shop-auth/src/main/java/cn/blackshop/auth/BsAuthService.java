@@ -9,16 +9,16 @@
 */
 package cn.blackshop.auth;
 
+import cn.blackshop.common.feign.annotation.EnableBsFeignClients;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * 认证服务器 oauth2.0
  * @author zibin
  */
 @SpringCloudApplication
-@EnableFeignClients
+@EnableBsFeignClients
 public class BsAuthService {
   public static void main(String[] args) {
     SpringApplication.run(BsAuthService.class, args);

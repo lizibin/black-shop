@@ -11,15 +11,49 @@
 
 	<artifactId>black-shop-user-service</artifactId>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!--undertow容器 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-undertow</artifactId>
+		</dependency>
+
+		<!--整合apollo -->
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-basic-apolloconfig</artifactId>
+		</dependency>
+
+		<!--整合redis -->
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-basic-redis</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>cn.black-shop</groupId>
 			<artifactId>black-shop-common-datasource</artifactId>
 		</dependency>
 
+		<!--整合通用工具 -->
 		<dependency>
 			<groupId>cn.black-shop</groupId>
 			<artifactId>black-shop-common-data</artifactId>
+		</dependency>
+
+		<!--整合通用工具 -->
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-feign</artifactId>
+		</dependency>
+
+		<!--整合通用工具 -->
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-util</artifactId>
 		</dependency>
 		<!--整合用户api -->
 		<dependency>
@@ -28,15 +62,15 @@
 		</dependency>
 
 		<!--整合微信api -->
-		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-wechat-api</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>cn.black-shop</groupId>-->
+<!--			<artifactId>black-shop-wechat-api</artifactId>-->
+<!--		</dependency>-->
 
-		<!--整合redis -->
 		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-basic-redis</artifactId>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>swagger-bootstrap-ui</artifactId>
+			<version>${swagger-bootstrap-ui.version}</version>
 		</dependency>
 	</dependencies>
 

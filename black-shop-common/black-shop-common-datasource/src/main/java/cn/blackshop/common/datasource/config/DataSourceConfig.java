@@ -25,7 +25,7 @@ public class DataSourceConfig {
 	@Value("${spring.datasource.type}")
 	private String type;
 
-	@Value("${spring.datasource.connectionProperties}")
+	@Value("${spring.datasource.druid.connectionProperties}")
 	private String connectionProperties;
 
 	@Value("${spring.datasource.druid.max-active}")
