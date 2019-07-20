@@ -62,53 +62,48 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 #### 项目架构图
 ![black-shop.png](https://i.loli.net/2019/03/21/5c93075604616.png)
 
-#### 软件架构
+#### 代码架构
 
 ```
 |-black-shop   #黑店
-|-  |-black-shop-basic   #基础组件
+|-  |-black-shop-auth   #oauth2.0认证服务
+|-  |-black-shop-basic   #基础服务pom
 |-  |-  |-black-shop-basic-apolloconfig   #阿波罗配置中心
 |-  |-  |-black-shop-basic-elasticsearch   #elasticsearch搜索服务，对es服务器封装
 |-  |-  |-black-shop-basic-redis   #redis缓存基础服务
 |-  |-  |-black-shop-basic-scheduler   #任务调度
 |-  |-  |-black-shop-basic-zipkin   #服务链路追踪
-|-  |-  |-black-shop-basic-gateway   #服务网关
-|-  |-  |-black-shop-basic-nacos   #nacos的demo
 |-  |-black-shop-common   #公共服务
 |-  |-  |-black-shop-common-bom  #集中管理版本号
-|-  |-  |-black-shop-common-basic  #公共基础服务
+|-  |-  |-black-shop-common-core  #公共核心
+|-  |-  |-black-shop-common-data   #数据管理 
+|-  |-  |-black-shop-common-data   #数据源 
+|-  |-  |-black-shop-common-feign   #feignclient远程调用
 |-  |-  |-black-shop-common-util   #公共工具服务   
 |-  |-  |-black-shop-common-security  #spring security相关
 |-  |-  |-black-shop-common-web  #和web相关的组件和工具类
-|-  |-black-shop-model   #实体模块
-|-  |-  |-black-shop-model-common  #公共实体
-|-  |-  |-black-shop-model-user  #用户实体
-|-  |-  |-black-shop-model-order   #订单实体 
-|-  |-  |-black-shop-model-product   #商品实体 
-|-  |-  |-black-shop-model-shoppingcart   #商品实体 
 |-  |-black-shop-porta   #门户模块
 |-  |-  |-black-shop-porta-web   #前端web项目
-|-  |-black-shop-service-api   #业务服务接口api
-|-  |-  |-black-shop-service-api-user   #用户服务接口
-|-  |-  |-black-shop-service-api-product   #商品服务接口
-|-  |-  |-black-shop-service-api-order   #订单服务接口
-|-  |-  |-black-shop-service-api-payment   #支付服务接口
-|-  |-  |-black-shop-service-api-shoppingcart   #购物车服务接口
-|-  |-  |-black-shop-service-api-serach   #搜索服务接口
-|-  |-  |-  |-black-shop-service-api-serach-product   #商品搜索服务暴露接口
-|-  |-  |-black-shop-service-api-thirdparty   #第三方应用接口
-|-  |-  |-black-shop-service-api-thirdparty-wechat   #第三方微信接口
-|-  |-black-shop-service   #服务实现
-|-  |-  |-black-shop-service-basic   #公共服务依赖
-|-  |-  |-black-shop-service-user   #用户服务实现
-|-  |-  |-black-shop-service-serach   #搜索服务
-|-  |-  |-  |-black-shop-service-serach-product   #商品搜索服务实现
-|-  |-  |-black-shop-service-product   #商品服务
-|-  |-  |-black-shop-service-shoppingcart   #购物车服务实现
+|-  |-black-shop-gateway   #网关服务
+|-  |-black-shop-service   #业务服务pom
 |-  |-  |-black-shop-service-order   #订单服务
+|-  |-  |-  |-black-shop-service-order-api   #订单服务Api
+|-  |-  |-  |-black-shop-service-order-service   #订单服务实现
 |-  |-  |-black-shop-service-payment   #支付服务
-|-  |-  |-black-shop-service-thirdparty   #第三方应用接口
-|-  |-  |-black-shop-service-thirdparty-wechat   #第三方微信接口
-
+|-  |-  |-  |-black-shop-service-payment-api   #支付服务Api
+|-  |-  |-  |-black-shop-service-payment-service   #支付服务实现
+|-  |-  |-black-shop-service-product   #商品服务
+|-  |-  |-  |-black-shop-service-product-api   #商品服务Api
+|-  |-  |-  |-black-shop-service-product-service   #商品服务实现
+|-  |-  |-black-shop-service-search   #搜索服务
+|-  |-  |-  |-black-shop-service-search-api   #搜索服务Api
+|-  |-  |-  |-black-shop-service-search-service   #搜索服务实现
+|-  |-  |-black-shop-service-shoppingcart   #购物车服务
+|-  |-  |-  |-black-shop-service-shoppingcart-api   #购物车服务Api
+|-  |-  |-  |-black-shop-service-shoppingcart-service   #购物车服务实现
+|-  |-  |-black-shop-service-thirdpart   #第三方服务
+|-  |-  |-  |-black-shop-service-wechat   #微信服务
+|-  |-  |-  |-  |-black-shop-service-wechat-api   微信服务Api
+|-  |-  |-  |-  |-black-shop-service-wechat-service   #微信服务实现
 
 ```
