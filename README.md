@@ -24,7 +24,7 @@
 # 项目介绍(开发中，欢迎加入~)
 black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块单独封装，各个模块之间通过Fegin调用，多业务系统并行开发，可以用来学习了解Spring Cloud各个组件的功能，了解电商的业务。 代码简洁，架构清晰，适合学习和直接项目中使用；核心技术采用Nacos、Sentinel、RocketMQ、Fegin、Ribbon、gateway、Security、Mybatis、Druid、Apollo、Redis、EFK、等主要框架和中间件， 后台管理采用开源框架vue-admin进行开发，前端采用Vue全家桶组件，欢迎Star、Watch、Fork。
 
-项目采用springBoot-2.0.9和spring-cloud-alibaba-{latest.version}进行开发。
+项目采用springBoot-2.1.7和spring-cloud-alibaba-{latest.version}进行开发。
 
 为 black-shop 贡献代码请参考 [如何贡献](https://github.com/lizibin/black-shop/wiki/%E5%A6%82%E4%BD%95%E8%B4%A1%E7%8C%AE%E4%BB%A3%E7%A0%81) 。
 
@@ -37,11 +37,9 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 
 ## 开发组件~
 
-**[Nacos(~~Eureka~~)](https://github.com/alibaba/Nacos)**：替换Eureka，nacos是一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
+**[Nacos(~~Eureka~~&~~SpringCloud Config~~)](https://github.com/alibaba/Nacos)**：替换Eureka喝Spring Config，nacos是一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
 
 **[Sentinel(~~Hystrix~~)](https://github.com/alibaba/Sentinel)**：替换Hystrix，把流量作为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务的稳定性。
-
-**[Apollo(~~SpringCloud Config~~)](https://github.com/ctripcorp/apollo)**：替换SpringCloud Config，apollo能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。
 
 **[SpringCloud Gateway(~~Zuul~~)](https://spring.io/projects/spring-cloud-gateway)**：替换Zuul，Spring Cloud Gateway作为Spring Cloud生态系中的网关，目标是替代Netflix ZUUL，其不仅提供统一的路由方式，并且基于Filter链的方式提供了网关基本的功能，例如：安全，监控/埋点，和限流等。
 
