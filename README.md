@@ -37,7 +37,7 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 
 ## 开发组件~
 
-**[Nacos(~~Eureka~~&~~SpringCloud Config~~)](https://github.com/alibaba/Nacos)**：替换Eureka喝Spring Config，nacos是一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
+**[Nacos(~~Eureka~~&~~SpringCloud Config~~)](https://github.com/alibaba/Nacos)**：替换Eureka和Spring Config，nacos是一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
 
 **[Sentinel(~~Hystrix~~)](https://github.com/alibaba/Sentinel)**：替换Hystrix，把流量作为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务的稳定性。
 
@@ -64,7 +64,6 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 |-black-shop   #黑店
 |-  |-black-shop-auth   #oauth2.0认证服务
 |-  |-black-shop-basic   #基础服务pom
-|-  |-  |-black-shop-basic-apolloconfig   #阿波罗配置中心
 |-  |-  |-black-shop-basic-elasticsearch   #elasticsearch搜索服务，对es服务器封装
 |-  |-  |-black-shop-basic-redis   #redis缓存基础服务
 |-  |-  |-black-shop-basic-scheduler   #任务调度
