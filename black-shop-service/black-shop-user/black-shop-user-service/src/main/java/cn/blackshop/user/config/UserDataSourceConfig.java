@@ -11,9 +11,7 @@ import cn.blackshop.common.datasource.config.DataSourceConfig;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
-import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 
-import cn.blackshop.basic.apollo.constans.ApolloNamespaceConstant;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -25,7 +23,6 @@ import lombok.EqualsAndHashCode;
 @Configuration
 @Data
 @EqualsAndHashCode(callSuper = false)
-@EnableApolloConfig(ApolloNamespaceConstant.DEFAULT)
 public class UserDataSourceConfig extends DataSourceConfig {
 
 	/**

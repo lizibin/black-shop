@@ -7,8 +7,6 @@
  */
 package cn.blackshop.common.datasource.config;
 
-import cn.blackshop.basic.apollo.constans.ApolloNamespaceConstant;
-import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -17,7 +15,7 @@ import org.springframework.beans.factory.annotation.Value;
  * @author zibin
  */
 @Data
-@EnableApolloConfig(ApolloNamespaceConstant.PUBLIC_DATASOURCE_CONFIG)
+//@EnableApolloConfig(ApolloNamespaceConstant.PUBLIC_DATASOURCE_CONFIG)
 public class DataSourceConfig {
 	@Value("${spring.datasource.driver-class-name}")
 	private String driverClassName;
