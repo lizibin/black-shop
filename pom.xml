@@ -47,52 +47,12 @@
 				<role>Developer</role>
 			</roles>
 		</developer>
-		<developer>
-			<id>molost</id>
-			<name>Lin Da Zhen</name>
-			<email>445081559@qq.com</email>
-			<organization>black-shop</organization>
-			<organizationUrl>http://www.black-shop.cn</organizationUrl>
-			<roles>
-				<role>Developer</role>
-			</roles>
-		</developer>
-		<developer>
-			<id>Cynic-b</id>
-			<name>Liu Sui Biao</name>
-			<email>1416669157@qq.com</email>
-			<organization>black-shop</organization>
-			<organizationUrl>http://www.black-shop.cn</organizationUrl>
-			<roles>
-				<role>Developer</role>
-			</roles>
-		</developer>
-		<developer>
-			<id>EDaoren</id>
-			<name>Chen Chu Wen</name>
-			<email>550790375@qq.com</email>
-			<organization>black-shop</organization>
-			<organizationUrl>http://www.black-shop.cn</organizationUrl>
-			<roles>
-				<role>Developer(Inactive)</role>
-			</roles>
-		</developer>
-		<developer>
-			<id>kaifahm</id>
-			<name>Guan Kai Fa</name>
-			<email>770813563@qq.com</email>
-			<organization>black-shop</organization>
-			<organizationUrl>http://www.black-shop.cn</organizationUrl>
-			<roles>
-				<role>Developer(Inactive)</role>
-			</roles>
-		</developer>
 	</developers>
 
 
 	<properties>
-		<springboot.version>2.0.9.RELEASE</springboot.version>
-		<springcloud.version>Finchley.SR4</springcloud.version>
+		<springboot.version>2.1.7.RELEASE</springboot.version>
+		<springcloud.version>Greenwich.SR2</springcloud.version>
 		<spring-platform.version>Cairo-SR6</spring-platform.version>
 		<springcloud.alibaba.version>2.0.0.RELEASE</springcloud.alibaba.version>
 		<springboot.jasypt.version>2.1.0</springboot.jasypt.version>
@@ -176,10 +136,15 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- SpringBoot整合nacos服务发现组件 -->
+		<!-- SpringCloud整合nacos服务发现组件 -->
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+		</dependency>
+		<!-- SpringCloud整合nacos配置中心组件 -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
 		</dependency>
 		<!--断路器依赖 -->
 		<dependency>

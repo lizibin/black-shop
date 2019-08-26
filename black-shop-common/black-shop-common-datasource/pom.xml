@@ -12,10 +12,6 @@
 	<artifactId>black-shop-common-datasource</artifactId>
 
 	<dependencies>
-		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-basic-apolloconfig</artifactId>
-		</dependency>
 		<!--数据库连接池 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
