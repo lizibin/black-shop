@@ -7,19 +7,16 @@
  */
 package cn.blackshop.user;
 
-import cn.blackshop.basic.apollo.constans.ApolloNamespaceConstant;
 import cn.blackshop.common.feign.annotation.EnableBsFeignClients;
-import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
-import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * BsUserServiceApp用户基础服务启动类
  *
  * @author zibin
  */
-@EnableApolloConfig({ApolloNamespaceConstant.PUBLIC_NACOS_CONFIG})
-@SpringCloudApplication
+@SpringBootApplication
 @EnableBsFeignClients
 public class BsUserServiceApp {
 
