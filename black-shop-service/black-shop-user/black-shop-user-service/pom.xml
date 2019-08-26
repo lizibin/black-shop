@@ -21,12 +21,6 @@
 			<artifactId>spring-boot-starter-undertow</artifactId>
 		</dependency>
 
-		<!--整合apollo -->
-		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-basic-apolloconfig</artifactId>
-		</dependency>
-
 		<!--整合redis -->
 		<dependency>
 			<groupId>cn.black-shop</groupId>
