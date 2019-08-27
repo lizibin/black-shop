@@ -23,7 +23,7 @@ layui.define(['element', 'carousel', 'table', 'util'], function(exports){
     var ddDetail = $(".house-detail").find(".shopChoose").find("dl").children("dd");
     ddDetail.each(function(){
       if($(this).hasClass("active")){
-        $(this).append('<i class="layui-icon layui-icon-ok active"></i>');
+        $(this).append('<e class="layui-icon layui-icon-ok active"></e>');
       };
     });
     //详情页——数量
@@ -114,8 +114,8 @@ layui.define(['element', 'carousel', 'table', 'util'], function(exports){
   $(".house-detail").find(".shopChoose").find("dl").each(function(){
     $(this).children("dd").on('click', function(){
       $(this).addClass("active").siblings().removeClass("active");
-      $(this).append('<i class="layui-icon layui-icon-ok active"></i>');
-      $(this).siblings().children("i").replaceWith("");
+      $(this).append('<e class="layui-icon layui-icon-ok active"></e>');
+      $(this).siblings().children("e").replaceWith("");
     });
   });
   

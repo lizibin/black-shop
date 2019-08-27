@@ -1,8 +1,3 @@
-server:
-  port: 8010
-spring:
-  application:
-    name: bs-user-service
 jasypt:
   encryptor:
     password: black-shop

@@ -9,13 +9,10 @@
   <artifactId>black-shop-basic</artifactId>
   <packaging>pom</packaging>
   <modules>
-    <module>black-shop-basic-apolloconfig</module>
     <module>black-shop-basic-redis</module>
-    <module>black-shop-basic-gateway</module>
     <module>black-shop-basic-elasticsearch</module>
     <module>black-shop-basic-zipkin</module>
     <module>black-shop-basic-scheduler</module>
-    <module>black-shop-basic-auth</module>
   </modules>
 
 
@@ -23,7 +20,7 @@
     <!--整合通用基础类 -->
     <dependency>
       <groupId>cn.black-shop</groupId>
-      <artifactId>black-shop-common-basic</artifactId>
+      <artifactId>black-shop-common-core</artifactId>
     </dependency>
   </dependencies>
 </project>

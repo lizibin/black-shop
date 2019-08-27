@@ -1,0 +1,22 @@
+version: "3.3"  
+services: 
+  redis:
+     image: redis:latest
+     restart: always
+     privileged: true
+     environment:
+         REDIS_PASS_FILE: /run/secrets/redis-password
+         TZ: ${GLOBAL_TIME_ZONE}
+     command: [
+       "bash", "-c",
+       '
+        docker-entrypoint.sh
+        --requirepass "$$(cat $$REDIS_PASS_FILE)"
+       '
+     ]
+     volumes:
+       - ./etc/redis.conf:/usr/local/etc/redis/redis.conf 
+       - ./data:/data 
+       - ./etc/redis-password:/run/secrets/redis-password
+     ports:
+       - "${REDIS_PORT}:6379"    

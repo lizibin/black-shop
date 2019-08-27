@@ -1,29 +1,36 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>cn.black-shop</groupId>
-    <artifactId>black-shop-common</artifactId>
-    <version>1.0.0</version>
-  </parent>
-  <artifactId>black-shop-common-security</artifactId>
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cn.black-shop</groupId>
+		<artifactId>black-shop-common</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>black-shop-common-security</artifactId>
 
-  <dependencies>
-    <dependency>
-      <groupId>cn.black-shop</groupId>
-      <artifactId>black-shop-common-basic</artifactId>
-    </dependency>
+	<dependencies>
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-core</artifactId>
+		</dependency>
 
-    <!--安全模块 -->
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-security</artifactId>
-    </dependency>
-    
-     <dependency>
-      <groupId>org.springframework.security.oauth.boot</groupId>
-      <artifactId>spring-security-oauth2-autoconfigure</artifactId>
-    </dependency>
-    
-  </dependencies>
+		<!--安全模块 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security.oauth.boot</groupId>
+			<artifactId>spring-security-oauth2-autoconfigure</artifactId>
+		</dependency>
+
+
+		<!-- 调用用户服务 -->
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-user-api</artifactId>
+		</dependency>
+
+	</dependencies>
 </project>
