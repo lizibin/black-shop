@@ -26,10 +26,9 @@
 
 		<!-- 缓存相关 -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-data</artifactId>
 		</dependency>
-
 		<!--undertow容器 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
