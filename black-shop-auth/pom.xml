@@ -18,7 +18,6 @@
 			<artifactId>black-shop-common-core</artifactId>
 		</dependency>
 
-
 		<!-- 安全相关 -->
 		<dependency>
 			<groupId>cn.black-shop</groupId>
