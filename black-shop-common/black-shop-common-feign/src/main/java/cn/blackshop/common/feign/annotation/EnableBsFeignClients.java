@@ -7,6 +7,7 @@
  */
 package cn.blackshop.common.feign.annotation;
 
+
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 import java.lang.annotation.*;

@@ -16,11 +16,6 @@
 			<version>${hutool.version}</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
-
 		<!--hibernate-validator-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

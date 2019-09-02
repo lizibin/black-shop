@@ -12,3 +12,10 @@ spring:
         file-extension: yml
   profiles:
     active: dev
+
+
+
+
+#feign:
+#  sentinel:
+#    enabled: true
