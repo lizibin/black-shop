@@ -19,8 +19,8 @@ import org.springframework.cloud.client.SpringCloudApplication;
  */
 @SpringCloudApplication
 @EnableBsFeignClients
-public class BsAuthService {
+public class BsAuthApplication {
   public static void main(String[] args) {
-    SpringApplication.run(BsAuthService.class, args);
+    SpringApplication.run(BsAuthApplication.class, args);
   }
 }

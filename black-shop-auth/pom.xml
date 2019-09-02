@@ -13,11 +13,31 @@
 	<description>black-shop 认证授权中心，基于 springSecurity OAuth2</description>
 	<dependencies>
 
+		<!-- SpringCloud整合nacos服务发现组件 -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+		</dependency>
+		<!-- SpringCloud整合nacos配置中心组件 -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-feign</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-datasource</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>cn.black-shop</groupId>
 			<artifactId>black-shop-common-core</artifactId>
 		</dependency>
-
 
 		<!-- 安全相关 -->
 		<dependency>
@@ -27,21 +47,13 @@
 
 		<!-- 缓存相关 -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-data</artifactId>
 		</dependency>
-
 		<!--undertow容器 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-undertow</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-common-feign</artifactId>
-		</dependency>
-
 	</dependencies>
-
 </project>

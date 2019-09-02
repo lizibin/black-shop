@@ -1,7 +1,8 @@
 version: "3.3"  
 services: 
-  redis:
-     image: redis:latest
+  blackshop-redis:
+     container_name: blackshop-redis
+     image: redis
      restart: always
      privileged: true
      environment:

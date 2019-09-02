@@ -4,7 +4,7 @@ import cn.blackshop.basic.redis.util.RedisUtil;
 import cn.blackshop.common.core.basic.ResponseResult;
 import cn.blackshop.common.core.constants.Constants;
 import cn.blackshop.common.utils.RegexUtils;
-import cn.blackshop.wechat.client.UserServiceClient;
+import cn.blackshop.user.api.client.SysUserServiceClient;
 import cn.blackshop.wechat.mp.builder.TextBuilder;
 import me.chanjar.weixin.common.api.WxConsts.XmlMsgType;
 import me.chanjar.weixin.common.error.WxErrorException;
@@ -39,7 +39,7 @@ public class MsgHandler extends AbstractHandler {
 	private RedisUtil redisUtil;
 
 	@Autowired
-	private UserServiceClient userBasicServiceClient;
+	private SysUserServiceClient sysUserServiceClient;
 
 	@Override
 	public WxMpXmlOutMessage handle(WxMpXmlMessage wxMessage, Map<String, Object> context, WxMpService weixinService,
@@ -64,7 +64,7 @@ public class MsgHandler extends AbstractHandler {
 		// 2.使用正则表达式验证消息是否为手机号码格式
 		if (RegexUtils.checkMobile(fromContent)) {
 			// 1.根据手机号码调用会员服务接口查询用户信息是否存在
-			ResponseResult<Boolean> result = userBasicServiceClient.existMobileNumber(fromContent);
+			ResponseResult<Boolean> result = sysUserServiceClient.existMobileNumber(fromContent);
 			if (!result.getResult()) {
 				return new TextBuilder().build("该手机号码" + fromContent + "已经存在!", wxMessage, weixinService);
 			}

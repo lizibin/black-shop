@@ -27,15 +27,16 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class BsUserDetailsServiceImpl implements BsUserDetailsService {
-	private final SysUserServiceClient userServiceClient;
+	private final SysUserServiceClient sysUserServiceClient;
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		ResponseResult<UserOutDTO> userOutDto = userServiceClient.getUserByUsername(username);
+		ResponseResult<UserOutDTO> userOutDto = sysUserServiceClient.getUserByUsername(username);
 		if (!userOutDto.hasBody()) {
 			log.error("用户信息错误或不存在！！！");
 			throw new UsernameNotFoundException("用户不存在");
 		}
+		System.out.println("进入了");
 
 
 		return null;

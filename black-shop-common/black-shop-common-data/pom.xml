@@ -37,7 +37,11 @@
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
 			<version>${springboot.pagehelper.version}</version>
 		</dependency>
-
+		<!--缓存依赖-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
 	</dependencies>
 
 </project>

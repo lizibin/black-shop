@@ -1,5 +1,5 @@
 server:
-  port: 8010
+  port: 3000
 spring:
   application:
     name: @artifactId@
@@ -9,13 +9,7 @@ spring:
         server-addr: ${NACOS-HOST:blackshop-register}:${NACOS-PORT:8848}
       config:
         server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        shared-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
         file-extension: yml
   profiles:
     active: dev
-
-
-
-
-#feign:
-#  sentinel:
-#    enabled: true

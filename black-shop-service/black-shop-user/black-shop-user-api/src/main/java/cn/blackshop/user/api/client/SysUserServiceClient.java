@@ -20,10 +20,10 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  * @author zibin
  */
-@FeignClient(value = UserServerNameConstant.BS_USER_SERVICE)
+@FeignClient(contextId = "sysUserServiceClient",value = UserServerNameConstant.BLACK_SHOP_USER_SERVICE)
 public interface SysUserServiceClient {
 
-	@GetMapping("user/getUserByUsername")
+	@GetMapping("/user/getUserByUsername")
 	ResponseResult<UserOutDTO> getUserByUsername(@RequestParam("username") String username);
 
 	@PostMapping("/existMobileNumber")

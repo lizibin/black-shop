@@ -13,14 +13,6 @@ package cn.blackshop.common.core.constants;
  */
 public interface ServerNameConstants {
 	
-	/**
-	 * 订单基础服务
-	 */
-	String ORDER_BASIC_SERVICE="bs-order-basic";
-	
-	/**
-	 * 商品基础服务
-	 */
-	String PRODUCT_BASIC_SERVICE="bs-product-basic";
+
 
 }

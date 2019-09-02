@@ -19,5 +19,5 @@ public interface UserServerNameConstant extends ServerNameConstants {
 	/**
 	 * 用户基础服务
 	 */
-	String BS_USER_SERVICE = "bs-user-service";
+	String BLACK_SHOP_USER_SERVICE = "black-shop-user-service";
 }
