@@ -36,8 +36,10 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 #### 欢迎参与该项目贡献和讨论  QQ群：204528889 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=2a90a69143d4fb1075bcdb4992fa3255ad896ca20cadd634b5e01e4f49cf1d19"><img border="0" src="https://i.loli.net/2019/02/15/5c6691f5a7906.png" alt="black-shop(黑店)" title="black-shop(黑店)"></a>
 ![qun.png](https://i.loli.net/2019/02/15/5c668eda177f8.png)
 
-## 开发组件~
+## 前端开发组件~
+**[Ant-design](https://github.com/alibaba/Nacos)**：提炼自企业级中后台产品的交互语言和视觉风格、开箱即用的高质量 React 组件、使用 TypeScript 构建，提供完整的类型定义文件、全链路开发和设计工具体系。
 
+## 后端开发组件~
 **[Nacos(~~Eureka~~&~~SpringCloud Config~~)](https://github.com/alibaba/Nacos)**：替换Eureka和Spring Config，nacos是一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
 
 **[Sentinel(~~Hystrix~~)](https://github.com/alibaba/Sentinel)**：替换Hystrix，把流量作为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务的稳定性。
@@ -45,7 +47,6 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 **[SpringCloud Gateway(~~Zuul~~)](https://spring.io/projects/spring-cloud-gateway)**：替换Zuul，Spring Cloud Gateway作为Spring Cloud生态系中的网关，目标是替代Netflix ZUUL，其不仅提供统一的路由方式，并且基于Filter链的方式提供了网关基本的功能，例如：安全，监控/埋点，和限流等。
 
 ## 部署组件~(全部组件采用docker|docker-compose|pod 进行部署)~
-
 **[Docker](https://www.docker.com/)**：Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。
 
 **[Harbor](https://www.docker.com/)**：Harbor是一个用于存储和分发Docker镜像的企业级Registry服务器，用来做镜像的存储。
