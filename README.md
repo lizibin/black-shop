@@ -23,7 +23,7 @@
 
 # 项目介绍(开发中，欢迎加入~)
 black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块单独封装，各个模块之间通过Fegin调用，多业务系统并行开发，可以用来学习了解Spring Cloud各个组件的功能，了解电商的业务。 代码简洁，架构清晰，适合学习和直接项目中使用；核心技术采用Nacos、Sentinel、RocketMQ、Fegin、Ribbon、gateway、Security、Mybatis、Druid、Apollo、Redis、EFK、等主要框架和中间件， 后台管理采用react + redux + dva + umi + typescript进行开发，欢迎Star、Watch、Fork。
-查看后台管理代码请移步：[black-shop后台管理端：](https://github.com/lizibin/black-shop-react-admin)
+查看后台管理代码请移步：[black-shop后台管理端](https://github.com/lizibin/black-shop-react-admin)
 
 项目采用springBoot-2.1.7和spring-cloud-alibaba-{latest.version}进行开发。
 
@@ -37,7 +37,7 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 ![qun.png](https://i.loli.net/2019/02/15/5c668eda177f8.png)
 
 ## 前端开发组件~
-**[Ant-design](https://github.com/alibaba/Nacos)**：提炼自企业级中后台产品的交互语言和视觉风格、开箱即用的高质量 React 组件、使用 TypeScript 构建，提供完整的类型定义文件、全链路开发和设计工具体系。
+**[Ant-design](https://github.com/ant-design/ant-design)**：提炼自企业级中后台产品的交互语言和视觉风格、开箱即用的高质量 React 组件、使用 TypeScript 构建，提供完整的类型定义文件、全链路开发和设计工具体系。
 
 ## 后端开发组件~
 **[Nacos(~~Eureka~~&~~SpringCloud Config~~)](https://github.com/alibaba/Nacos)**：替换Eureka和Spring Config，nacos是一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。
