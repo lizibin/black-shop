@@ -9,12 +9,11 @@
 */
 package cn.blackshop.common.security.dto;
 
-import java.util.Collection;
-
+import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
-import lombok.Getter;
+import java.util.Collection;
 
 /**
  * 扩展user类
@@ -27,9 +26,9 @@ public class SecurityUserDetail extends User {
    * 用户ID
    */
   @Getter
-  private String userId;
+  private Long userId;
 
-  public SecurityUserDetail(String userId, String username, String password, boolean enabled, boolean accountNonExpired,
+  public SecurityUserDetail(Long userId, String username, String password, boolean enabled, boolean accountNonExpired,
       boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities) {
     super(username, password, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked, authorities);
     this.userId = userId;
