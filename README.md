@@ -58,7 +58,9 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 **[kubernetes(k8s)](https://kubernetes.io/)**：kubernetes用于管理云平台中多个主机上的容器化的应用，Kubernetes的目标是让部署容器化的应用简单并且高效（powerful）,Kubernetes提供了应用部署，规划，更新，维护的一种机制，非常适合各种微服务的项目快速部署。
 
 #### 项目架构图
-![black-shop.jpg](https://github.com/lizibin/black-shop/blob/master/doc/pic/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.jpg)
+![系统架构图.jpg](https://github.com/lizibin/black-shop/blob/master/doc/pic/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE.jpg)
+#### 项目后台截图
+![后台登录页面.png](https://github.com/lizibin/black-shop/blob/master/doc/pic/%E5%90%8E%E5%8F%B0%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png)
 
 #### 代码架构
 
