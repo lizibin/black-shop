@@ -12,11 +12,10 @@ spring:
         shared-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
         file-extension: yml
   profiles:
-    active: dev
-
-
+    active: @profiles.active@
 
 
 #feign:
 #  sentinel:
 #    enabled: true
+
