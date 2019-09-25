@@ -22,8 +22,8 @@ services:
      restart: always
      privileged: true
      environment:
-         REDIS_PASS_FILE: /run/secrets/redis-password
-         TZ: ${GLOBAL_TIME_ZONE}
+       REDIS_PASS_FILE: /run/secrets/redis-password
+       TZ: ${GLOBAL_TIME_ZONE}
      command: [
        "bash", "-c",
        '
@@ -41,17 +41,19 @@ services:
       - bs-backend      
   blackshop-register:
     image: nacos/nacos-server:latest
-    container_name: nacos-standalone
+    container_name: blackshop-register
     environment:
-    - PREFER_HOST_MODE=hostname
-    - MODE=standalone
-    # nacos的日志非常大，非常恐怖，最好禁用了
-    - TOMCAT_ACCESSLOG_ENABLED=true
+      - PREFER_HOST_MODE=hostname
+      - MODE=standalone
+      # nacos的日志非常大，非常恐怖，最好禁用了
+      - TOMCAT_ACCESSLOG_ENABLED=true
     volumes:
-    - ./logs/standalone-logs/:/home/nacos/logs
-    - ./nacos/init.d/custom.properties:/home/nacos/init.d/custom.properties
+      - ./logs/standalone-logs/:/home/nacos/logs
+      - ./nacos/init.d/custom.properties:/home/nacos/init.d/custom.properties
     ports:
-    - "${NACOS_PORT}:8848"      
+      - "${NACOS_PORT}:8848"
+    networks:
+      - bs-backend      
 networks:
   bs-backend:  
     driver: bridge
