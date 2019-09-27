@@ -12,6 +12,17 @@
 	<artifactId>black-shop-gateway</artifactId>
 
 	<dependencies>
+
+		<!-- SpringCloud整合nacos服务发现组件 -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+		</dependency>
+		<!-- SpringCloud整合nacos配置中心组件 -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+		</dependency>
 		<!--整合gateway -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

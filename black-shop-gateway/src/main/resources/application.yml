@@ -1,7 +1,17 @@
-###服务启动端口号
 server:
   port: 9999
-###服务名称(服务注册到eureka名称)
 spring:
   application:
-    name: bs-gateway-service
+    name: @artifactId@
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS-HOST:blackshop-register}:${NACOS-PORT:8848}
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        shared-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+        file-extension: yml
+  profiles:
+    active: @profiles.active@
+  main:
+    allow-bean-definition-overriding: true

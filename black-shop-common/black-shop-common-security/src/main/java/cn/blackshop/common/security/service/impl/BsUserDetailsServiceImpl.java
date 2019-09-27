@@ -57,6 +57,11 @@ public class BsUserDetailsServiceImpl implements BsUserDetailsService {
 	}
 
 
+	/**
+	 * 构建userdetails
+	 * @param result
+	 * @return
+	 */
 	private UserDetails buildUserDails(ResponseResult<UserOutDTO> result) {
 		if (result == null || !result.hasBody()) {
 			log.error("用户信息错误或不存在！！！");

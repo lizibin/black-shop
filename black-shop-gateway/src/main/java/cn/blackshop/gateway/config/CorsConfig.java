@@ -1,12 +1,10 @@
-/**  
- 
-* <p>Company: www.black-shop.cn</p>  
-
-* <p>Copyright: Copyright (c) 2018-2050</p>   
-
-* black-shop(黑店) 版权所有,并保留所有权利。
-
-*/
+/**
+ * <p>Company: www.black-shop.cn</p>
+ *
+ * <p>Copyright: Copyright (c) 2018-2050</p>
+ * <p>
+ * black-shop(黑店) 版权所有,并保留所有权利。
+ */
 package cn.blackshop.gateway.config;
 
 import org.springframework.context.annotation.Configuration;
@@ -36,56 +34,56 @@ import reactor.core.publisher.Mono;
 @Configuration
 public class CorsConfig {
 
-  private static final String MAX_AGE = "18000L";
+	private static final String MAX_AGE = "18000L";
 
-  @Bean
-  public WebFilter corsFilter() {
-    return (ServerWebExchange ctx, WebFilterChain chain) -> {
-      ServerHttpRequest request = ctx.getRequest();
-      if (CorsUtils.isCorsRequest(request)) {
-        HttpHeaders requestHeaders = request.getHeaders();
-        ServerHttpResponse response = ctx.getResponse();
-        HttpMethod requestMethod = requestHeaders.getAccessControlRequestMethod();
-        HttpHeaders headers = response.getHeaders();
-        headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, requestHeaders.getOrigin());
-        headers.addAll(HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS, requestHeaders.getAccessControlRequestHeaders());
-        if (requestMethod != null) {
-          headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS, requestMethod.name());
-        }
-        headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_CREDENTIALS, "true");
-        headers.add(HttpHeaders.ACCESS_CONTROL_EXPOSE_HEADERS, "*");
-        headers.add(HttpHeaders.ACCESS_CONTROL_MAX_AGE, MAX_AGE);
-        if (request.getMethod() == HttpMethod.OPTIONS) {
-          response.setStatusCode(HttpStatus.OK);
-          return Mono.empty();
-        }
+	@Bean
+	public WebFilter corsFilter() {
+		return (ServerWebExchange ctx, WebFilterChain chain) -> {
+			ServerHttpRequest request = ctx.getRequest();
+			if (CorsUtils.isCorsRequest(request)) {
+				HttpHeaders requestHeaders = request.getHeaders();
+				ServerHttpResponse response = ctx.getResponse();
+				HttpMethod requestMethod = requestHeaders.getAccessControlRequestMethod();
+				HttpHeaders headers = response.getHeaders();
+				headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, requestHeaders.getOrigin());
+				headers.addAll(HttpHeaders.ACCESS_CONTROL_ALLOW_HEADERS, requestHeaders.getAccessControlRequestHeaders());
+				if (requestMethod != null) {
+					headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_METHODS, requestMethod.name());
+				}
+				headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_CREDENTIALS, "true");
+				headers.add(HttpHeaders.ACCESS_CONTROL_EXPOSE_HEADERS, "*");
+				headers.add(HttpHeaders.ACCESS_CONTROL_MAX_AGE, MAX_AGE);
+				if (request.getMethod() == HttpMethod.OPTIONS) {
+					response.setStatusCode(HttpStatus.OK);
+					return Mono.empty();
+				}
 
-      }
-      return chain.filter(ctx);
-    };
-  }
+			}
+			return chain.filter(ctx);
+		};
+	}
 
-  /**
-   * Server codec configurer.
-   *
-   * @return the server codec configurer
-   */
-  @Bean
-  public ServerCodecConfigurer serverCodecConfigurer() {
-    return new DefaultServerCodecConfigurer();
-  }
+	/**
+	 * Server codec configurer.
+	 *
+	 * @return the server codec configurer
+	 */
+	@Bean
+	public ServerCodecConfigurer serverCodecConfigurer() {
+		return new DefaultServerCodecConfigurer();
+	}
 
-  /**
-   * 如果使用了注册中心（如：Eureka），进行控制则需要增加如下配置.
-   *
-   * @param discoveryClient the discovery client
-   * @param properties      the properties
-   * @return the route definition locator
-   */
-  @Bean
-  public RouteDefinitionLocator discoveryClientRouteDefinitionLocator(DiscoveryClient discoveryClient,
-      DiscoveryLocatorProperties properties) {
-    return new DiscoveryClientRouteDefinitionLocator(discoveryClient, properties);
-  }
+	/**
+	 * 如果使用了注册中心（如：Eureka），进行控制则需要增加如下配置.
+	 *
+	 * @param discoveryClient the discovery client
+	 * @param properties      the properties
+	 * @return the route definition locator
+	 */
+	@Bean
+	public RouteDefinitionLocator discoveryClientRouteDefinitionLocator(DiscoveryClient discoveryClient,
+																		DiscoveryLocatorProperties properties) {
+		return new DiscoveryClientRouteDefinitionLocator(discoveryClient, properties);
+	}
 
 }

@@ -12,6 +12,7 @@ import cn.blackshop.common.core.basic.ResponseResultManager;
 import cn.blackshop.common.utils.BeanUtils;
 import cn.blackshop.user.api.dto.o.UserOutDTO;
 import cn.blackshop.user.service.SysUserService;
+import cn.hutool.crypto.SmUtil;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -32,6 +33,7 @@ public class SysUserController {
 	@GetMapping("/getUserByUsername")
 	@ApiOperation(value = "根据用户昵称获取用户信息", httpMethod = "GET", notes = "根据用户名获取用户信息")
 	ResponseResult<UserOutDTO> getUserByUsername(@RequestParam("username") String username) {
+		SmUtil.sm2();
 		return ResponseResultManager.setResultSuccess(BeanUtils.transfrom(UserOutDTO.class, sysUserService.getUserByUsername(username)));
 	}
 
