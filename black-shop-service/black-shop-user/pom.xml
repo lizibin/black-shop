@@ -20,17 +20,11 @@
 			<artifactId>black-shop-common-core</artifactId>
 		</dependency>
 
-		<!--springBoot整合swagger -->
 		<dependency>
-			<groupId>com.spring4all</groupId>
-			<artifactId>swagger-spring-boot-starter</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>io.springfox</groupId>
-					<artifactId>springfox-swagger-ui</artifactId>
-				</exclusion>
-			</exclusions>
-			<version>${springboot.swagger.version}</version>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${swagger.version}</version>
 		</dependency>
+
 	</dependencies>
 </project>

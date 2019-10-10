@@ -13,5 +13,3 @@ spring:
         file-extension: yml
   profiles:
     active: @profiles.active@
-  main:
-    allow-bean-definition-overriding: true

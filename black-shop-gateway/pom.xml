@@ -28,6 +28,11 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-core</artifactId>
+		</dependency>
 		<!--springBoot整合swagger -->
 		<!--接口文档 -->
 		<dependency>

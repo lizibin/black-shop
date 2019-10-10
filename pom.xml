@@ -51,7 +51,7 @@
 
 
 	<properties>
-		<springboot.version>2.1.7.RELEASE</springboot.version>
+		<springboot.version>2.1.8.RELEASE</springboot.version>
 		<springcloud.version>Greenwich.SR3</springcloud.version>
 		<spring-platform.version>Cairo-SR8</spring-platform.version>
 		<springcloud.alibaba.version>2.1.0.RELEASE</springcloud.alibaba.version>
@@ -61,7 +61,7 @@
 		<security.oauth.version>2.3.6.RELEASE</security.oauth.version>
 		<hutool.version>4.5.1</hutool.version>
 		<swagger.version>2.9.2</swagger.version>
-		<swagger-bootstrap-ui.version>1.9.4</swagger-bootstrap-ui.version>
+		<swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
 		<docker.build-images-url>http://192.168.0.11:2375</docker.build-images-url>
 		<docker.plugin.version>0.4.14</docker.plugin.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -167,6 +167,18 @@
 			<groupId>com.github.ulisesbocchio</groupId>
 			<artifactId>jasypt-spring-boot-starter</artifactId>
 			<version>${springboot.jasypt.version}</version>
+		</dependency>
+		<!--springBoot整合swagger -->
+		<dependency>
+			<groupId>com.spring4all</groupId>
+			<artifactId>swagger-spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>io.springfox</groupId>
+					<artifactId>springfox-swagger-ui</artifactId>
+				</exclusion>
+			</exclusions>
+			<version>${springboot.swagger.version}</version>
 		</dependency>
 	</dependencies>
 

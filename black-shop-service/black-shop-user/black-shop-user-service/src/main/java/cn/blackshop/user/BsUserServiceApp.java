@@ -8,6 +8,7 @@
 package cn.blackshop.user;
 
 import cn.blackshop.common.feign.annotation.EnableBsFeignClients;
+import com.spring4all.swagger.EnableSwagger2Doc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -18,6 +19,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @EnableBsFeignClients
+@EnableSwagger2Doc
 public class BsUserServiceApp {
 
 	public static void main(String[] args) {
