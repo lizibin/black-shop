@@ -38,10 +38,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	/**
 	 * 授权认证的用户.
 	 */
-	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(bsUserDetailsService);
-	}
+//	@Override
+//	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//		auth.userDetailsService(bsUserDetailsService);
+//	}
 
 
 	/**

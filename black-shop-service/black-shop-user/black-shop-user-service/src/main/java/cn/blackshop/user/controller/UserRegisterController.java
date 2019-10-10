@@ -9,7 +9,7 @@ package cn.blackshop.user.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+//@RestController
 public class UserRegisterController {
 
 }

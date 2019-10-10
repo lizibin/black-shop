@@ -1,5 +1,5 @@
 server:
-  port: 8010
+  port: 9999
 spring:
   application:
     name: @artifactId@
@@ -13,13 +13,3 @@ spring:
         file-extension: yml
   profiles:
     active: @profiles.active@
-
-swagger:
-  title: "用户服务接口文档"
-  base-package: cn.blackshop.user.controller
-  description: "用户服务的接口文档描述"
-
-#feign:
-#  sentinel:
-#    enabled: true
-
