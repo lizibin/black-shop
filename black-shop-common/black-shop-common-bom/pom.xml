@@ -29,12 +29,7 @@
 				<artifactId>druid-spring-boot-starter</artifactId>
 				<version>${druid.version}</version>
 			</dependency>
-			<!--redis配置 -->
-			<dependency>
-				<groupId>cn.black-shop</groupId>
-				<artifactId>black-shop-basic-redis</artifactId>
-				<version>${blackshop.version}</version>
-			</dependency>
+
 
 			<!--公共工具版本依赖 -->
 			<dependency>
