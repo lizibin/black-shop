@@ -32,12 +32,6 @@
 			<artifactId>spring-boot-starter-undertow</artifactId>
 		</dependency>
 
-		<!--整合redis -->
-		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-basic-redis</artifactId>
-		</dependency>
-
 		<dependency>
 			<groupId>cn.black-shop</groupId>
 			<artifactId>black-shop-common-datasource</artifactId>

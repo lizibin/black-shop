@@ -1,8 +1,6 @@
 package cn.blackshop.wechat.mp.handler;
 
-import cn.blackshop.basic.redis.util.RedisUtil;
 import cn.blackshop.common.core.basic.ResponseResult;
-import cn.blackshop.common.core.constants.Constants;
 import cn.blackshop.common.utils.RegexUtils;
 import cn.blackshop.user.api.client.SysUserServiceClient;
 import cn.blackshop.wechat.mp.builder.TextBuilder;
@@ -35,8 +33,8 @@ public class MsgHandler extends AbstractHandler {
 	@Value("${blackshop.wechat.default.registration.code.message}")
 	private String defaultRegistrationCodeMessage;
 
-	@Autowired
-	private RedisUtil redisUtil;
+//	@Autowired
+//	private RedisUtil redisUtil;
 
 	@Autowired
 	private SysUserServiceClient sysUserServiceClient;
@@ -72,7 +70,7 @@ public class MsgHandler extends AbstractHandler {
 			int registCode = registCode();
 			String content = registrationCodeMessage.format(registrationCodeMessage, registCode);
 			// 将注册码存入在redis中 key为手机号码
-			redisUtil.setString(Constants.WECHET_CODE_KEY + fromContent, registCode + "", Constants.WECHET_CODE_TIMEOUT);
+			//redisUtil.setString(Constants.WECHET_CODE_KEY + fromContent, registCode + "", Constants.WECHET_CODE_TIMEOUT);
 			return new TextBuilder().build(content, wxMessage, weixinService);
 		}
 		// 否则情况下返回默认消息 调用第三方机器人接口
