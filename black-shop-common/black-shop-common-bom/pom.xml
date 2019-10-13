@@ -93,6 +93,30 @@
 				<artifactId>black-shop-wechat-api</artifactId>
 				<version>${blackshop.version}</version>
 			</dependency>
+			<!--商品基础服务接口-->
+			<dependency>
+				<groupId>cn.black-shop</groupId>
+				<artifactId>black-shop-product-api</artifactId>
+				<version>${blackshop.version}</version>
+			</dependency>
+			<!--搜索基础服务接口-->
+			<dependency>
+				<groupId>cn.black-shop</groupId>
+				<artifactId>black-shop-search-api</artifactId>
+				<version>${blackshop.version}</version>
+			</dependency>
+			<!--订单基础服务接口-->
+			<dependency>
+				<groupId>cn.black-shop</groupId>
+				<artifactId>black-shop-order-api</artifactId>
+				<version>${blackshop.version}</version>
+			</dependency>
+			<!--支付基础服务接口-->
+			<dependency>
+				<groupId>cn.black-shop</groupId>
+				<artifactId>black-shop-payment-api</artifactId>
+				<version>${blackshop.version}</version>
+			</dependency>
 
 			<!--mybatis plus extension,包含了mybatis plus core-->
 			<dependency>

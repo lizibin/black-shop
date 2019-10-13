@@ -70,9 +70,7 @@
 
 	<modules>
 		<module>black-shop-common</module>
-		<module>black-shop-basic</module>
 		<module>black-shop-service</module>
-		<module>black-shop-model</module>
 		<module>black-shop-portal</module>
 		<module>black-shop-auth</module>
 		<module>black-shop-gateway</module>

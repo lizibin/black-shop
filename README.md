@@ -67,11 +67,6 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 ```
 |-black-shop   #黑店
 |-  |-black-shop-auth   #oauth2.0认证服务
-|-  |-black-shop-basic   #基础服务pom
-|-  |-  |-black-shop-basic-elasticsearch   #elasticsearch搜索服务，对es服务器封装
-|-  |-  |-black-shop-basic-redis   #redis缓存基础服务
-|-  |-  |-black-shop-basic-scheduler   #任务调度
-|-  |-  |-black-shop-basic-zipkin   #服务链路追踪
 |-  |-black-shop-common   #公共服务
 |-  |-  |-black-shop-common-bom  #集中管理版本号
 |-  |-  |-black-shop-common-core  #公共核心
@@ -83,6 +78,7 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 |-  |-  |-black-shop-common-web  #和web相关的组件和工具类
 |-  |-black-shop-porta   #门户模块
 |-  |-  |-black-shop-porta-web   #前端web项目
+|-  |-  |-black-shop-payment-web   #前端支付项目
 |-  |-black-shop-gateway   #网关服务
 |-  |-black-shop-service   #业务服务pom
 |-  |-  |-black-shop-service-order   #订单服务
