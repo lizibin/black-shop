@@ -30,7 +30,8 @@ public class VerificaWechatCodeController {
 
     @PostMapping("/verificaWechatCode")
     public ResponseResult<Boolean> verificaWechatCode(@RequestParam  String phone,@RequestParam  String weixinCode){
-       return verificaWechatCodeService.verificaWechatCode(phone,weixinCode);
+       //return verificaWechatCodeService.verificaWechatCode(phone,weixinCode);
+		return null;
     }
 
 }

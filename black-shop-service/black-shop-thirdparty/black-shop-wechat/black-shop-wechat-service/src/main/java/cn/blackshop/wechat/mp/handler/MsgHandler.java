@@ -1,8 +1,6 @@
 package cn.blackshop.wechat.mp.handler;
 
-import cn.blackshop.basic.redis.util.RedisUtil;
 import cn.blackshop.common.core.basic.ResponseResult;
-import cn.blackshop.common.core.constants.Constants;
 import cn.blackshop.common.utils.RegexUtils;
 import cn.blackshop.user.api.client.SysUserServiceClient;
 import cn.blackshop.wechat.mp.builder.TextBuilder;
