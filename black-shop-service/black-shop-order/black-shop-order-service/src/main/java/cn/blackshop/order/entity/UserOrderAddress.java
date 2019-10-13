@@ -6,31 +6,26 @@
  * black-shop(黑店) 版权所有,并保留所有权利。
  */
 
-package cn.blackshop.user.entity;
+package cn.blackshop.order.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.Date;
-
 /**
- * 用户收货地址表实体
+ * 用户底单表实体
  * @author zibin
  */
 @Data
 @ToString
-@TableName("bs_user_receipt_address")
-public class UserReceiptAddress {
+@TableName("bs_user_order_address")
+public class UserOrderAddress {
 
 	/**
 	 * 主键id
 	 */
 	private Long id;
 
-	/**
-	 * 用户id
-	 */
 	private Long userId;
 
 	/**
@@ -39,7 +34,7 @@ public class UserReceiptAddress {
 	private String consigneeName;
 
 	/**
-	 * 手机号码
+	 * 手机号
 	 */
 	private String mobileNumber;
 
@@ -49,9 +44,19 @@ public class UserReceiptAddress {
 	private Long provinceId;
 
 	/**
+	 * 省份名称
+	 */
+	private Long provinceName;
+
+	/**
 	 * 城市id
 	 */
 	private Long cityId;
+
+	/**
+	 * 城市名称
+	 */
+	private Long cityName;
 
 	/**
 	 * 地区id
@@ -59,17 +64,12 @@ public class UserReceiptAddress {
 	private Long areaId;
 
 	/**
+	 * 地区名称
+	 */
+	private Long areaName;
+
+	/**
 	 * 详细地址
 	 */
 	private String detailAddress;
-
-	/**
-	 * 是否为常用地址
-	 */
-	private Boolean isCommonAddress;
-
-	/**
-	 * 创建时间
-	 */
-	private Date createDate;
 }

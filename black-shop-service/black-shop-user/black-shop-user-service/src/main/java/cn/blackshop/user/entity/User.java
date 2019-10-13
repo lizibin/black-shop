@@ -1,12 +1,14 @@
 /**
  * <p>Company: www.black-shop.cn</p>
- * <p>Copyright: Copyright (c) 2018</p>
  *
- * @version 1.0
+ * <p>Copyright: Copyright (c) 2018-2050</p>
+ * <p>
  * black-shop(黑店) 版权所有,并保留所有权利。
  */
+
 package cn.blackshop.user.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.ToString;
 
@@ -19,7 +21,7 @@ import java.util.Date;
  */
 @Data
 @ToString
-//@Table(name = "bs_user")
+@TableName("bs_user")
 public class User implements Serializable {
 
 	/** serialVersionUID */
