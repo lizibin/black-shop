@@ -32,8 +32,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Autowired
-	private BsUserDetailsService bsUserDetailsService;
+//	@Autowired
+//	private BsUserDetailsService bsUserDetailsService;
 
 	/**
 	 * 授权认证的用户.

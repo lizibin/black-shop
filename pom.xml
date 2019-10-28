@@ -51,7 +51,7 @@
 
 
 	<properties>
-		<springboot.version>2.1.8.RELEASE</springboot.version>
+		<springboot.version>2.1.9.RELEASE</springboot.version>
 		<springcloud.version>Greenwich.SR3</springcloud.version>
 		<spring-platform.version>Cairo-SR8</spring-platform.version>
 		<springcloud.alibaba.version>2.1.0.RELEASE</springcloud.alibaba.version>
@@ -117,6 +117,12 @@
 				<version>1.0.0</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<!--稳定版本，替代spring security bom内置-->
+			<dependency>
+				<groupId>org.springframework.security.oauth</groupId>
+				<artifactId>spring-security-oauth2</artifactId>
+				<version>${security.oauth.version}</version>
 			</dependency>
 			<!--spring boot web 组件 -->
 			<dependency>
