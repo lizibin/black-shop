@@ -1,3 +1,4 @@
+
 /**
  * <p>Company: www.black-shop.cn</p>
  *
@@ -6,7 +7,7 @@
  * black-shop(黑店) 版权所有,并保留所有权利。
  */
 
-package cn.blackshop.product;
+package cn.blackshop.goods;
 
 import com.spring4all.swagger.EnableSwagger2Doc;
 import org.springframework.boot.SpringApplication;
@@ -19,9 +20,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @EnableSwagger2Doc
-public class BsProductServiceApp {
+public class BsGoodsServiceApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BsProductServiceApp.class, args);
+		SpringApplication.run(BsGoodsServiceApp.class, args);
 	}
 }

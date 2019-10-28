@@ -6,15 +6,14 @@
  * black-shop(黑店) 版权所有,并保留所有权利。
  */
 
-package cn.blackshop.product.entity;
+package cn.blackshop.goods.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.ToString;
 
-import java.math.BigDecimal;
-import java.util.Date;
+
 
 /**
  * 商品表实体
@@ -22,8 +21,8 @@ import java.util.Date;
  */
 @Data
 @ToString
-@TableName("bs_product_detail")
-public class ProductDetail {
+@TableName("bs_goods_detail")
+public class GoodsDetail {
 
 	/**
 	 * 主键id

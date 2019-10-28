@@ -17,7 +17,7 @@
 	<modules>
 		<module>black-shop-user</module>
 		<module>black-shop-search</module>
-		<module>black-shop-product</module>
+		<module>black-shop-goods</module>
 		<module>black-shop-payment</module>
 		<module>black-shop-thirdparty</module>
 		<module>black-shop-shoppingcart</module>

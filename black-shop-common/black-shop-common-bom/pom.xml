@@ -91,7 +91,7 @@
 			<!--商品基础服务接口-->
 			<dependency>
 				<groupId>cn.black-shop</groupId>
-				<artifactId>black-shop-product-api</artifactId>
+				<artifactId>black-shop-goods-api</artifactId>
 				<version>${blackshop.version}</version>
 			</dependency>
 			<!--搜索基础服务接口-->
