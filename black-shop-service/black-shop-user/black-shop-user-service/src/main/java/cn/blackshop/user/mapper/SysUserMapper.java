@@ -10,6 +10,7 @@
 
 package cn.blackshop.user.mapper;
 
+import cn.blackshop.user.api.dto.o.SysUserDTO;
 import cn.blackshop.user.entity.SysUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -32,6 +33,6 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
 	 * @param username
 	 * @return
 	 */
-	SysUser selectByUsername(String username);
+	SysUserDTO selectByUsername(String username);
 
 }

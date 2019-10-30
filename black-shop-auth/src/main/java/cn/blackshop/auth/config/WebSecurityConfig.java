@@ -32,17 +32,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-//	@Autowired
-//	private BsUserDetailsService bsUserDetailsService;
-
-	/**
-	 * 授权认证的用户.
-	 */
-//	@Override
-//	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//		auth.userDetailsService(bsUserDetailsService);
-//	}
-
 
 	/**
 	 * 配置认证授权的URL.
