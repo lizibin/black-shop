@@ -1,21 +1,18 @@
 /**
  * <p>Company: www.black-shop.cn</p>
  *
- * <p>Copyright: Copyright (c) 2018-2050</p>
+ * <p>Copyright: Copyright (c) 2018</p>
  * <p>
  * black-shop(黑店) 版权所有,并保留所有权利。
  */
 package cn.blackshop.auth.config;
 
-import cn.blackshop.common.security.service.BsUserDetailsService;
 import lombok.SneakyThrows;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;

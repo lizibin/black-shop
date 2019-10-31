@@ -15,9 +15,9 @@ import org.springframework.cloud.client.SpringCloudApplication;
  * @author zibin
  */
 @SpringCloudApplication
-public class GatewayServiceApp {
+public class BsGatewayServiceApp {
 
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(GatewayServiceApp.class, args);
+		SpringApplication.run(BsGatewayServiceApp.class, args);
 	}
 }

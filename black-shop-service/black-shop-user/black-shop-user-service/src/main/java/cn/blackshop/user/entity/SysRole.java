@@ -34,7 +34,7 @@ public class SysRole extends Model<SysRole> {
 	 * 角色ID
 	 */
 	@TableId(value = "role_id")
-	private Long roleId;
+	private Integer roleId;
 
 	/**
 	 * 角色名称

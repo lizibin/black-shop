@@ -10,13 +10,16 @@
 package cn.blackshop.user.service;
 
 
+import cn.blackshop.user.api.dto.MenuDTO;
 import cn.blackshop.user.entity.SysMenu;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 
 /**
  * <p>
- * 菜单权限表 服务类
+ * 菜单权限表接口
  * </p>
  *
  * @author zibin
@@ -25,10 +28,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface SysMenuService extends IService<SysMenu> {
 
 	/**
-	 * 更新菜单信息
+	 * 通过角色编号查询URL 权限
 	 *
-	 * @param sysMenu 菜单信息
-	 * @return 成功、失败
+	 * @param roleId 角色ID
+	 * @return 菜单列表
 	 */
-	Boolean updateMenuById(SysMenu sysMenu);
+	List<MenuDTO> findMenuByRoleId(Integer roleId);
 }

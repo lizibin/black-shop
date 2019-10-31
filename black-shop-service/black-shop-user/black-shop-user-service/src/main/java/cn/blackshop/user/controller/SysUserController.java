@@ -14,6 +14,7 @@ import cn.blackshop.user.api.dto.o.UserOutDTO;
 import cn.blackshop.user.entity.SysUser;
 import cn.blackshop.user.service.SysUserService;
 import cn.hutool.crypto.SmUtil;
+import cn.hutool.http.HttpStatus;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -51,7 +52,7 @@ public class SysUserController {
 		SysUser user = sysUserService.getOne(Wrappers.<SysUser>query()
 				.lambda().eq(SysUser::getUsername, username));
 		if (user == null) {
-			return ResponseResultManager.setResultError(null, String.format("用户信息为空 %s", username));
+			return ResponseResultManager.setResultError(HttpStatus.HTTP_UNAUTHORIZED, String.format("用户信息为空 %s", username));
 		}
 		return ResponseResultManager.setResultSuccess(sysUserService.getUserInfo(user));
 	}
