@@ -9,6 +9,7 @@
 package cn.blackshop.user.entity;
 
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -37,8 +38,8 @@ public class SysUser implements Serializable {
 	/**
 	 * 用户ID
 	 */
-	@TableId(value = "user_id")
-	private Long userId;
+	@TableId(value = "user_id", type = IdType.AUTO)
+	private Integer userId;
 
 
 	/**

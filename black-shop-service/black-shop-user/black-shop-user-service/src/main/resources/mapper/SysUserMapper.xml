@@ -2,14 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.blackshop.user.mapper.SysUserMapper">
-	
-	<!-- 查询用户的所有权限 -->
-	<select id="queryAllPerms" resultType="string">
-		select m.perms from bs_sys_user_role sur
-			LEFT JOIN bs_sys_role_menu srm on sur.role_id = srm.role_id
-			LEFT JOIN bs_sys_menu sm on srm.menu_id = m.menu_id
-		where ur.user_id = #{userId}
-	</select>
 
 	<!-- 根据用户名查询用户 -->
 	<select id="selectByUsername" resultType="cn.blackshop.user.entity.SysUser">
