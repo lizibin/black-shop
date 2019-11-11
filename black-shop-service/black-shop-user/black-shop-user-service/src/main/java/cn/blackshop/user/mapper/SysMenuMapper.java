@@ -12,7 +12,6 @@ package cn.blackshop.user.mapper;
 
 import cn.blackshop.user.api.dto.MenuDTO;
 import cn.blackshop.user.entity.SysMenu;
-import cn.blackshop.user.entity.SysRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;

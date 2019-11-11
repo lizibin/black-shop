@@ -1,2 +1,5 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    cn.blackshop.common.data.cache.RedisTemplateConfig,\
+    cn.blackshop.common.data.cache.RedisCacheManagerConfig,\
+    cn.blackshop.common.data.cache.RedisCacheAutoConfiguration,\
     cn.blackshop.common.data.mybatis.MybatisPlusConfig
