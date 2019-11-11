@@ -7,18 +7,11 @@
  */
 package cn.blackshop.user.service.impl;
 
-import cn.blackshop.common.utils.BeanUtils;
-import cn.blackshop.user.api.dto.UserInfoDTO;
-import cn.blackshop.user.api.dto.o.SysUserDTO;
 import cn.blackshop.user.entity.SysRole;
-import cn.blackshop.user.entity.SysUser;
 import cn.blackshop.user.mapper.SysRoleMapper;
-import cn.blackshop.user.mapper.SysUserMapper;
 import cn.blackshop.user.service.SysRoleService;
-import cn.blackshop.user.service.SysUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

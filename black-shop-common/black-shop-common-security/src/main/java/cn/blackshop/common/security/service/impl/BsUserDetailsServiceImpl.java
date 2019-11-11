@@ -10,6 +10,7 @@
 package cn.blackshop.common.security.service.impl;
 
 import cn.blackshop.common.core.basic.ResponseResult;
+import cn.blackshop.common.core.constants.CacheConstants;
 import cn.blackshop.common.security.dto.SecurityUserDetail;
 import cn.blackshop.common.security.service.BsUserDetailsService;
 import cn.blackshop.user.api.client.SysUserServiceClient;
@@ -19,6 +20,8 @@ import cn.blackshop.user.api.dto.o.UserOutDTO;
 import cn.hutool.core.util.ArrayUtil;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.Cache;
+import org.springframework.cache.CacheManager;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -40,18 +43,18 @@ import java.util.Set;
 @Service
 @Slf4j
 public class BsUserDetailsServiceImpl implements BsUserDetailsService {
-	//	private final CacheManager cacheManager;
+	private final CacheManager cacheManager;
 	private final SysUserServiceClient sysUserServiceClient;
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//		Cache cache = cacheManager.getCache(CacheConstants.USER_DETAILS);
-//		if (cache != null && cache.get(username) != null) {
-//			return (SecurityUserDetail) cache.get(username).get();
-//		}
+		Cache cache = cacheManager.getCache(CacheConstants.USER_DETAILS);
+		if (cache != null && cache.get(username) != null) {
+			return (SecurityUserDetail) cache.get(username).get();
+		}
 		ResponseResult<UserInfoDTO> userOutDto = sysUserServiceClient.info(username);
 		UserDetails userDetails = buildUserDails(userOutDto);
-		//cache.put(username,userDetails);
+		cache.put(username,userDetails);
 		return userDetails;
 	}
 

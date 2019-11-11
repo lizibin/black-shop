@@ -21,6 +21,6 @@
         SELECT
             r.*
         FROM
-        sys_role r, sys_user_role ur WHERE r.role_id = ur.role_id AND r.del_flag = 0 and  ur.user_id IN (#{userId})
+        bs_sys_role r, bs_sys_user_role ur WHERE r.role_id = ur.role_id AND r.del_flag = 0 and  ur.user_id IN (#{userId})
     </select>
 </mapper>

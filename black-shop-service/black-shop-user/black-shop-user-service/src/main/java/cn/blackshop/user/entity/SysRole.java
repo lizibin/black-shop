@@ -9,16 +9,18 @@
 package cn.blackshop.user.entity;
 
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
+import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotBlank;
-import java.util.Date;
-import java.util.List;
+import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 
 /**
  * 系统用户角色
@@ -26,7 +28,8 @@ import java.util.List;
  * @author zibin
  */
 @Data
-@TableName("bs_sys_role")
+@ApiModel(value = "用户角色")
+@EqualsAndHashCode(callSuper = true)
 public class SysRole extends Model<SysRole> {
 	private static final long serialVersionUID = 1L;
 
@@ -42,17 +45,35 @@ public class SysRole extends Model<SysRole> {
 	@NotBlank(message = "角色名称不能为空")
 	private String roleName;
 
+	@NotBlank(message = "角色标识不能为空")
+	@ApiModelProperty(value = "角色标识")
+	private String roleCode;
+
+	@ApiModelProperty(value = "角色描述")
+	private String roleDesc;
+
+	@NotNull(message = "数据权限类型不能为空")
+	@ApiModelProperty(value = "数据权限类型")
+	private Integer dsType;
 	/**
-	 * 备注
+	 * 数据权限作用范围
 	 */
-	private String remark;
-
-	@TableField(exist = false)
-	private List<Long> menuIdList;
-
+	@ApiModelProperty(value = "数据权限作用范围")
+	private String dsScope;
 	/**
 	 * 创建时间
 	 */
-	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-	private Date createTime;
+	@ApiModelProperty(value = "创建时间")
+	private LocalDateTime createTime;
+	/**
+	 * 修改时间
+	 */
+	@ApiModelProperty(value = "修改时间")
+	private LocalDateTime updateTime;
+	/**
+	 * 删除标识（0-正常,1-删除）
+	 */
+	@TableLogic
+	@ApiModelProperty(value = "删除标记,1:已删除,0:正常")
+	private String delFlag;
 }
