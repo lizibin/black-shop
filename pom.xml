@@ -74,6 +74,7 @@
 		<module>black-shop-portal</module>
 		<module>black-shop-auth</module>
 		<module>black-shop-gateway</module>
+		<module>black-shop-nacos</module>
 	</modules>
 
 	<!-- 管理依赖 -->
