@@ -1,0 +1,24 @@
+nacos:
+  cmdb:
+    dumpTaskInterval: 3600
+    eventTaskInterval: 10
+    labelTaskInterval: 300
+    loadDataAtStart: false
+  security:
+    ignore: #忽略security验证的url
+      urls: /,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-fe/public/**,/v1/auth/login,/v1/console/health/**,/v1/cs/**,/v1/ns/**,/v1/cmdb/**,/actuator/**,/v1/console/server/**
+  standalone: true
+
+db:
+  num: 1   #只连接一个数据库
+  user: ${MYSQL-USER:root}  #用户名
+  password: ${MYSQL-PWD:root}  #密码
+  url:
+    0: jdbc:mysql://${MYSQL-HOST:blackshop-mysql}:${MYSQL-PORT:3306}/${MYSQL-DB:blackshop_nacosconfig}?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+
+
+server:
+  tomcat:
+    accesslog:
+      enabled: true
+
