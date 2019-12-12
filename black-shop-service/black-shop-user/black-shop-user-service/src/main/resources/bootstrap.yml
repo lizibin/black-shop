@@ -1,0 +1,25 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: @artifactId@
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS-HOST:blackshop-register}:${NACOS-PORT:8848}
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        shared-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+        file-extension: yml
+  profiles:
+    active: @profiles.active@
+
+swagger:
+  title: "用户服务接口文档"
+  base-package: cn.blackshop.user.controller
+  description: "用户服务的接口文档描述"
+
+#feign:
+#  sentinel:
+#    enabled: true
+

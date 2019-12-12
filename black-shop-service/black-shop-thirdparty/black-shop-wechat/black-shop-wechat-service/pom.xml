@@ -12,27 +12,20 @@
     <artifactId>black-shop-wechat-service</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>cn.black-shop</groupId>
-            <artifactId>black-shop-service-api-thirdparty-wechat</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-util</artifactId>
+		</dependency>
 
         <dependency>
             <groupId>cn.black-shop</groupId>
             <artifactId>black-shop-user-api</artifactId>
         </dependency>
 
-        <!--整合redis -->
-        <dependency>
-            <groupId>cn.black-shop</groupId>
-            <artifactId>black-shop-basic-redis</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>com.github.binarywang</groupId>
             <artifactId>weixin-java-mp</artifactId>
-            <version>3.3.0</version>
+            <version>3.4.0</version>
             <exclusions>
                 <exclusion>
                     <artifactId>xstream</artifactId>

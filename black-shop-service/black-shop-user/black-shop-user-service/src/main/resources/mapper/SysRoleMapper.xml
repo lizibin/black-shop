@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.blackshop.user.mapper.SysRoleMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="cn.blackshop.user.entity.SysRole">
+		<id column="role_id" property="roleId"/>
+		<result column="role_name" property="roleName"/>
+		<result column="role_code" property="roleCode"/>
+		<result column="role_desc" property="roleDesc"/>
+		<result column="ds_type" property="dsType"/>
+		<result column="ds_scope" property="dsScope"/>
+		<result column="create_time" property="createTime"/>
+		<result column="update_time" property="updateTime"/>
+		<result column="del_flag" property="delFlag"/>
+	</resultMap>
+
+	<!-- 通过用户ID，查询角色信息-->
+	<select id="listRolesByUserId" resultMap="BaseResultMap">
+        SELECT
+            r.*
+        FROM
+        bs_sys_role r, bs_sys_user_role ur WHERE r.role_id = ur.role_id AND r.del_flag = 0 and  ur.user_id IN (#{userId})
+    </select>
+</mapper>

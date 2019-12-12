@@ -99,7 +99,7 @@
 					href="about.html">售后服务</a> <a href="about.html">配送服务</a> <a
 					href="about.html">关于货源</a>
 				</span>
-				<p>家居商城版权所有 &copy; 2012-2020</p>
+				<p>XXXXXX商城版权所有 &copy; 2018-2050</p>
 			</div>
 		</div>
 	</div>

@@ -9,15 +9,15 @@
 */
 package cn.blackshop.common.utils;
 
+import org.jasypt.intf.cli.JasyptPBEStringEncryptionCLI;
+import org.springframework.util.StringUtils;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.jasypt.intf.cli.JasyptPBEStringEncryptionCLI;
-import org.springframework.util.StringUtils;
 
 /**
  * 加密类
@@ -71,7 +71,7 @@ public class EncryptUtil {
     }
 
     public static void main(String[] args) {
-        System.out.println(getEncryptedParams("root"));//print : {input=Ore69lUopDHL5R8Bw/G3bQ==, password=klklklklklklklkl}
+        System.out.println(getEncryptedParams("blackshop_user@123"));//print : {input=Ore69lUopDHL5R8Bw/G3bQ==, password=klklklklklklklkl}
     }
 
     /**

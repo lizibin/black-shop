@@ -12,7 +12,7 @@
  
     <dependency>
       <groupId>cn.black-shop</groupId>
-      <artifactId>black-shop-common-basic</artifactId>
+      <artifactId>black-shop-common-core</artifactId>
     </dependency>
 
     <dependency>

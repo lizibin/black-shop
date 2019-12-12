@@ -16,7 +16,7 @@
 				href="http://www.black-shop.cn" target="_blank">配送服务</a> <a
 				href="http://www.black-shop.cn" target="_blank">关于货源</a>
 			</span>
-			<p>上海每特教育科技有限公司版权所有- &copy; 2018-2019</p>
+			<p>XXXXXXXXXX公司版权所有- &copy; 2018-2050</p>
 		</div>
 	</div>
 </div>

@@ -1,296 +1,303 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>cn.black-shop</groupId>
-  <artifactId>black-shop</artifactId>
-  <version>1.0.0</version>
-  <name>black-shop</name>
-  <packaging>pom</packaging>
-  <description>black-shop 微服务商城</description>
-  <url>http://www.black-shop.cn</url>
-
-
-  <organization>
-    <name>Lee Zzi βin</name>
-    <url>http://www.black-shop.cn/</url>
-  </organization>
-
-  <licenses>
-    <license>
-      <name>Apache License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-    </license>
-  </licenses>
-
-  <scm>
-    <url>https://github.com/lizibin/black-shop</url>
-    <connection>scm:git:git://github.com/lizibin/black-shop.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:lizibin/black-shop.git</developerConnection>
-  </scm>
-
-  <issueManagement>
-    <system>github</system>
-    <url>https://github.com/lizibin/black-shop/issues</url>
-  </issueManagement>
-
-  <developers>
-    <developer>
-      <id>nobodyiam</id>
-      <name>Lee Zzi βin</name>
-      <email>12572024@qq.com</email>
-      <organization>black-shop</organization>
-      <organizationUrl>http://www.black-shop.cn</organizationUrl>
-      <roles>
-        <role>Developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>molost</id>
-      <name>Lin Da Zhen</name>
-      <email>445081559@qq.com</email>
-      <organization>black-shop</organization>
-      <organizationUrl>http://www.black-shop.cn</organizationUrl>
-      <roles>
-        <role>Developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>Cynic-b</id>
-      <name>Liu Sui Biao</name>
-      <email>1416669157@qq.com</email>
-      <organization>black-shop</organization>
-      <organizationUrl>http://www.black-shop.cn</organizationUrl>
-      <roles>
-        <role>Developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>EDaoren</id>
-      <name>Chen Chu Wen</name>
-      <email>550790375@qq.com</email>
-      <organization>black-shop</organization>
-      <organizationUrl>http://www.black-shop.cn</organizationUrl>
-      <roles>
-        <role>Developer(Inactive)</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>kaifahm</id>
-      <name>Guan Kai Fa</name>
-      <email>770813563@qq.com</email>
-      <organization>black-shop</organization>
-      <organizationUrl>http://www.black-shop.cn</organizationUrl>
-      <roles>
-        <role>Developer(Inactive)</role>
-      </roles>
-    </developer>
-  </developers>
+	<groupId>cn.black-shop</groupId>
+	<artifactId>black-shop</artifactId>
+	<version>1.0.0</version>
+	<name>black-shop</name>
+	<packaging>pom</packaging>
+	<description>black-shop 微服务商城</description>
+	<url>http://www.black-shop.cn</url>
 
 
-  <properties>
-    <springboot.version>2.0.6.RELEASE</springboot.version>
-    <springcloud.version>Finchley.SR2</springcloud.version>
-    <spring-platform.version>Cairo-SR6</spring-platform.version>
-    <springcloud.alibaba.version>0.2.1.RELEASE</springcloud.alibaba.version>
-    <springboot.jasypt.version>2.1.0</springboot.jasypt.version>
-    <springboot.swagger.version>1.8.0.RELEASE</springboot.swagger.version>
-    <springboot.log4j.version>1.3.8.RELEASE</springboot.log4j.version>
-    <springboot.mybatis.version>1.3.2</springboot.mybatis.version>
-    <swagger.version>2.9.2</swagger.version>
-    <swagger-bootstrap-ui.version>1.8.8</swagger-bootstrap-ui.version>
-    <docker.build-images-url>http://192.168.0.11:2375</docker.build-images-url>
-    <docker.plugin.version>0.4.14</docker.plugin.version>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
+	<organization>
+		<name>Lee Zzi βin</name>
+		<url>http://www.black-shop.cn/</url>
+	</organization>
 
-  <modules>
-    <module>black-shop-common</module>
-    <module>black-shop-basic</module>
-    <module>black-shop-service</module>
-    <module>black-shop-model</module>
-    <module>black-shop-portal</module>
-  </modules>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
 
-  <!-- 管理依赖 -->
-  <dependencyManagement>
-    <dependencies>
-      <!-- spring Boot 依赖 -->
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-dependencies</artifactId>
-        <version>${springboot.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <!-- spring Cloud 依赖 -->
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-dependencies</artifactId>
-        <version>${springcloud.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <!-- spring Cloud Alibaba依赖 -->
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-        <version>${springcloud.alibaba.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>io.spring.platform</groupId>
-        <artifactId>platform-bom</artifactId>
-        <version>${spring-platform.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <!-- 统一依赖管理 -->
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>black-shop-common-bom</artifactId>
-        <version>1.0.0</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <!--spring boot web 组件 -->
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-        <version>${springboot.version}</version>
-        <exclusions>
-          <!--排除tomcat依赖 ,使用underom -->
-          <exclusion>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <groupId>org.springframework.boot</groupId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+	<scm>
+		<url>https://github.com/lizibin/black-shop</url>
+		<connection>scm:git:git://github.com/lizibin/black-shop.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:lizibin/black-shop.git</developerConnection>
+	</scm>
 
-  <dependencies>
-    <!-- SpringBoot整合nacos服务发现组件 -->
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-    </dependency>
-    <!--feign 依赖 -->
-    <dependency>
-      <groupId>io.github.openfeign</groupId>
-      <artifactId>feign-okhttp</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-openfeign</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-configuration-processor</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <!-- SpringBoot整合lombok组件 -->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-    </dependency>
-    <!-- SpringBoot整合jasypt加密 -->
-    <dependency>
-      <groupId>com.github.ulisesbocchio</groupId>
-      <artifactId>jasypt-spring-boot-starter</artifactId>
-      <version>${springboot.jasypt.version}</version>
-    </dependency>
-  </dependencies>
+	<issueManagement>
+		<system>github</system>
+		<url>https://github.com/lizibin/black-shop/issues</url>
+	</issueManagement>
 
-  <build>
-    <finalName>${project.name}</finalName>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-      </resource>
-    </resources>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-maven-plugin</artifactId>
-          <version>${springboot.version}</version>
-          <configuration>
-            <finalName>${project.build.finalName}</finalName>
-          </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>repackage</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>com.spotify</groupId>
-          <artifactId>docker-maven-plugin</artifactId>
-          <version>${docker.plugin.version}</version>
-          <configuration>
-            <imageName>${registry.url}/${docker.harbor.project}/${project.name}:0.0.1</imageName>
-            <dockerHost>${docker.build-images-url}</dockerHost>
-            <dockerDirectory>${project.basedir}</dockerDirectory>
-            <resources>
-              <resource>
-                <targetPath>/</targetPath>
-                <directory>${project.build.directory}</directory>
-                <include>${project.build.finalName}.jar</include>
-              </resource>
-            </resources>
-            <serverId>docker-hub</serverId>
-            <pushImage>false</pushImage>
-            <registryUrl>https://harbor.black-shop.cn</registryUrl>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
-        <configuration>
-          <target>${maven.compiler.target}</target>
-          <source>${maven.compiler.source}</source>
-          <encoding>UTF-8</encoding>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+	<developers>
+		<developer>
+			<id>nobodyiam</id>
+			<name>Lee Zzi βin</name>
+			<email>12572024@qq.com</email>
+			<organization>black-shop</organization>
+			<organizationUrl>http://www.black-shop.cn</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+	</developers>
 
 
-  <repositories>
-    <!--阿里云主仓库，代理了maven central和jcenter仓库 -->
-    <repository>
-      <id>aliyun</id>
-      <name>aliyun</name>
-      <url>https://maven.aliyun.com/repository/public</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <!--阿里云代理Spring 官方仓库 -->
-    <repository>
-      <id>spring-milestones</id>
-      <name>Spring Milestones</name>
-      <url>https://maven.aliyun.com/repository/spring</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
+	<properties>
+		<springboot.version>2.1.9.RELEASE</springboot.version>
+		<springcloud.version>Greenwich.SR3</springcloud.version>
+		<spring-platform.version>Cairo-SR8</spring-platform.version>
+		<springcloud.alibaba.version>2.1.0.RELEASE</springcloud.alibaba.version>
+		<springboot.jasypt.version>2.1.0</springboot.jasypt.version>
+		<springboot.swagger.version>1.8.0.RELEASE</springboot.swagger.version>
+		<springboot.mybatis.version>1.3.2</springboot.mybatis.version>
+		<security.oauth.version>2.3.6.RELEASE</security.oauth.version>
+		<hutool.version>4.5.1</hutool.version>
+		<swagger.version>2.9.2</swagger.version>
+		<swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
+		<docker.build-images-url>http://192.168.0.11:2375</docker.build-images-url>
+		<docker.plugin.version>0.4.14</docker.plugin.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<modules>
+		<module>black-shop-common</module>
+		<module>black-shop-service</module>
+		<module>black-shop-portal</module>
+		<module>black-shop-auth</module>
+		<module>black-shop-gateway</module>
+		<module>black-shop-nacos</module>
+	</modules>
+
+	<!-- 管理依赖 -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- spring Boot 依赖 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${springboot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- spring Cloud 依赖 -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${springcloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- spring Cloud Alibaba依赖 -->
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
+				<version>${springcloud.alibaba.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>io.spring.platform</groupId>
+				<artifactId>platform-bom</artifactId>
+				<version>${spring-platform.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- 统一依赖管理 -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>black-shop-common-bom</artifactId>
+				<version>1.0.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!--稳定版本，替代spring security bom内置-->
+			<dependency>
+				<groupId>org.springframework.security.oauth</groupId>
+				<artifactId>spring-security-oauth2</artifactId>
+				<version>${security.oauth.version}</version>
+			</dependency>
+			<!--spring boot web 组件 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${springboot.version}</version>
+				<exclusions>
+					<!--排除tomcat依赖 ,使用underom -->
+					<exclusion>
+						<artifactId>spring-boot-starter-tomcat</artifactId>
+						<groupId>org.springframework.boot</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<!--SpringCloud整合sentinel熔断限流降级依赖 -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+		</dependency>
+		<!--feign 依赖-->
+		<dependency>
+			<groupId>io.github.openfeign</groupId>
+			<artifactId>feign-okhttp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!-- SpringBoot整合lombok组件 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<!-- SpringBoot整合jasypt加密 -->
+		<dependency>
+			<groupId>com.github.ulisesbocchio</groupId>
+			<artifactId>jasypt-spring-boot-starter</artifactId>
+			<version>${springboot.jasypt.version}</version>
+		</dependency>
+		<!--springBoot整合swagger -->
+		<dependency>
+			<groupId>com.spring4all</groupId>
+			<artifactId>swagger-spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>io.springfox</groupId>
+					<artifactId>springfox-swagger-ui</artifactId>
+				</exclusion>
+			</exclusions>
+			<version>${springboot.swagger.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${project.name}</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>${springboot.version}</version>
+					<configuration>
+						<finalName>${project.build.finalName}</finalName>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>com.spotify</groupId>
+					<artifactId>docker-maven-plugin</artifactId>
+					<version>${docker.plugin.version}</version>
+					<configuration>
+						<!--						<imageName>${registry.url}/${docker.harbor.project}/${project.name}:0.0.1</imageName>-->
+						<dockerHost>${docker.build-images-url}</dockerHost>
+						<dockerDirectory>${project.basedir}</dockerDirectory>
+						<resources>
+							<resource>
+								<targetPath>/</targetPath>
+								<directory>${project.build.directory}</directory>
+								<include>${project.build.finalName}.jar</include>
+							</resource>
+						</resources>
+						<serverId>docker-hub</serverId>
+						<pushImage>false</pushImage>
+						<registryUrl>https://harbor.black-shop.cn</registryUrl>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<target>${maven.compiler.target}</target>
+					<source>${maven.compiler.source}</source>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<repositories>
+		<!--阿里云主仓库，代理了maven central和jcenter仓库 -->
+		<repository>
+			<id>aliyun</id>
+			<name>aliyun</name>
+			<url>https://maven.aliyun.com/repository/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<!--阿里云代理Spring 官方仓库 -->
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://maven.aliyun.com/repository/spring</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<!-- 环境标识，需要与配置文件的名称相对应 -->
+				<profiles.active>dev</profiles.active>
+			</properties>
+			<activation>
+				<!-- 默认环境 -->
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<profiles.active>test</profiles.active>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<profiles.active>prod</profiles.active>
+			</properties>
+		</profile>
+	</profiles>
 </project>
