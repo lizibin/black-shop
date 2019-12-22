@@ -51,8 +51,8 @@
 
 
 	<properties>
-		<springboot.version>2.1.9.RELEASE</springboot.version>
-		<springcloud.version>Greenwich.SR3</springcloud.version>
+		<springboot.version>2.1.10.RELEASE</springboot.version>
+		<springcloud.version>Greenwich.SR4</springcloud.version>
 		<spring-platform.version>Cairo-SR8</spring-platform.version>
 		<springcloud.alibaba.version>2.1.0.RELEASE</springcloud.alibaba.version>
 		<springboot.jasypt.version>2.1.0</springboot.jasypt.version>
@@ -115,7 +115,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>black-shop-common-bom</artifactId>
-				<version>1.0.0</version>
+				<version>${project.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -143,10 +143,10 @@
 
 	<dependencies>
 		<!--SpringCloud整合sentinel熔断限流降级依赖 -->
-		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.alibaba.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>-->
+<!--		</dependency>-->
 		<!--feign 依赖-->
 		<dependency>
 			<groupId>io.github.openfeign</groupId>

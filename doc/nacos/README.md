@@ -1,3 +1,3 @@
 ### NACOS的docker 启动yaml文件
 
-#### config里面是nacos的存储的应用配置，请启动nacos之后，导入最新版本配置到nacos中
+#### nacos的配置数据库在db里面blackshop-nacosfonig.sql文件，导入数据库，启动black-shop-naocs即可
