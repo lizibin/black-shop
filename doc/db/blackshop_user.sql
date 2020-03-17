@@ -1,5 +1,6 @@
 /*
-MySQL - Database - blackshop-user
+SQLyog Ultimate v13.1.1 (64 bit)
+MySQL - 5.6.47 : Database - blackshop_user
 *********************************************************************
 */
 
@@ -11,9 +12,9 @@ MySQL - Database - blackshop-user
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`blackshop-user` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`blackshop_user` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
 
-USE `blackshop-user`;
+USE `blackshop_user`;
 
 /*Table structure for table `bs_oauth_details` */
 
@@ -54,13 +55,14 @@ CREATE TABLE `bs_sys_menu` (
   `icon` varchar(50) DEFAULT NULL COMMENT '菜单图标',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `update_time` datetime DEFAULT NULL COMMENT '修改时间',
+  `sort` int(11) DEFAULT NULL COMMENT '排序值',
   PRIMARY KEY (`menu_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `bs_sys_menu` */
 
-insert  into `bs_sys_menu`(`menu_id`,`name`,`permission`,`url`,`parent_id`,`icon`,`create_time`,`update_time`) values 
-(1,'用户管理',NULL,'/user',-1,NULL,'2019-10-31 00:08:23','2019-10-31 00:08:25');
+insert  into `bs_sys_menu`(`menu_id`,`name`,`permission`,`url`,`parent_id`,`icon`,`create_time`,`update_time`,`sort`) values 
+(1,'用户管理',NULL,'/user',-1,NULL,'2019-10-31 00:08:23','2019-10-31 00:08:25',1);
 
 /*Table structure for table `bs_sys_role` */
 
@@ -83,7 +85,7 @@ CREATE TABLE `bs_sys_role` (
 /*Data for the table `bs_sys_role` */
 
 insert  into `bs_sys_role`(`role_id`,`role_name`,`role_code`,`role_desc`,`ds_type`,`ds_scope`,`create_time`,`update_time`,`del_flag`) values 
-(1,'管理员','ROLE_ADMIN','管理员','0','2','2017-10-29 15:45:51','2018-12-26 14:09:11','0');
+(1,'管理员','ROLE_ADMIN','管理员','0','2','2019-10-01 22:37:27','2019-11-11 22:37:32','0');
 
 /*Table structure for table `bs_sys_role_menu` */
 

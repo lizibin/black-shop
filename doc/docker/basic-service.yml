@@ -1,21 +1,24 @@
 version: "3.3"  
 services:
   blackshop-mysql:
-    container_name: blackshop-mysql
-    image: mysql:5.6
+    container_name: mysql
+    image: mysql:8.0.18
     restart: always
-    volumes:  
-      - ./etc/mysql/data:/var/lib/mysql 
-      - ./etc/mysql/init-db/:/docker-entrypoint-initdb.d
-      - ./etc/mysql/conf.d:/etc/mysql/conf.d 
+    command:
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+      --lower_case_table_names=1
+    volumes:
+      - ./db/mysql/data:/var/lib/mysql
     environment:
-      #MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
       TZ: ${GLOBAL_TIME_ZONE}
-    ports:  
-      - "3307:3306" 
+    ports:
+      - "${MYSQL_PORT}:3306"
     networks:
-      - bs-backend  
+      - bs-backend
   blackshop-redis:
      container_name: blackshop-redis
      image: redis
@@ -37,22 +40,7 @@ services:
      ports:
        - "${REDIS_PORT}:6379" 
      networks:
-      - bs-backend      
-  blackshop-register:
-    image: nacos/nacos-server:latest
-    container_name: blackshop-register
-    environment:
-      - PREFER_HOST_MODE=hostname
-      - MODE=standalone
-      # nacos的日志非常大，非常恐怖，最好禁用了
-      - TOMCAT_ACCESSLOG_ENABLED=true
-    volumes:
-      - ./etc/nacos/logs/:/home/nacos/logs
-      - ./etc/nacos/init.d/custom.properties:/home/nacos/init.d/custom.properties
-    ports:
-      - "${NACOS_PORT}:8848"
-    networks:
-      - bs-backend      
+      - bs-backend
 networks:
   bs-backend:  
     driver: bridge
