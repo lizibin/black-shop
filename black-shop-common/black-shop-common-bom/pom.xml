@@ -17,6 +17,7 @@
 		<blackshop.version>1.0.0</blackshop.version>
 		<druid.version>1.1.18</druid.version>
 		<mybatis-plus.version>3.1.2</mybatis-plus.version>
+		<knife4j.version>2.0.1</knife4j.version>
 	</properties>
 
 	<dependencyManagement>
@@ -130,6 +131,20 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid-spring-boot-starter</artifactId>
 				<version>${druid.version}</version>
+			</dependency>
+
+			<!-- swagger依赖 -->
+			<dependency>
+				<groupId>com.github.xiaoymin</groupId>
+				<artifactId>knife4j-micro-spring-boot-starter</artifactId>
+				<version>${knife4j.version}</version>
+			</dependency>
+
+			<!-- swagger ui -->
+			<dependency>
+				<groupId>com.github.xiaoymin</groupId>
+				<artifactId>knife4j-spring-ui</artifactId>
+				<version>${knife4j.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

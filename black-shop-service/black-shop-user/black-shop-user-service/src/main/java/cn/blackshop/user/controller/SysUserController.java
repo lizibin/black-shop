@@ -10,6 +10,7 @@ package cn.blackshop.user.controller;
 import cn.blackshop.common.core.basic.ResponseResult;
 import cn.blackshop.common.core.basic.ResponseResultManager;
 import cn.blackshop.common.utils.BeanUtils;
+import cn.blackshop.user.api.dto.o.SysUserDTO;
 import cn.blackshop.user.api.dto.o.UserOutDTO;
 import cn.blackshop.user.entity.SysUser;
 import cn.blackshop.user.service.SysUserService;
@@ -38,7 +39,7 @@ public class SysUserController {
 	@GetMapping("/getUserByUsername")
 	@ApiOperation(value = "根据用户名获取用户信息", httpMethod = "GET", notes = "根据用户名获取用户信息")
 	ResponseResult<UserOutDTO> getUserByUsername(@RequestParam("username") String username) {
-		return ResponseResultManager.setResultSuccess(BeanUtils.transfrom(UserOutDTO.class, sysUserService.getUserByUsername(username)));
+		return ResponseResultManager.setResultSuccess(sysUserService.getUserByUsername(username));
 	}
 
 	/**

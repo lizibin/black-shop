@@ -33,6 +33,6 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
 	 * @param username
 	 * @return
 	 */
-	SysUserDTO selectByUsername(String username);
+	SysUser selectByUsername(String username);
 
 }

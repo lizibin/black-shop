@@ -17,30 +17,15 @@ services:
       TZ: ${GLOBAL_TIME_ZONE}
     ports:
       - "${MYSQL_PORT}:3306"
-    networks:
-      - bs-backend
   blackshop-redis:
-     container_name: blackshop-redis
-     image: redis
-     restart: always
-     privileged: true
-     environment:
-       REDIS_PASS_FILE: /run/secrets/redis-password
-       TZ: ${GLOBAL_TIME_ZONE}
-     command: [
-       "bash", "-c",
-       '
-        docker-entrypoint.sh
-        --requirepass "$$(cat $$REDIS_PASS_FILE)"
-       '
-     ]
-     volumes:
-       - ./etc/redis/redis.conf:/usr/local/etc/redis/redis.conf 
-       - ./etc/redis/redis-password:/run/secrets/redis-password
-     ports:
-       - "${REDIS_PORT}:6379" 
-     networks:
-      - bs-backend
+    image: redis:5.0.8
+    container_name: redis
+    command: redis-server --requirepass 123456
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./db/redis:/data
+
 networks:
   bs-backend:  
     driver: bridge

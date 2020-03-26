@@ -51,12 +51,11 @@
 
 
 	<properties>
-		<springboot.version>2.1.10.RELEASE</springboot.version>
+		<springboot.version>2.1.13.RELEASE</springboot.version>
 		<springcloud.version>Greenwich.SR4</springcloud.version>
 		<spring-platform.version>Cairo-SR8</spring-platform.version>
-		<springcloud.alibaba.version>2.1.0.RELEASE</springcloud.alibaba.version>
+		<springcloud.alibaba.version>2.1.1.RELEASE</springcloud.alibaba.version>
 		<springboot.jasypt.version>2.1.0</springboot.jasypt.version>
-		<springboot.swagger.version>1.8.0.RELEASE</springboot.swagger.version>
 		<springboot.mybatis.version>1.3.2</springboot.mybatis.version>
 		<security.oauth.version>2.3.6.RELEASE</security.oauth.version>
 		<hutool.version>4.5.1</hutool.version>

@@ -11,6 +11,7 @@ import cn.blackshop.common.utils.BeanUtils;
 import cn.blackshop.user.api.dto.MenuDTO;
 import cn.blackshop.user.api.dto.UserInfoDTO;
 import cn.blackshop.user.api.dto.o.SysUserDTO;
+import cn.blackshop.user.api.dto.o.UserOutDTO;
 import cn.blackshop.user.entity.SysRole;
 import cn.blackshop.user.entity.SysUser;
 import cn.blackshop.user.mapper.SysUserMapper;
@@ -68,7 +69,7 @@ public class SysUserServiceImpl  extends ServiceImpl<SysUserMapper, SysUser> imp
 	}
 
 	@Override
-	public SysUserDTO getUserByUsername(String username) {
-		return baseMapper.selectByUsername(username);
+	public UserOutDTO getUserByUsername(String username) {
+		return BeanUtils.transfrom(UserOutDTO.class, baseMapper.selectByUsername(username));
 	}
 }
