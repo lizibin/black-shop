@@ -172,18 +172,6 @@
 			<artifactId>jasypt-spring-boot-starter</artifactId>
 			<version>${springboot.jasypt.version}</version>
 		</dependency>
-		<!--springBoot整合swagger -->
-		<dependency>
-			<groupId>com.spring4all</groupId>
-			<artifactId>swagger-spring-boot-starter</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>io.springfox</groupId>
-					<artifactId>springfox-swagger-ui</artifactId>
-				</exclusion>
-			</exclusions>
-			<version>${springboot.swagger.version}</version>
-		</dependency>
 	</dependencies>
 
 	<build>
