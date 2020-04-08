@@ -7,9 +7,16 @@
  */
 package cn.blackshop.user.controller;
 
+import cn.blackshop.common.core.basic.ResponseResult;
+import cn.blackshop.common.core.basic.ResponseResultManager;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-//@RestController
+@RestController
 public class UserRegisterController {
 
+	@GetMapping("/test")
+	ResponseResult<String> test() {
+		return ResponseResultManager.setResultSuccess("ok吗");
+	}
 }

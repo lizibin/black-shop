@@ -43,8 +43,8 @@
 
 		<dependency>
 			<groupId>com.github.xiaoymin</groupId>
-			<artifactId>swagger-bootstrap-ui</artifactId>
-			<version>${swagger-bootstrap-ui.version}</version>
+			<artifactId>knife4j-spring-ui</artifactId>
 		</dependency>
+
 	</dependencies>
 </project>

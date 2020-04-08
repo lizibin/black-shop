@@ -10,6 +10,7 @@ package cn.blackshop.user.service;
 
 import cn.blackshop.user.api.dto.UserInfoDTO;
 import cn.blackshop.user.api.dto.o.SysUserDTO;
+import cn.blackshop.user.api.dto.o.UserOutDTO;
 import cn.blackshop.user.entity.SysUser;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -22,5 +23,5 @@ public interface SysUserService extends IService<SysUser> {
 
 	UserInfoDTO getUserInfo(SysUser sysUser);
 
-	SysUserDTO getUserByUsername(String username);
+	UserOutDTO getUserByUsername(String username);
 }
