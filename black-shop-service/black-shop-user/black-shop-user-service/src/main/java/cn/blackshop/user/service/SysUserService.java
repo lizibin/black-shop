@@ -9,10 +9,12 @@
 package cn.blackshop.user.service;
 
 import cn.blackshop.user.api.dto.UserInfoDTO;
-import cn.blackshop.user.api.dto.o.SysUserDTO;
 import cn.blackshop.user.api.dto.o.UserOutDTO;
-import cn.blackshop.user.entity.SysUser;
+import cn.blackshop.user.api.entity.SysUser;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * SysUserService
@@ -24,4 +26,6 @@ public interface SysUserService extends IService<SysUser> {
 	UserInfoDTO getUserInfo(SysUser sysUser);
 
 	UserOutDTO getUserByUsername(String username);
+
+	List<UserOutDTO> getUserPage(Page page);
 }

@@ -32,7 +32,7 @@ public class Sku {
 	/**
 	 * 商品id
 	 */
-	private Integer productId;
+	private Integer goodsId;
 
 	/**
 	 * 中文属性值   key:value

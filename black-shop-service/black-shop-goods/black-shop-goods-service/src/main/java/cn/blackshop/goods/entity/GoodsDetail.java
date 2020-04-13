@@ -29,7 +29,8 @@ public class GoodsDetail {
 	 */
 	private Long id;
 
-	private Long productId;
+
+	private Long goodsId;
 
 	@TableField("product_content")
 	private Long productContent;

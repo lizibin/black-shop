@@ -6,12 +6,11 @@
  * black-shop(黑店) 版权所有,并保留所有权利。
  */
 
-package cn.blackshop.user.entity;
+package cn.blackshop.user.api.entity;
 
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

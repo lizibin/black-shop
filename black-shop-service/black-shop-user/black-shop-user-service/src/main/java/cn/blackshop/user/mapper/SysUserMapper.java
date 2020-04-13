@@ -10,15 +10,16 @@
 
 package cn.blackshop.user.mapper;
 
-import cn.blackshop.user.api.dto.o.SysUserDTO;
-import cn.blackshop.user.entity.SysUser;
+import cn.blackshop.user.api.entity.SysUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 /**
  * 系统用户
  */
+@Mapper
 public interface SysUserMapper extends BaseMapper<SysUser> {
 	
 	/**
@@ -35,4 +36,10 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
 	 */
 	SysUser selectByUsername(String username);
 
+	/**
+	 * 分页查询用户信息
+	 * @param page
+	 * @return
+	 */
+	//List<UserOutDTO> getUserPage(Page page);
 }

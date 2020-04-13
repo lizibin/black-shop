@@ -7,7 +7,7 @@
  */
 package cn.blackshop.user.service.impl;
 
-import cn.blackshop.user.entity.SysRole;
+import cn.blackshop.user.api.entity.SysRole;
 import cn.blackshop.user.mapper.SysRoleMapper;
 import cn.blackshop.user.service.SysRoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

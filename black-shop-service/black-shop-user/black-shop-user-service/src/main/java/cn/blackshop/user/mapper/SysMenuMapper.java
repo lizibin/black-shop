@@ -11,11 +11,13 @@
 package cn.blackshop.user.mapper;
 
 import cn.blackshop.user.api.dto.MenuDTO;
-import cn.blackshop.user.entity.SysMenu;
+import cn.blackshop.user.api.entity.SysMenu;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
+@Mapper
 public interface SysMenuMapper extends BaseMapper<SysMenu> {
 
 	/**

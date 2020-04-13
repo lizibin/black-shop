@@ -8,15 +8,11 @@
 package cn.blackshop.user.service.impl;
 
 import cn.blackshop.user.api.dto.MenuDTO;
-import cn.blackshop.user.entity.SysMenu;
-import cn.blackshop.user.entity.SysRole;
+import cn.blackshop.user.api.entity.SysMenu;
 import cn.blackshop.user.mapper.SysMenuMapper;
-import cn.blackshop.user.mapper.SysRoleMapper;
 import cn.blackshop.user.service.SysMenuService;
-import cn.blackshop.user.service.SysRoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.AllArgsConstructor;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -3,7 +3,7 @@
 <mapper namespace="cn.blackshop.user.mapper.SysMenuMapper">
 
 	<!-- 通用查询映射结果 -->
-	<resultMap id="BaseResultMap" type="cn.blackshop.user.entity.SysMenu">
+	<resultMap id="BaseResultMap" type="cn.blackshop.user.api.entity.SysMenu">
 		<id column="menu_id" property="menuId"/>
 		<result column="name" property="name"/>
 		<result column="permission" property="permission"/>
@@ -37,14 +37,14 @@
 	<!--通过角色查询菜单信息-->
 	<select id="listMenusByRoleId" resultMap="MenuDTOResultMap">
 		SELECT
-			bs_sys_menu.*
+			sys_menu.*
 		FROM
-			bs_sys_menu
-		LEFT JOIN bs_sys_role_menu ON bs_sys_menu.menu_id = bs_sys_role_menu.menu_id
+			sys_menu
+		LEFT JOIN sys_role_menu ON sys_menu.menu_id = sys_role_menu.menu_id
 		WHERE
-			 bs_sys_role_menu.role_id = #{roleId}
+			 sys_role_menu.role_id = #{roleId}
 		ORDER BY
-			bs_sys_menu.sort DESC
+			sys_menu.sort DESC
     </select>
 
 	<!--通过角色ID 查询权限-->
@@ -52,6 +52,6 @@
         SELECT
             m.permission
         FROM
-        bs_sys_menu m, bs_sys_role_menu rm WHERE m.menu_id = rm.menu_id AND m.del_flag = 0 AND rm.role_id IN (#{roleIds})
+        sys_menu m, sys_role_menu rm WHERE m.menu_id = rm.menu_id AND m.del_flag = 0 AND rm.role_id IN (#{roleIds})
     </select>
 </mapper>

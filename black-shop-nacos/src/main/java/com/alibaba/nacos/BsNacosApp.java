@@ -22,6 +22,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import static com.alibaba.nacos.console.config.PropertyConfig.STANDALONE_MODEL;
+import static com.alibaba.nacos.console.config.PropertyConfig.TOMCAT_ACCESS_LOG;
 
 /**
  * @author nacos
@@ -36,6 +37,7 @@ public class BsNacosApp {
 
     public static void main(String[] args) {
 		System.setProperty(STANDALONE_MODEL, "true");
+		System.setProperty(TOMCAT_ACCESS_LOG, "false");
     	SpringApplication.run(BsNacosApp.class, args);
     }
 }

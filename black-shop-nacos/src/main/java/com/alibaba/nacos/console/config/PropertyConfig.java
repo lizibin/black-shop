@@ -13,5 +13,10 @@ public interface PropertyConfig {
 	 */
 	String STANDALONE_MODEL="nacos.standalone";
 
+	/**
+	 * tomcat日志
+	 */
+	String TOMCAT_ACCESS_LOG="server.tomcat.accesslog.enabled";
+
 
 }
