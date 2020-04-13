@@ -11,7 +11,7 @@ package cn.blackshop.user.service;
 
 
 import cn.blackshop.user.api.dto.MenuDTO;
-import cn.blackshop.user.entity.SysMenu;
+import cn.blackshop.user.api.entity.SysMenu;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;

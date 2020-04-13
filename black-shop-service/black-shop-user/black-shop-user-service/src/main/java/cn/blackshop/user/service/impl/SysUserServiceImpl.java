@@ -12,13 +12,14 @@ import cn.blackshop.user.api.dto.MenuDTO;
 import cn.blackshop.user.api.dto.UserInfoDTO;
 import cn.blackshop.user.api.dto.o.SysUserDTO;
 import cn.blackshop.user.api.dto.o.UserOutDTO;
-import cn.blackshop.user.entity.SysRole;
-import cn.blackshop.user.entity.SysUser;
+import cn.blackshop.user.api.entity.SysRole;
+import cn.blackshop.user.api.entity.SysUser;
 import cn.blackshop.user.mapper.SysUserMapper;
 import cn.blackshop.user.service.SysMenuService;
 import cn.blackshop.user.service.SysRoleService;
 import cn.blackshop.user.service.SysUserService;
 import cn.hutool.core.util.ArrayUtil;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -71,5 +72,11 @@ public class SysUserServiceImpl  extends ServiceImpl<SysUserMapper, SysUser> imp
 	@Override
 	public UserOutDTO getUserByUsername(String username) {
 		return BeanUtils.transfrom(UserOutDTO.class, baseMapper.selectByUsername(username));
+	}
+
+	@Override
+	public List<UserOutDTO> getUserPage(Page page) {
+		return null;
+		//return baseMapper.getUserPage(page);
 	}
 }

@@ -4,7 +4,7 @@
 <mapper namespace="cn.blackshop.user.mapper.SysUserMapper">
 
 	<!-- 根据用户名查询用户 -->
-	<select id="selectByUsername" resultType="cn.blackshop.user.entity.SysUser">
-		select * from bs_sys_user where username = #{username}
+	<select id="selectByUsername" resultType="cn.blackshop.user.api.entity.SysUser">
+		select * from sys_user where username = #{username}
 	</select>
 </mapper>

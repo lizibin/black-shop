@@ -10,11 +10,13 @@
 
 package cn.blackshop.user.mapper;
 
-import cn.blackshop.user.entity.SysRole;
+import cn.blackshop.user.api.entity.SysRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
+@Mapper
 public interface SysRoleMapper extends BaseMapper<SysRole> {
 
 	/**

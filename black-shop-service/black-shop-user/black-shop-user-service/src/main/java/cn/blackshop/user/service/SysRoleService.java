@@ -8,7 +8,7 @@
 
 package cn.blackshop.user.service;
 
-import cn.blackshop.user.entity.SysRole;
+import cn.blackshop.user.api.entity.SysRole;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;

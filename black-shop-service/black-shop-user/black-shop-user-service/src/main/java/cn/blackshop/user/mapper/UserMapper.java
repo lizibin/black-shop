@@ -7,8 +7,9 @@
  */
 package cn.blackshop.user.mapper;
 
-import cn.blackshop.user.entity.User;
+import cn.blackshop.user.api.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ import java.util.List;
  * 用户mapper类
  * @author zibin
  */
+@Mapper
 public interface UserMapper extends BaseMapper<User> {
 
 	User getUserByNickName(String nickName);
