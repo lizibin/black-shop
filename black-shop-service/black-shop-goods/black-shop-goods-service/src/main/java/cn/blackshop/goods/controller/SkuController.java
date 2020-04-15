@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @AllArgsConstructor
-public class GoodsController {
+public class SkuController {
 
 	private final GoodsService goodsService;
 

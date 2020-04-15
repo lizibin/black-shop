@@ -9,14 +9,14 @@
 package cn.blackshop.goods.service.impl;
 
 
-import cn.black.goods.api.entity.Goods;
-import cn.blackshop.goods.mapper.GoodsMapper;
-import cn.blackshop.goods.service.GoodsService;
+import cn.black.goods.api.entity.Brand;
+import cn.blackshop.goods.mapper.BrandMapper;
+import cn.blackshop.goods.service.BrandService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements GoodsService {
+public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements BrandService {
 
 
 }

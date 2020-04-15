@@ -25,7 +25,6 @@ services:
       - "6379:6379"
     volumes:
       - ./db/redis:/data
-
 networks:
   bs-backend:  
     driver: bridge
