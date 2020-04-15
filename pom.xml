@@ -62,10 +62,14 @@
 		<springboot.swagger.version>1.8.0.RELEASE</springboot.swagger.version>
 		<swagger.version>2.9.2</swagger.version>
 		<swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
-		<docker.build-images-url>http://192.168.0.11:2375</docker.build-images-url>
-		<docker.plugin.version>0.4.14</docker.plugin.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<docker.registry>192.168.0.188</docker.registry>
+		<docker.host>http://192.168.0.188:2375</docker.host>
+		<docker.namespace>blackshop</docker.namespace>
+		<docker.username>admin</docker.username>
+		<docker.password>Harbor12345</docker.password>
+		<docker.plugin.version>0.32.0</docker.plugin.version>
 	</properties>
 
 	<modules>
@@ -213,23 +217,26 @@
 					</executions>
 				</plugin>
 				<plugin>
-					<groupId>com.spotify</groupId>
+					<groupId>io.fabric8</groupId>
 					<artifactId>docker-maven-plugin</artifactId>
 					<version>${docker.plugin.version}</version>
 					<configuration>
-						<!--						<imageName>${registry.url}/${docker.harbor.project}/${project.name}:0.0.1</imageName>-->
-						<dockerHost>${docker.build-images-url}</dockerHost>
-						<dockerDirectory>${project.basedir}</dockerDirectory>
-						<resources>
-							<resource>
-								<targetPath>/</targetPath>
-								<directory>${project.build.directory}</directory>
-								<include>${project.build.finalName}.jar</include>
-							</resource>
-						</resources>
-						<serverId>docker-hub</serverId>
-						<pushImage>false</pushImage>
-						<registryUrl>https://harbor.black-shop.cn</registryUrl>
+						<dockerHost>${docker.host}</dockerHost>
+						<registry>${docker.registry}</registry>
+						<authConfig>
+							<push>
+								<username>${docker.username}</username>
+								<password>${docker.password}</password>
+							</push>
+						</authConfig>
+						<images>
+							<image>
+								<name>${docker.registry}/${docker.namespace}/${project.name}:${project.version}</name>
+								<build>
+									<dockerFile>${project.basedir}/Dockerfile</dockerFile>
+								</build>
+							</image>
+						</images>
 					</configuration>
 				</plugin>
 			</plugins>
