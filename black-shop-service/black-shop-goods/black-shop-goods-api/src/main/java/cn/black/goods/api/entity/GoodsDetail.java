@@ -6,13 +6,11 @@
  * black-shop(黑店) 版权所有,并保留所有权利。
  */
 
-package cn.blackshop.goods.entity;
+package cn.black.goods.api.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.ToString;
-
 
 
 /**
@@ -21,7 +19,6 @@ import lombok.ToString;
  */
 @Data
 @ToString
-@TableName("bs_goods_detail")
 public class GoodsDetail {
 
 	/**

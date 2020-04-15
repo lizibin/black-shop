@@ -6,9 +6,8 @@
  * black-shop(黑店) 版权所有,并保留所有权利。
  */
 
-package cn.blackshop.goods.entity;
+package cn.black.goods.api.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.ToString;
 
@@ -20,7 +19,6 @@ import java.util.Date;
  */
 @Data
 @ToString
-@TableName("bs_brand")
 public class Brand {
 
 	/**
