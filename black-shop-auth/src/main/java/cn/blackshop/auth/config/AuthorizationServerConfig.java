@@ -9,7 +9,7 @@ package cn.blackshop.auth.config;
 
 import cn.blackshop.common.core.constants.SecurityConstants;
 import cn.blackshop.common.security.dto.SecurityUserDetail;
-import cn.blackshop.common.security.service.BsUserDetailsService;
+import cn.blackshop.common.security.service.BlackUserDetailsService;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.context.annotation.Bean;
@@ -43,7 +43,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	private final AuthenticationManager authenticationManager;
 	private final RedisConnectionFactory redisConnectionFactory;
 	private final DataSource dataSource;
-	private final BsUserDetailsService bsUserDetailsService;
+	private final BlackUserDetailsService blackUserDetailsService;
 
 	/**
 	 * 设置client去数据库读取信息.
@@ -78,7 +78,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 				.allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST)
 				.tokenStore(tokenStore())
 				.tokenEnhancer(tokenEnhancer())
-				.userDetailsService(bsUserDetailsService)
+				.userDetailsService(blackUserDetailsService)
 				.authenticationManager(authenticationManager)
 				.reuseRefreshTokens(false)
 				;

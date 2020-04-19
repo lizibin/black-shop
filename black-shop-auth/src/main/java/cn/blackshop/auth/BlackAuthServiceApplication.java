@@ -9,7 +9,7 @@
 */
 package cn.blackshop.auth;
 
-import cn.blackshop.common.feign.annotation.EnableBsFeignClients;
+import cn.blackshop.common.feign.annotation.EnableBlackFeignClients;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 
@@ -18,9 +18,9 @@ import org.springframework.cloud.client.SpringCloudApplication;
  * @author zibin
  */
 @SpringCloudApplication
-@EnableBsFeignClients
-public class BsAuthServiceApp {
+@EnableBlackFeignClients
+public class BlackAuthServiceApplication {
   public static void main(String[] args) {
-    SpringApplication.run(BsAuthServiceApp.class, args);
+    SpringApplication.run(BlackAuthServiceApplication.class, args);
   }
 }

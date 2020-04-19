@@ -11,7 +11,7 @@
 	<artifactId>black-shop-common-bom</artifactId>
 	<packaging>pom</packaging>
 	<version>${blackshop.version}</version>
-	<description>blackshop版本控制</description>
+	<description>black-shop版本控制</description>
 
 	<properties>
 		<blackshop.version>1.0.0</blackshop.version>
@@ -23,14 +23,12 @@
 	<dependencyManagement>
 		<!-- 模块说明：这里声明多个子模块 -->
 		<dependencies>
-
 			<!-- druid 连接池 -->
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid-spring-boot-starter</artifactId>
 				<version>${druid.version}</version>
 			</dependency>
-
 
 			<!--公共工具版本依赖 -->
 			<dependency>
@@ -42,17 +40,16 @@
 			<!--数据库相关的依赖-->
 			<dependency>
 				<groupId>cn.black-shop</groupId>
-				<artifactId>black-shop-common-datasource</artifactId>
+				<artifactId>black-shop-common-data</artifactId>
 				<version>${blackshop.version}</version>
 			</dependency>
 
 			<!--数据库相关的依赖-->
 			<dependency>
 				<groupId>cn.black-shop</groupId>
-				<artifactId>black-shop-common-data</artifactId>
+				<artifactId>black-shop-common-datasource</artifactId>
 				<version>${blackshop.version}</version>
 			</dependency>
-
 			<!--公共工具版本依赖 -->
 			<dependency>
 				<groupId>cn.black-shop</groupId>

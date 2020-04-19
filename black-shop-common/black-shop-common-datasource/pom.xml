@@ -12,7 +12,7 @@
 	<artifactId>black-shop-common-datasource</artifactId>
 
 	<dependencies>
-		<!--数据库连接池 -->
+		<!-- druid 连接池 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
@@ -23,6 +23,5 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-
 	</dependencies>
 </project>

@@ -22,9 +22,9 @@ import javax.sql.DataSource;
  * @date 2019-07-19
  * clientDetailService JdbcClientDetailsService
  */
-public class BsClientDetailsService extends JdbcClientDetailsService {
+public class BlackClientDetailsService extends JdbcClientDetailsService {
 
-	public BsClientDetailsService(DataSource dataSource) {
+	public BlackClientDetailsService(DataSource dataSource) {
 		super(dataSource);
 	}
 

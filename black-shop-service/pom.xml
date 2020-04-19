@@ -25,16 +25,21 @@
 	</modules>
 	<dependencies>
 
-		<!--service 整合sentinel监控 -->
-<!--		<dependency>-->
-<!--			<groupId>com.alibaba.csp</groupId>-->
-<!--			<artifactId>sentinel-core</artifactId>-->
-<!--		</dependency>-->
-<!--		&lt;!&ndash;service 整合sentinel 通信 &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>com.alibaba.csp</groupId>-->
-<!--			<artifactId>sentinel-transport-simple-http</artifactId>-->
-<!--		</dependency>-->
-<!--		-->
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-core</artifactId>
+		</dependency>
+
+		<!--数据库相关的依赖-->
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-data</artifactId>
+		</dependency>
+
+		<!--数据库相关的依赖-->
+		<dependency>
+			<groupId>cn.black-shop</groupId>
+			<artifactId>black-shop-common-datasource</artifactId>
+		</dependency>
 	</dependencies>
 </project>

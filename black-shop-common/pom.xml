@@ -9,13 +9,13 @@
 	<artifactId>black-shop-common</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-		<module>black-shop-common-util</module>
 		<module>black-shop-common-core</module>
+		<module>black-shop-common-util</module>
+		<module>black-shop-common-data</module>
+		<module>black-shop-common-datasource</module>
 		<module>black-shop-common-web</module>
 		<module>black-shop-common-bom</module>
 		<module>black-shop-common-security</module>
-		<module>black-shop-common-datasource</module>
-		<module>black-shop-common-data</module>
 		<module>black-shop-common-feign</module>
 	</modules>
 </project>

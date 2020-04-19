@@ -33,11 +33,11 @@ import static com.alibaba.nacos.console.config.PropertyConfig.TOMCAT_ACCESS_LOG;
 @SpringBootApplication(scanBasePackages = "com.alibaba.nacos")
 @ServletComponentScan
 @EnableScheduling
-public class BsNacosApp {
+public class BlackNacosApplication {
 
     public static void main(String[] args) {
 		System.setProperty(STANDALONE_MODEL, "true");
 		System.setProperty(TOMCAT_ACCESS_LOG, "false");
-    	SpringApplication.run(BsNacosApp.class, args);
+    	SpringApplication.run(BlackNacosApplication.class, args);
     }
 }

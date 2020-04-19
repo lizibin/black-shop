@@ -8,51 +8,40 @@
 
 package cn.black.goods.api.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
-import lombok.ToString;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 /**
- * 单品表实体
+ * 单品实体
  * @author zibin
  */
 @Data
-@ToString
-@TableName("bs_sku")
 public class Sku {
 
 	/**
 	 * 主键id
 	 */
-	private Long id;
+	@TableId(value = "sku_id", type = IdType.AUTO)
+	private Long skuId;
 
 	/**
 	 * 商品id
 	 */
 	private Integer goodsId;
 
-	/**
-	 * 中文属性值   key:value
-	 */
-	private String cnProperty;
-
-	/**
-	 * 属性值 key:value
-	 */
-	private String property;
 
 	/**
 	 * sku名字
 	 */
-	private String skuName;
+	private String name;
 
 	/**
 	 * sku价格
 	 */
-	private BigDecimal skuPrice;
+	private BigDecimal price;
 
 	/**
 	 * sku库存
@@ -60,28 +49,8 @@ public class Sku {
 	private Integer stock;
 
 	/**
-	 * sku真实库存
-	 */
-	private Integer actualStock;
-
-	/**
-	 * sku主图
-	 */
-	private String pic;
-
-	/**
-	 * sku图片集合
-	 */
-	private String imageList;
-
-	/**
 	 * sku状态
 	 */
 	private Integer status;
-
-	/**
-	 * 创建时间
-	 */
-	private Date createDate;
 
 }

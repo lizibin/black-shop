@@ -8,13 +8,7 @@
 	</parent>
 	<artifactId>black-shop-common-security</artifactId>
 
-	<dependencies>
-		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-common-core</artifactId>
-		</dependency>
-
-		<!--安全模块 -->
+	<dependencies><!--安全模块 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-oauth2</artifactId>

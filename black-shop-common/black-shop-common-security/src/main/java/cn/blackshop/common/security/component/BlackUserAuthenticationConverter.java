@@ -28,7 +28,7 @@ import java.util.Map;
  * <p>
  * 转换用户的认证信息
  */
-public class BsUserAuthenticationConverter implements UserAuthenticationConverter {
+class BlackUserAuthenticationConverter implements UserAuthenticationConverter {
 	private static final String N_A = "N/A";
 
 	/**
