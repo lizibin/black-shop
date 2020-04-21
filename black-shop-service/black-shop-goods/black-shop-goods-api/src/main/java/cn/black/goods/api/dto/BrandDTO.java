@@ -15,34 +15,33 @@ import java.util.Date;
 
 @Data
 public class BrandDTO {
-
 	/**
-	 * 主键id
+	 * 品牌名称
 	 */
-	private Long id;
+	private String name;
 
 	/**
-	 * 品牌名字
+	 * 品牌logo
 	 */
-	private String brandName;
+	private String logo;
 
 	/**
-	 * 品牌图片路径
+	 * 品牌简介
 	 */
-	private String brandPic;
+	private String brief;
 
 	/**
-	 * 品牌备注
-	 */
-	private String remark;
-
-	/**
-	 * 品牌状态
+	 * 状态，(0下线，1上线)
 	 */
 	private Integer status;
 
 	/**
 	 * 创建时间
 	 */
-	private Date createDate;
+	private Date createTime;
+
+	/**
+	 * 更新时间
+	 */
+	private Date updateTime;
 }

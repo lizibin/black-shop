@@ -11,7 +11,6 @@ import cn.blackshop.user.api.entity.SysRole;
 import cn.blackshop.user.mapper.SysRoleMapper;
 import cn.blackshop.user.service.SysRoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,7 +21,6 @@ import java.util.List;
  * @author zibin
  */
 @Service
-@AllArgsConstructor
 public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> implements SysRoleService {
 
 	/**

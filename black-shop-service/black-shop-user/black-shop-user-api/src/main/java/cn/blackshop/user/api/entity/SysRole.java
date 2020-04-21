@@ -18,7 +18,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 /**
@@ -51,14 +50,6 @@ public class SysRole extends Model<SysRole> {
 	@ApiModelProperty(value = "角色描述")
 	private String roleDesc;
 
-	@NotNull(message = "数据权限类型不能为空")
-	@ApiModelProperty(value = "数据权限类型")
-	private Integer dsType;
-	/**
-	 * 数据权限作用范围
-	 */
-	@ApiModelProperty(value = "数据权限作用范围")
-	private String dsScope;
 	/**
 	 * 创建时间
 	 */
@@ -73,6 +64,6 @@ public class SysRole extends Model<SysRole> {
 	 * 删除标识（0-正常,1-删除）
 	 */
 	@TableLogic
-	@ApiModelProperty(value = "删除标记,1:已删除,0:正常")
-	private String delFlag;
+	@ApiModelProperty(value = "删除标记")
+	private Boolean delStatus;
 }

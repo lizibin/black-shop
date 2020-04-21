@@ -18,7 +18,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
  * @date 2019-07-19
  * @author zibin
  */
-public interface BsUserDetailsService extends UserDetailsService {
+public interface BlackUserDetailsService extends UserDetailsService {
 
   /**
    * 根据社交登录type 登录.

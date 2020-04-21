@@ -16,15 +16,9 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-common-core</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>${swagger.version}</version>
 		</dependency>
-
 	</dependencies>
 </project>

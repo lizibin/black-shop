@@ -7,7 +7,8 @@
  */
 package cn.blackshop.user;
 
-import cn.blackshop.common.feign.annotation.EnableBsFeignClients;
+import cn.blackshop.common.feign.annotation.EnableBlackFeignClients;
+import cn.blackshop.common.security.annotation.EnableBlackResourceServer;
 import com.spring4all.swagger.EnableSwagger2Doc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,11 +19,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author zibin
  */
 @SpringBootApplication
-@EnableBsFeignClients
+@EnableBlackFeignClients
 @EnableSwagger2Doc
-public class BsUserServiceApp {
+@EnableBlackResourceServer
+public class BlackUserServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BsUserServiceApp.class, args);
+		SpringApplication.run(BlackUserServiceApplication.class, args);
 	}
 }

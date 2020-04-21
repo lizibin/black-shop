@@ -14,17 +14,17 @@ import lombok.Data;
 
 
 /**
- * 商品详情实体
+ * 商品评论实体
  * @author zibin
  */
 @Data
-public class GoodsDetail {
+public class GoodsComment {
 
 	/**
 	 * 商品详情id
 	 */
-	@TableId(value = "goods_detail_id", type = IdType.AUTO)
-	private Long goodsDetailId;
+	@TableId(value = "common_id", type = IdType.AUTO)
+	private Long commonId;
 
 	/**
 	 * 商品id
@@ -32,7 +32,28 @@ public class GoodsDetail {
 	private Long goodsId;
 
 	/**
-	 * 商品详情信息
+	 * skuid
 	 */
-	private String productContent;
+	private Long skuId;
+
+	/**
+	 * 用户id
+	 */
+	private Long userId;
+
+	/**
+	 * 用户名
+	 */
+	private Long userName;;
+
+	/**
+	 * 是否匿名(0,1 匿名)
+	 */
+	private Boolean is_anonymous;
+
+	/**
+	 * 创建时间
+	 */
+	private Boolean createTime;
+
 }

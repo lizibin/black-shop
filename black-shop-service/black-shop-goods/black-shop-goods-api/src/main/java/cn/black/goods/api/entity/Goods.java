@@ -8,50 +8,45 @@
 
 package cn.black.goods.api.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
-import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * 商品表实体
+ * 商品实体
  * @author zibin
  */
 @Data
-@ToString
 public class Goods {
 
 	/**
-	 * 主键id
+	 * 商品id
 	 */
-	private Long id;
+	@TableId(value = "goods_id", type = IdType.AUTO)
+	private Long goodsId;
 
 	/**
-	 * 一级分类id
+	 * 分类id
 	 */
-	private Long firstCategoryId;
+	private Long category_id;
 
 	/**
-	 * 二级分类id
+	 * 品牌id
 	 */
-	private Long secondCategoryId;
-
-	/**
-	 * 三级分类id
-	 */
-	private Long thirdCategoryId;
+	private Long brand_id;
 
 	/**
 	 * 商品名称
 	 */
-	private String productName;
+	private String name;
 
 	/**
-	 * 商品价格
+	 * 商品图片(主图)
 	 */
-	private BigDecimal productPrice;
+	private String image;
 
 	/**
 	 * 商品简要、卖点
@@ -59,43 +54,32 @@ public class Goods {
 	private String brief;
 
 	/**
-	 * 商品主图
+	 * 商品价格
 	 */
-	private String pic;
+	private BigDecimal price;
 
 	/**
-	 * 商品图片集合
+	 * 商品原价
 	 */
-	private String imageList;
+	private BigDecimal originalPrice;
+
+	/**
+	 * 商品库存
+	 */
+	private Long stock;
 
 	/**
 	 * 商品状态
 	 */
-	private Integer status;
-
-	/**
-	 * 商品库存，包含所有sku的库存
-	 */
-	private Integer totalStock;
-
-	/**
-	 * 商品动态参数
-	 */
-	private String dynamicParameter;
-
-	/**
-	 * 商品品牌id
-	 */
-	private Long brandId;
-
-	/**
-	 * 商品详细内容
-	 */
-	private String content;
+	private Long status;
 
 	/**
 	 * 创建时间
 	 */
-	private Date createDate;
+	private Date createTime;
 
+	/**
+	 * 创建时间
+	 */
+	private Date updateTime;
 }

@@ -75,7 +75,6 @@ black-shop是基于Spring Cloud Alibaba微服务化电商平台，每个模块�
 |-  |-  |-black-shop-common-bom  #集中管理版本号
 |-  |-  |-black-shop-common-core  #公共核心
 |-  |-  |-black-shop-common-data   #redis等数据管理 
-|-  |-  |-black-shop-common-datasource   #数据源 
 |-  |-  |-black-shop-common-feign   #feignclient远程调用
 |-  |-  |-black-shop-common-util   #公共工具服务   
 |-  |-  |-black-shop-common-security  #spring security相关

@@ -12,12 +12,6 @@
 	<artifactId>black-shop-order-service</artifactId>
 
 	<dependencies>
-
-		<dependency>
-			<groupId>cn.black-shop</groupId>
-			<artifactId>black-shop-common-datasource</artifactId>
-		</dependency>
-
 		<!--整合通用工具 -->
 		<dependency>
 			<groupId>cn.black-shop</groupId>

@@ -12,11 +12,10 @@ package cn.blackshop.common.security.service.impl;
 import cn.blackshop.common.core.basic.ResponseResult;
 import cn.blackshop.common.core.constants.CacheConstants;
 import cn.blackshop.common.security.dto.SecurityUserDetail;
-import cn.blackshop.common.security.service.BsUserDetailsService;
+import cn.blackshop.common.security.service.BlackUserDetailsService;
 import cn.blackshop.user.api.client.SysUserServiceClient;
 import cn.blackshop.user.api.dto.UserInfoDTO;
 import cn.blackshop.user.api.dto.o.SysUserDTO;
-import cn.blackshop.user.api.dto.o.UserOutDTO;
 import cn.hutool.core.util.ArrayUtil;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -42,7 +41,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Service
 @Slf4j
-public class BsUserDetailsServiceImpl implements BsUserDetailsService {
+public class BlackUserDetailsServiceImpl implements BlackUserDetailsService {
 	private final CacheManager cacheManager;
 	private final SysUserServiceClient sysUserServiceClient;
 

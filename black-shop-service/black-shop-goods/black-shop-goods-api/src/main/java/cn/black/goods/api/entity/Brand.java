@@ -8,46 +8,52 @@
 
 package cn.black.goods.api.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
-import lombok.ToString;
 
 import java.util.Date;
 
 /**
- * 品牌表实体
+ * 品牌实体
  * @author zibin
  */
 @Data
-@ToString
 public class Brand {
 
 	/**
-	 * 主键id
+	 * 品牌id
 	 */
-	private Long id;
+	@TableId(value = "brand_id", type = IdType.AUTO)
+	private Long brandId;
 
 	/**
-	 * 品牌名字
+	 * 品牌名称
 	 */
-	private String brandName;
+	private String name;
 
 	/**
-	 * 品牌图片路径
+	 * 品牌logo
 	 */
-	private String brandPic;
+	private String logo;
 
 	/**
-	 * 品牌备注
+	 * 品牌简介
 	 */
-	private String remark;
+	private String brief;
 
 	/**
-	 * 品牌状态
+	 * 状态，(0下线，1上线)
 	 */
 	private Integer status;
 
 	/**
 	 * 创建时间
 	 */
-	private Date createDate;
+	private Date createTime;
+
+	/**
+	 * 更新时间
+	 */
+	private Date updateTime;
 }

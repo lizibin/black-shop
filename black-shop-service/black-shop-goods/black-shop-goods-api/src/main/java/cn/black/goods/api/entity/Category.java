@@ -8,32 +8,32 @@
 
 package cn.black.goods.api.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
-import lombok.ToString;
 
 import java.util.Date;
 
 /**
- * 分类表实体
+ * 分类实体
  * @author zibin
  */
 @Data
-@ToString
 public class Category {
 
 	/**
 	 * 主键id
 	 */
-	private Long id;
+	@TableId(value = "category_id", type = IdType.AUTO)
+	private Long categoryId;
 
 	/**
 	 * 分类名称
 	 */
-	private String categoryName;
+	private String name;
 
 	/**
-	 * 父类id
+	 * 父类id，为0则为顶级
 	 */
 	private Integer parentId;
 
@@ -43,12 +43,12 @@ public class Category {
 	private String icon;
 
 	/**
-	 * 分类层级
-	 */
-	private Integer level;
-
-	/**
 	 * 创建时间
 	 */
-	private Date createDate;
+	private Date create_time;
+
+	/**
+	 * 更新时间
+	 */
+	private Date update_time;
 }
