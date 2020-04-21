@@ -20,7 +20,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
  * 抽象公共默认的配置类
  * @author zibin
  */
-public class ResourceServerAuthConfigurerAdapter extends ResourceServerConfigurerAdapter {
+public class BlackResourceServerConfigurerAdapter extends ResourceServerConfigurerAdapter {
 
 	@Autowired
 	private PermitAllUrlProperties permitAllUrlProperties;
@@ -36,6 +36,7 @@ public class ResourceServerAuthConfigurerAdapter extends ResourceServerConfigure
 		ExpressionUrlAuthorizationConfigurer<HttpSecurity>
 				.ExpressionInterceptUrlRegistry registry = httpSecurity
 				.authorizeRequests();
+		//registry.antMatchers("/user/test").permitAll();
 		permitAllUrlProperties.getIgnoreUrls()
 				.forEach(url -> registry.antMatchers(url).permitAll());
 		registry.anyRequest().authenticated()

@@ -7,6 +7,7 @@
 		<version>1.0.0</version>
 	</parent>
 	<artifactId>black-shop-common-security</artifactId>
+	<packaging>jar</packaging>
 
 	<dependencies><!--安全模块 -->
 		<dependency>

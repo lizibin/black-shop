@@ -8,7 +8,11 @@
 
 package cn.blackshop.common.security.properties;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,12 +20,13 @@ import java.util.List;
 /**
  * 忽略的url配置
  */
-@Data
+@Configuration
+@ConditionalOnExpression("!'${security.oauth2.client.ignore-urls}'.isEmpty()")
+@ConfigurationProperties(prefix = "security.oauth2.client")
 public class PermitAllUrlProperties {
-
-
+	@Getter
+	@Setter
 	private List<String> ignoreUrls = new ArrayList<>();
-
 
 
 }

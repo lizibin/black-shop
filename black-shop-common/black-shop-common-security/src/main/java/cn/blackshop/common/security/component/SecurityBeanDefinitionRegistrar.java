@@ -10,7 +10,7 @@ package cn.blackshop.common.security.component;
 
 
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.type.AnnotationMetadata;
 
@@ -21,8 +21,8 @@ import org.springframework.core.type.AnnotationMetadata;
 public class SecurityBeanDefinitionRegistrar implements ImportBeanDefinitionRegistrar {
 	@Override
 	public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
-		RootBeanDefinition rootBeanDefinition = new RootBeanDefinition();
-		rootBeanDefinition.setBeanClass(ResourceServerAuthConfigurerAdapter.class);
-		registry.registerBeanDefinition("resourceServerConfigurerAdapter", rootBeanDefinition);
+		GenericBeanDefinition genericBeanDefinition = new GenericBeanDefinition();
+		genericBeanDefinition.setBeanClass(BlackResourceServerConfigurerAdapter.class);
+		registry.registerBeanDefinition("resourceServerConfigurerAdapter", genericBeanDefinition);
 	}
 }

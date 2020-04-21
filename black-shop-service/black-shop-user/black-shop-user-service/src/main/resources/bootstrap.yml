@@ -22,4 +22,3 @@ swagger:
 #feign:
 #  sentinel:
 #    enabled: true
-

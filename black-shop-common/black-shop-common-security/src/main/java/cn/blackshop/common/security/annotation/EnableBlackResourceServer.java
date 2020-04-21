@@ -7,6 +7,7 @@
  */
 package cn.blackshop.common.security.annotation;
 
+import cn.blackshop.common.security.component.BlackResourceServerAutoConfiguration;
 import cn.blackshop.common.security.component.SecurityBeanDefinitionRegistrar;
 import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -24,7 +25,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableResourceServer
-@Import(SecurityBeanDefinitionRegistrar.class)
+@Import({BlackResourceServerAutoConfiguration.class,SecurityBeanDefinitionRegistrar.class})
 public @interface EnableBlackResourceServer {
 
 }
