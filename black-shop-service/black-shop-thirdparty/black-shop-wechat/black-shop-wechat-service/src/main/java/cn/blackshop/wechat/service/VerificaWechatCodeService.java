@@ -1,6 +1,6 @@
-/**  
- 
-* <p>Company: www.black-shop.cn</p>  
+/**
+
+* <p>Company: www.black-shop.cn</p>
 
 * <p>Copyright: Copyright (c) 2018-2050</p>
 
@@ -33,7 +33,7 @@ public class VerificaWechatCodeService {
 //      return ResponseResultManager.setResultError("注册码不能为空!");
 //    }
 //    // 2.根据手机号码查询redis返回对应的注册码
-//    String wecahtCodeKey = Constants.WECHET_CODE_KEY + phone;
+//    String wecahtCodeKey = Constants.WECHAT_CODE_KEY + phone;
 //    String redisCode = redisUtil.getString(wecahtCodeKey);
 //    if (StrUtil.isEmpty(redisCode)) {
 //      return ResponseResultManager.setResultError("注册码可能已经过期!!");

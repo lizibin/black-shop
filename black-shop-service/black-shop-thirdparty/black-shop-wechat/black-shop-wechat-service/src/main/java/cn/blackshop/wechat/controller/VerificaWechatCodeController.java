@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @AllArgsConstructor
-@RequestMapping("/wechet")
+@RequestMapping("/wechat")
 public class VerificaWechatCodeController {
     private final VerificaWechatCodeService verificaWechatCodeService;
 

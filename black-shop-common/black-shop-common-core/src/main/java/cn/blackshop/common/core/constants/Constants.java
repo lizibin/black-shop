@@ -18,9 +18,9 @@ public interface Constants {
 	// cookie 会员 totoken 名称
 	String COOKIE_USER_TOKEN = "cookie_user_token";
 	// 微信注册码存放rediskey
-	String WECHET_CODE_KEY = "weixin.code";
+	String WECHAT_CODE_KEY = "weixin.code";
 	// 微信注册码有效期30分钟
-	Long WECHET_CODE_TIMEOUT = 30L;
+	Long WECHAT_CODE_TIMEOUT = 30L;
 
 	// 用户信息不存在
 	Integer HTTP_RES_CODE_EXISTMOBILE_203 = 203;
