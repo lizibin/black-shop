@@ -68,7 +68,7 @@ public class MsgHandler extends AbstractHandler {
 			}
 			// 3.如果是手机号码格式的话,随机生产4位数字注册码
 			int registCode = registCode();
-			String content = registrationCodeMessage.format(registrationCodeMessage, registCode);
+			String content = String.format(registrationCodeMessage, registCode);
 			// 将注册码存入在redis中 key为手机号码
 			//redisUtil.setString(Constants.WECHAT_CODE_KEY + fromContent, registCode + "", Constants.WECHAT_CODE_TIMEOUT);
 			return new TextBuilder().build(content, wxMessage, weixinService);
