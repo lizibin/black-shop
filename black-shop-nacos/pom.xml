@@ -14,6 +14,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<nacos.version>1.1.4</nacos.version>
+		<jjwt.version>0.10.5</jjwt.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -23,13 +25,13 @@
 		<dependency>
 			<groupId>com.xkcoding</groupId>
 			<artifactId>nacos-config</artifactId>
-			<version>1.1.4</version>
+			<version>${nacos.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.xkcoding</groupId>
 			<artifactId>nacos-naming</artifactId>
-			<version>1.1.4</version>
+			<version>${nacos.version}</version>
 		</dependency>
 
 		<dependency>
@@ -39,18 +41,18 @@
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-api</artifactId>
-			<version>0.10.5</version>
+			<version>${jjwt.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-impl</artifactId>
-			<version>0.10.5</version>
+			<version>${jjwt.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-jackson</artifactId>
-			<version>0.10.5</version>
+			<version>${jjwt.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
