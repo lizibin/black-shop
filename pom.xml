@@ -51,7 +51,7 @@
 
 
 	<properties>
-		<springboot.version>2.1.13.RELEASE</springboot.version>
+		<springboot.version>2.5.12</springboot.version>
 		<springcloud.version>Greenwich.SR4</springcloud.version>
 		<spring-platform.version>Cairo-SR8</spring-platform.version>
 		<springcloud.alibaba.version>2.1.1.RELEASE</springcloud.alibaba.version>
